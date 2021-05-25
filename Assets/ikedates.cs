@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ikedates : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+{ 
     void Update()
-    {
-        
+    { 
+        if (SceneLoader.IsFade) return;// フェード中は処理しない
+        SceneLoader.Load("シーン名");//かわりにこれを...
     }
 }
