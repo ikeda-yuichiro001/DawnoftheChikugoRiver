@@ -74,11 +74,11 @@ public static class SceneLoader
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void StartUp()
     { 
-        SceneManager.sceneLoaded += delegate (Scene n, LoadSceneMode m) 
-        {
-            Fader.FadeHandle = true;
-            Fader.INIT();
-        };
+        //SceneManager.sceneLoaded += delegate (Scene n, LoadSceneMode m) 
+        //{
+        //    Fader.FadeHandle = true;
+        //    Fader.INIT();
+        //};
     }
     
 
