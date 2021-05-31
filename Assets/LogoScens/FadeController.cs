@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeController : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class FadeController : MonoBehaviour
 
     void Update()
     {
-       
+       if(Animation)
+        {
+            SceneManager.LoadScene("title");
+        }
     }
     public void EndFadeInAnimation()
     {
