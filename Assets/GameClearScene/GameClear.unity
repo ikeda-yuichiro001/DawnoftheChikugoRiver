@@ -187,6 +187,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151592794}
   m_CullTransparentMesh: 0
+--- !u!1 &616162015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616162016}
+  - component: {fileID: 616162018}
+  - component: {fileID: 616162017}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &616162016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616162015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.2441838, y: 2.1203914, z: 2.2992}
+  m_Children: []
+  m_Father: {fileID: 1027941734}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2, y: -3103}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &616162017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616162015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 4337352dbc8b27b409e3777d4270a08e, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &616162018
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616162015}
+  m_CullTransparentMesh: 0
 --- !u!1 &617178955
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +438,7 @@ GameObject:
   - component: {fileID: 1027941734}
   - component: {fileID: 1027941736}
   - component: {fileID: 1027941735}
+  - component: {fileID: 1027941737}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -380,17 +453,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027941733}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 616162016}
   m_Father: {fileID: 151592795}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -159}
-  m_SizeDelta: {x: -632, y: -246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -388}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027941735
 MonoBehaviour:
@@ -425,7 +499,110 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<color=red><size=50>\u5236\u4F5C</size></color>\n\n<size=30>\u897F\u6751\u3000\u82F1\u6643</size>\n\n<size=25>\u6C60\u7530\u3000\u96C4\u4E00\u90CE</size>\n\n<size=30>\u8D64\u91CE\u3000\u4F38\u609F</size>\n\n<size=30>\u5DE5\u85E4\u3000\u5B99</size>\n\n<size=30>\u91CE\u7530\u3000\u60A0\u592A</size>\n\n<size=25>\u4E09\u6751\u3000\u60A0\u5E03\u6A39</size>\n\n"
+  m_Text: '<color=red><size=42>Produce</size></color>
+
+
+    <size=28>Hideaki NISHIMURA</size>
+
+
+    <color=red><size=45>Directer</size></color>
+
+
+    <size=28>Hideaki NISHIMURA</size>
+
+
+    <color=red><size=45>Game Desigh</size></color>
+
+
+    <size=28>Hideaki NISHIMURA</size>
+
+
+    <size=30>Yuitiro IKEDA</size>
+
+
+    <size=30>Shingo AKANO</size>
+
+
+    <size=30>Yuta     NODA</size>
+
+
+    <size=30>Huwari KUDO</size>
+
+
+    <size=30>Yuki MIMURA</size>
+
+
+    <color=red><size=45>Animation Create</size></color>
+
+
+    <size=28>Hideaki NISHIMURA</size>
+
+
+    <size=30>Yuitiro IKEDA</size>
+
+
+    <size=30>Shingo AKANO</size>
+
+
+    <size=30>Yuta     NODA</size>
+
+
+    <size=30>Huwari KUDO</size>
+
+
+    <size=30>Yuki MIMURA</size>
+
+
+    <color=red><size=45>CG Create</size></color>
+
+
+    <size=28>Hideaki NISHIMURA</size>
+
+
+    <size=30>Yuitiro IKEDA</size>
+
+
+    <size=30>Shingo AKANO</size>
+
+
+    <size=30>Yuta     NODA</size>
+
+
+    <size=30>Huwari KUDO</size>
+
+
+    <size=30>Yuki MIMURA</size>
+
+
+    <color=red><size=45>Rogo Desigh</size></color>
+
+
+    <size=30>Shingo AKANO</size>
+
+
+    <color=red><size=45>Picture Book Making</size></color>
+
+
+    <size=30>OOO OOO</size>
+
+
+    <color=red><size=45>Sound Making</size></color>
+
+
+    <size=30>OOO OOO</size>
+
+
+    <color=red><size=45>Special Thanks</size></color>
+
+
+    <size=30>OOO OOO</size>
+
+
+
+
+
+
+'
 --- !u!222 &1027941736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -434,6 +611,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027941733}
   m_CullTransparentMesh: 0
+--- !u!114 &1027941737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027941733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f000e250a42a8f045bc50698470eeb4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
+  goal: 3500
 --- !u!1 &1433570221
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028429439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
