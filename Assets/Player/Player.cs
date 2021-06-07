@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     Rigidbody rigidBody;
     public float speed;
+    public float Lowspeed;
+    public float nonspeed;
+
     private Vector3 player_pos;
 
     void Start()
@@ -35,6 +38,15 @@ public class Player : MonoBehaviour
             x += speed;
         }
         rigidBody.position += new Vector3(x, 0, z) * Time.deltaTime;
+        if((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+        {
+            speed = Lowspeed;
+        }
+        else
+        {
+            speed = nonspeed;
+        }
+
 
         player_pos = transform.position; 
 
