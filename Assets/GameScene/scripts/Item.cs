@@ -6,7 +6,6 @@ public class Item : MonoBehaviour
 {
     public bool get;
     GameObject Player;
-    GameObject Obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +19,9 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.GetComponent<shot>() != null) {
 
-            other.GetComponent<shot>().Power++;
-            Obj = (GameObject)Instantiate(Resources.Load("fannel"), transform.position, Quaternion.identity);
-            Obj.transform.parent = Player.transform;
+            other.GetComponent<shot>().UpPower();
             Destroy(this.gameObject);
         }
     }

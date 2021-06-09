@@ -8,6 +8,8 @@ public class inst_fan : MonoBehaviour
     GameObject Obj;
     public bool once = false;
     public int fannnelint = 0;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class inst_fan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(gameObject.name);
         /*switch (fannnelint)
         {
             default:
@@ -41,10 +44,14 @@ public class inst_fan : MonoBehaviour
         }*/
     }
 
+    bool fla;
+
     private void OnTriggerEnter(Collider other)
     {
+        if(!fla)
         if (other.GetComponent<Item>() != null)
         {
+                fla = true;
             //fannnelint++;
             Obj = (GameObject)Instantiate(Resources.Load("fannel"), transform.position, Quaternion.identity);
             Obj.transform.parent = Player.transform;

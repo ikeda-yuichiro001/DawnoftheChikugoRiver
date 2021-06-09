@@ -19,7 +19,7 @@ public class fannel : shot
         {
             timecount = 0;
         }
-        if (Input.GetButton("z") && timecount % 25 == 0)
+        if (Input.GetKey(KeyCode.Z) && timecount % 10 == 0)
         {
             shoot(0);
         }
