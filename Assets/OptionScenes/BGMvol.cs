@@ -15,14 +15,23 @@ public class BGMvol : OptionButton
     // Update is called once per frame
     void Update()
     {
-        if (point == 0 && Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            bgm.volume += 0.01f;
-        }
 
-        if (point == 0 && Input.GetKeyDown(KeyCode.LeftArrow))
+        if(point == 0)
         {
-            bgm.volume -= 0.01f;
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                bgm.volume += 0.01f;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                bgm.volume -= 0.01f;
+            }
+        }
+        
+
+        if (point == 2 && Input.GetKeyDown(KeyCode.Z))
+        {
+            bgm.volume = 0.50f;
         }
     }
 }

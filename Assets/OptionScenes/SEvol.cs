@@ -15,16 +15,21 @@ public class SEvol : OptionButton
     // Update is called once per frame
     void Update()
     {
-        se.volume = 0;
-    
-        if (point == 1 && Input.GetKeyDown(KeyCode.RightArrow))
+        if (point == 1)
         {
-            se.volume += 0.01f;
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                se.volume += 0.01f;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                se.volume -= 0.01f;
+            }
         }
 
-        if (point == 1 && Input.GetKeyDown(KeyCode.LeftArrow))
+        if (point == 2 && Input.GetKeyDown(KeyCode.Z))
         {
-            se.volume -= 0.01f;
+            se.volume = 0.50f;
         }
     }
 }
