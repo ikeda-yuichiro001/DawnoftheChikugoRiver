@@ -12,21 +12,21 @@ public class OptionButton : MonoBehaviour
     Image Decision;
     Text Number;
     Text Number2;
-    Text NumberUp;
-    Text NumberDown;
-    /*Text NumberUp2;
-    Text NumberDown2;*/
     Text BGM;
     Text SE;
     Text Default;
     Text Quit;
-    public int point = 0;
-    /*public int number_point=0;
-    public int number_point2 = 0;
-    private int value;*/
+    public static int point = 0;
+   // public static int point2 = 0;
+    public Text Textbgmvol;
+    protected float bgmvol;
+    public Text Textsevol;
+    protected float sevol;
 
     void Start()
     {
+        bgmvol = 0;
+        sevol = 0;
         Decision = GameObject.Find("Canvas/Panel/Decision").GetComponent<Image>();
         BGM = GameObject.Find("Canvas/Panel/Decision/BGM").GetComponent<Text>();
         SE = GameObject.Find("Canvas/Panel/Decision/SE").GetComponent<Text>();
@@ -34,10 +34,6 @@ public class OptionButton : MonoBehaviour
         Quit = GameObject.Find("Canvas/Panel/Decision/Quit").GetComponent<Text>();
         Number = GameObject.Find("Canvas/Panel/Decision/Number").GetComponent<Text>();
         Number2 = GameObject.Find("Canvas/Panel/Decision/Number2").GetComponent<Text>();
-        NumberUp = GameObject.Find("Canvas/Panel/Decision/NumberUp").GetComponent<Text>();
-        NumberDown = GameObject.Find("Canvas/Panel/Decision/NumberDown").GetComponent<Text>();
-        /*NumberUp2 = GameObject.Find("Canvas/Panel/Decision/NumberUp2").GetComponent<Text>();
-        NumberDown2 = GameObject.Find("Canvas/Panel/Decision/NumberDown2").GetComponent<Text>();*/
     }
 
     //サウンド設定Buttonの色変化と決定キーを押したときの処理
@@ -62,7 +58,7 @@ public class OptionButton : MonoBehaviour
 
         if (point == -1)
         {
-            point = 1;
+            point = 4;
         }
 
 
@@ -114,10 +110,45 @@ public class OptionButton : MonoBehaviour
             Decision.color = new Color32(70, 70, 70, 100);
         }
 
-
-        if (Input.GetKeyDown(KeyCode.Z))
+        //BGM・SEvol用のText移動
+        /*if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            point2--;
         }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            point2++;
+        }
+
+        if(point2 == 2)
+        {
+            point2 = 0;
+        }
+
+        if(point2 == -1)
+        {
+            point2 = 1;
+        }
+
+        if (point2 == 0)
+        {
+            BGM.color = Color.red;
+        }
+        else
+        {
+            BGM.color = new Color32(70, 70, 70, 100);
+        }
+
+
+        if (point2 == 1)
+        {
+            SE.color = Color.red;
+        }
+        else
+        {
+            SE.color = new Color32(70, 70, 70, 100);
+        }*/
 
 
         //決定Buttonを押したらタイトル画面へ
@@ -129,14 +160,56 @@ public class OptionButton : MonoBehaviour
             }
 
         }
+
+        //BGM音量増減
+        Textbgmvol.text = string.Format("vol {0:000} ",bgmvol);
+         if (point == 0 && Input.GetKeyDown(KeyCode.RightArrow))
+         {
+            bgmvol++;
+         }
+
+        if (point == 0 && Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            bgmvol--;
+        }
+
+        if (bgmvol < 0) bgmvol = 0;
+        if (bgmvol > 100) bgmvol = 100;
+
+
+        //SE音量増減
+        Textsevol.text = string.Format("vol {0:000} ", sevol);
+        if (point == 1 && Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            sevol++;
+        }
+
+        if (point == 1 && Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            sevol--;
+        }
+
+        if (sevol < 0) sevol = 0;
+        if (sevol > 100) sevol = 100;
+        
+
+
+        //Defalutの処理
+        if(point == 2 && Input.GetKeyDown(KeyCode.Z))
+        {
+            bgmvol = 50;
+            sevol = 50;
+        }
     }
 }
 
 
+//BGMとSEの数字格納庫
 public class Option
 {
-    static int bgm;
-    public static int BGM
+    //bgmが呼ばれたらgetへ行く　BGMが呼ばれたらsetへ行く
+    static float bgm;
+    public static float BGM
     {
         get
         {
@@ -150,8 +223,9 @@ public class Option
         }
     }
 
-    static int se;
-    public static int SE
+    //seが呼ばれたらgetへ行く　SEが呼ばれたらsetへ行く
+    static float se;
+    public static float SE
     {
         get
         {
@@ -165,3 +239,6 @@ public class Option
         }
     }
 }
+
+
+
