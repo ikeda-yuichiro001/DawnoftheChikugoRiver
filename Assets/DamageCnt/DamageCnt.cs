@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyDamageCnt : MonoBehaviour
 {
@@ -31,6 +32,14 @@ public class EnemyDamageCnt : MonoBehaviour
                 other.GetComponent<Enemy>().HP--;
                 IsHit = true;
             }
+        }
+        if(GetComponent<Player>().HP <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else if(GetComponent<Enemy>().HP <= 0)
+        {
+            SceneManager.LoadScene("NextStage");
         }
     }
 }
