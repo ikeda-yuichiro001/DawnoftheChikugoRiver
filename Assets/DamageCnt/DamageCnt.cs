@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyDamageCnt : MonoBehaviour
 {
-    public bool IsHit;
+    public bool ishit;
     public bool IsPlayer;
     // Start is called before the first frame update
     void Start()
@@ -20,20 +20,13 @@ public class EnemyDamageCnt : MonoBehaviour
     }
     public void OnTriggerStay(Collider other)//ダメージ処理
     {
-        if (!IsHit)
+        if (!ishit && other.GetComponent<shot>() != null)
         {
-            if (!IsPlayer && other.GetComponent<Player>() != null)
-            {
-                other.GetComponent<Player>().HP--;
-                IsHit = true;
-            }
-            else if (IsPlayer && other.GetComponent<Enemy>() != null)
-            {
-                other.GetComponent<Enemy>().HP--;
-                IsHit = true;
-            }
+            other.GetComponent<Player>().HP--;
+            Destroy(gameObject);
+            ishit = true;
         }
-        if(GetComponent<Player>().HP <= 0)
+        if (GetComponent<Player>().HP <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
