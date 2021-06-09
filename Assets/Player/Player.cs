@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float Lowspeed;
     public float nonspeed;
+    public int HP = 5;
 
     private Vector3 player_pos;
 
