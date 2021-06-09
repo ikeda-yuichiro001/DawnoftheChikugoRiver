@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class vol : MonoBehaviour
+public class BGMvol : OptionButton
 {
     AudioSource bgm;
     // Start is called before the first frame update
@@ -15,6 +15,14 @@ public class vol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bgm.volume = 0;
+        if (point == 0 && Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            bgm.volume += 0.01f;
+        }
+
+        if (point == 0 && Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            bgm.volume -= 0.01f;
+        }
     }
 }
