@@ -26,27 +26,34 @@ public class DamageCnt : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (GetComponent<Player>().HP <= 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-        else if (GetComponent<Enemy>().HP <= 0)
-        {
-            SceneManager.LoadScene("NextStage");
-        }
+        
+
     }
-    public void OnTriggerStay(Collider other)//ダメージ処理
+    public void OnTriggerEnter(Collider other)//ダメージ処理
     {
         if (!IsHit)
         {
             if (!IsPlayer && other.GetComponent<Player>() != null)
             {
                 other.GetComponent<Player>().HP--;
+                
+                if (other.GetComponent<Player>().HP <= 0)
+                {
+
+                    SceneManager.LoadScene("GameOver");
+                }
                 IsHit = true;
             }
             else if (IsPlayer && other.GetComponent<Enemy>() != null)
             {
                 other.GetComponent<Enemy>().HP--;
+                
+
+
+                if (other.GetComponent<Enemy>().HP <= 0)
+                {
+                    SceneManager.LoadScene("NextStage");
+                }
                 IsHit = true;
             }
         }

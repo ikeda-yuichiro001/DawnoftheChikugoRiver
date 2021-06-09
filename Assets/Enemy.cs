@@ -35,18 +35,7 @@ public class Enemy : MonoBehaviour
 
 
 
-            case AttackPattern.Double:
-                {
-                    cnt += Time.deltaTime * Speed;
-                    if (cnt >= 1)
-                    {
-                        Instantiate(Resources.Load("Barrage_"), transform.position + new Vector3(1, 0, 0) * PlacementDistance, Quaternion.identity);
-                        Instantiate(Resources.Load("Barrage_"), transform.position + new Vector3(-1, 0, 0) * PlacementDistance, Quaternion.identity);
-                        cnt = 0;
-                    }
-
-                }
-                break;
+           
 
             case AttackPattern.Round:
                 {
