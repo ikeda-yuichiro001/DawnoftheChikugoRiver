@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 911226029}
   - component: {fileID: 911226028}
   - component: {fileID: 911226027}
+  - component: {fileID: 911226030}
   m_Layer: 0
   m_Name: BGMvolume
   m_TagString: Untagged
@@ -662,6 +663,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911226030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911226026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d566259ffe90b044b54ff27ba4d1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioType: 0
 --- !u!1 &1020808452
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187555090}
   - component: {fileID: 1187555089}
+  - component: {fileID: 1187555088}
   m_Layer: 0
   m_Name: SEvolume
   m_TagString: Untagged
@@ -754,6 +769,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1187555088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187555087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d566259ffe90b044b54ff27ba4d1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioType: 1
 --- !u!82 &1187555089
 AudioSource:
   m_ObjectHideFlags: 0
