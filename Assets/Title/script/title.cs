@@ -61,7 +61,7 @@ public class title : MonoBehaviour
                     SceneManager.LoadScene("CollectionScene");
                     break;
                 case 2:
-                    SceneManager.LoadScene("OptionScene");
+                    SceneManager.LoadScene("Option");
                     break;
                 default:
                     Application.Quit();
