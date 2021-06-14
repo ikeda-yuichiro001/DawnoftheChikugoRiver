@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fannel : shot
+public class fannel : MonoBehaviour
 {
+    int timecount = 0;
     //bool get = false;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class fannel : shot
         }
         if (Input.GetKey(KeyCode.Z) && timecount % 10 == 0)
         {
-            shoot(0);
+            Instantiate(Resources.Load("bullet"), transform.position, Quaternion.identity);
         }
     }
 }

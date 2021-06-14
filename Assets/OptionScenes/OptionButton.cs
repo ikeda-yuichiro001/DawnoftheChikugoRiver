@@ -11,7 +11,7 @@ public class OptionButton : MonoBehaviour
     {
         Option.BGM = PlayerPrefs.GetFloat("Option.BGM",0.9f );
         Option.SE = PlayerPrefs.GetFloat("Option.SE",0.9f);
-        Debug.Log("Initialized");
+        //Debug.Log("Initialized");
     }
 
     //各定義
