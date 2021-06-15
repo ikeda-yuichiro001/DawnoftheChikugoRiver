@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DamageCnt : MonoBehaviour
+public class DamageCnt2 : MonoBehaviour
 {
     Rigidbody rigidBody;
     public Vector2 move;
     float cnt;
     public float LifeTime;
     public bool IsHit;
-    public bool IsPlayer;
+    public bool IsEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class DamageCnt : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate() 
     {
         rigidBody.position += new Vector3(move.x, 0, move.y) * Time.deltaTime;
         cnt += (Mathf.Abs(move.x) + Mathf.Abs(move.y)) * Time.deltaTime;
@@ -27,16 +27,16 @@ public class DamageCnt : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void OnTriggerEnter(Collider other)//ダメージ処理
+    public void OnTriggerEnter(Collider other)
     {
         if (!IsHit)
         {
-            if (!IsPlayer && other.GetComponent<Player>() != null)
+            if (!IsEnemy && other.GetComponent<Enemy>() != null)
             {
-                other.GetComponent<Player>().HP--;
-                if (other.GetComponent<Player>().HP <= 0)
+                other.GetComponent<Enemy>().HP--;
+                if (other.GetComponent<Enemy>().HP <= 0)
                 {
-                    SceneManager.LoadScene("GameOver");
+                    SceneManager.LoadScene("NextStage");
                 }
                 IsHit = true;
             }

@@ -26,17 +26,10 @@ public class Enemy : MonoBehaviour
                     cnt += Time.deltaTime * Speed;
                     if (cnt >= 1)
                     {
-                        GameObject g = Instantiate(Resources.Load("Barrage_"), transform.position, Quaternion.identity) as GameObject;
                         cnt = 0;
                     }
                 }
                 break;
-
-
-
-
-           
-
             case AttackPattern.Round:
                 {
                     cnt += Time.deltaTime * Speed;
@@ -44,7 +37,7 @@ public class Enemy : MonoBehaviour
                     {
                         for (int v = 0; v < 40; v++)
                         {
-                            GameObject a = Instantiate(Resources.Load("Barrage_"), transform.position, Quaternion.identity) as GameObject;
+                            GameObject a = Instantiate(Resources.Load("barrage"), transform.position, Quaternion.identity) as GameObject;
                             a.GetComponent<DamageCnt>().move = new Vector2(Mathf.Sin(v * 1f / 40 * Mathf.PI * 2), Mathf.Cos(v * 1f / 40 * Mathf.PI * 2));
                         }
                         cnt = 0;

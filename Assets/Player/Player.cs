@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public float Lowspeed;
     public float nonspeed;
     public int HP = 5;
-
     private Vector3 player_pos;
 
     void Start()
