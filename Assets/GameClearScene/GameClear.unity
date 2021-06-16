@@ -574,7 +574,7 @@ MonoBehaviour:
     <size=30>Yuki MIMURA</size>
 
 
-    <color=red><size=45>Rogo Desigh</size></color>
+    <color=red><size=45>Logo Desigh</size></color>
 
 
     <size=30>Shingo AKANO</size>
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f000e250a42a8f045bc50698470eeb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 50
   goal: 3500
 --- !u!1 &1433570221
 GameObject:
