@@ -26,7 +26,11 @@ public class shot : MonoBehaviour
     {
         int L = Power / 2;
         Power++;
-        if (Power >= 9) Power = 8;
+        if (Power >= 9)
+        {
+            Debug.Log("+10000point");
+            Power = 8;
+        }
         if (Power / 2 != L)
         {
             fannels[N] = (GameObject)Instantiate(Resources.Load("fannel"), transform.position, Quaternion.identity);
@@ -58,7 +62,7 @@ public class shot : MonoBehaviour
             Debug.Log(Power);
         }
 
-        Debug.Log(Power);
+        //Debug.Log(Power);
 
         if (Input.GetKeyDown(KeyCode.U))
         {
