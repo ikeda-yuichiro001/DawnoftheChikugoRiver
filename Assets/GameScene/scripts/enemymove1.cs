@@ -18,6 +18,7 @@ public class enemymove1 : MonoBehaviour
         if (hp <= 0)
         {
             Instantiate(Resources.Load("Item"), transform.position,Quaternion.identity);
+            Debug.Log("+100point");
             Destroy(gameObject);
         }
     }

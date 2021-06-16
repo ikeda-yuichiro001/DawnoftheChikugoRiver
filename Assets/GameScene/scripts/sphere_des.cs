@@ -21,6 +21,7 @@ public class sphere_des : MonoBehaviour
         if (!ishit && other.GetComponent<enemymove1>() != null)
         {
             other.GetComponent<enemymove1>().hp--;
+            Debug.Log("+10point");
             Destroy(gameObject);
             ishit = true;
         }
