@@ -44,7 +44,7 @@ public class SceneContollor : MonoBehaviour
         //1～45体と戻るボタンを上下でループさせる処理
         if (point == 51)point = 0;
         if (point == -1)point = 50;
-        //左右で戻るボタンに飛ぶ処理
+        //左右で"戻るボタン"に飛ぶ処理
         if (point2 == 1)
         {
             point = 50;
@@ -61,11 +61,27 @@ public class SceneContollor : MonoBehaviour
             
         }
         //1～45体の魚の色の処理
-        if (point == 0) Fish1.color = Color.green;
-        else Fish1.color = Color.white;
+        if (point == 0)
+        {
+            Fish1.color = Color.green;
+            var Picture1 = Resources.Load("Picture1") as GameObject;
+        }
+        else
+        {
+            Fish1.color = Color.white;
+            Destroy(this.gameObject);
+        }
 
-        if (point == 1) Fish2.color = Color.green;
-        else Fish2.color = Color.white;
+        if (point == 1)
+        {
+            Fish2.color = Color.green;
+            var Picture2 = Resources.Load("Picture2") as GameObject;
+        }
+        else
+        {
+            Fish2.color = Color.white;
+            Destroy(this.gameObject);
+        }
 
         if (point == 2) Fish3.color = Color.green;
         else Fish3.color = Color.white;
@@ -85,15 +101,15 @@ public class SceneContollor : MonoBehaviour
         if(point >= 0)
 
         //戻るボタンの色の処理
-        if (point == 50)BackButton.color = Color.red;
-        else BackButton.color = Color.white;
         //戻るボタンを選択したときタイトルに戻る処理
         if(point == 50)
         {
+            BackButton.color = Color.red;
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 SceneManager.LoadScene("title");
             }
         }
+        else BackButton.color = Color.white;
     }
 }
