@@ -1858,6 +1858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Picture2
       objectReference: {fileID: 0}
+    - target: {fileID: 5961391625812924574, guid: 721486d2b68e68e4b85a308a8fe496c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5961391625812924575, guid: 721486d2b68e68e4b85a308a8fe496c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1976,6 +1981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Picture1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705816244373955700, guid: cdb39b678b97fc04483d17a6253942fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8705816244373955701, guid: cdb39b678b97fc04483d17a6253942fc,
         type: 3}

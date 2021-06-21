@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,4 +40,4 @@ public class next
         else
         {
             RawImage.url = "file///mov+StageNumber+.mp4";
-        }  
+        } */ 
