@@ -44,45 +44,72 @@ public class SceneContollor : MonoBehaviour
         //1～45体と戻るボタンを上下でループさせる処理
         if (point == 51)point = 0;
         if (point == -1)point = 50;
-        //左右で戻るボタンに飛ぶ処理
-        if (point2 == 1)point = 50;
-        if (point2 == -1)point = 50;
+        //左右で"戻るボタン"に飛ぶ処理
+        if (point2 == 1)
+        {
+            point = 50;
+            point2--;
+        }
+        if (point2 == -1)
+        {
+            point = 50;
+            point2++;
+        }
 
         for (int p = 0; p < 50; p++)
         {
             
         }
         //1～45体の魚の色の処理
-        if (point == 0) Fish1.color = Color.red;
-        else Fish1.color = new Color32(70, 70, 70, 100);
+        if (point == 0)
+        {
+            Fish1.color = Color.green;
+            var Picture1 = Resources.Load("Picture1") as GameObject;
+        }
+        else
+        {
+            Fish1.color = Color.white;
+            Destroy(this.gameObject);
+        }
 
-        if (point == 1) Fish2.color = Color.red;
-        else Fish2.color = new Color32(70, 70, 70, 100);
+        if (point == 1)
+        {
+            Fish2.color = Color.green;
+            var Picture2 = Resources.Load("Picture2") as GameObject;
+        }
+        else
+        {
+            Fish2.color = Color.white;
+            Destroy(this.gameObject);
+        }
 
-        if (point == 2) Fish3.color = Color.red;
-        else Fish3.color = new Color32(70, 70, 70, 100);
+        if (point == 2) Fish3.color = Color.green;
+        else Fish3.color = Color.white;
 
-        if (point == 3) Fish4.color = Color.red;
-        else Fish4.color = new Color32(70, 70, 70, 100);
+        if (point == 3) Fish4.color = Color.green;
+        else Fish4.color = Color.white;
 
-        if (point == 4) Fish5.color = Color.red;
-        else Fish5.color = new Color32(70, 70, 70, 100);
+        if (point == 4) Fish5.color = Color.green;
+        else Fish5.color = Color.white;
 
-        if (point == 5) Fish6.color = Color.red;
-        else Fish6.color = new Color32(70, 70, 70, 100);
+        if (point == 5) Fish6.color = Color.green;
+        else Fish6.color = Color.white;
 
-        if (point == 6) Fish7.color = Color.red;
-        else Fish7.color = new Color32(70, 70, 70, 100);
+        if (point == 6) Fish7.color = Color.green;
+        else Fish7.color = Color.white;
+
+        if(point >= 0)
+
         //戻るボタンの色の処理
-        if (point == 50)BackButton.color = Color.red;
-        else BackButton.color = new Color32(70, 70, 70, 100);
         //戻るボタンを選択したときタイトルに戻る処理
         if(point == 50)
         {
+            BackButton.color = Color.red;
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 SceneManager.LoadScene("title");
             }
         }
+        else BackButton.color = Color.white;
     }
 }

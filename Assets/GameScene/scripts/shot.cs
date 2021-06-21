@@ -56,7 +56,7 @@ public class shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        /*if (Input.GetKeyDown(KeyCode.Y))
         {
             UpPower();
             Debug.Log(Power);
@@ -68,7 +68,7 @@ public class shot : MonoBehaviour
         {
             DownPower();
             Debug.Log(Power);
-        }
+        }*/
         timecount++;
         if (timecount == 3)
         {
