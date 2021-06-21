@@ -21,12 +21,13 @@ public class MovieScene : MonoBehaviour
     {
         time += Time.deltaTime;
         RawImage.url = "file///mov+StageNumber+.mp4";
-        if (Time.deltaTime >= /ムービーの長さ/ +1)
+        if (Time.deltaTime >= /*ムービーの長さ*/ +1)
         {
             if (SceneLoader.IsFade) return;
             SceneLoader.Load("stage+StageNumber");
         }
     }
+<<<<<<< HEAD
 }
 
 public class next
@@ -41,3 +42,6 @@ public class next
         {
             RawImage.url = "file///mov+StageNumber+.mp4";
         } */ 
+=======
+}
+>>>>>>> a7fa84c4e878b56c8fdcb8054647740cb95b9b5a
