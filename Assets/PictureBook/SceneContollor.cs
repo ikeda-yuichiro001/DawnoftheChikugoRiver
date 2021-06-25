@@ -16,8 +16,6 @@ public class SceneContollor : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i <= Fish.Length; i++)
-        {
             Fish[0] = GameObject.Find("Canvas/Panel/Fish1").GetComponent<Image>();
             Fish[1] = GameObject.Find("Canvas/Panel/Fish2").GetComponent<Image>();
             Fish[2] = GameObject.Find("Canvas/Panel/Fish3").GetComponent<Image>();
@@ -35,7 +33,6 @@ public class SceneContollor : MonoBehaviour
             Fish[14] = GameObject.Find("Canvas/Panel/Fish15").GetComponent<Image>();
             Fish[15] = GameObject.Find("Canvas/Panel/Fish16").GetComponent<Image>();
             Fish[16] = GameObject.Find("Canvas/Panel/Fish17").GetComponent<Image>();
-        }
 
 
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
@@ -57,40 +54,12 @@ public class SceneContollor : MonoBehaviour
         if (point2 == -1){point = 50;point2++;}Debug.Log(Panel_pos);
         //スクロール
 
-        //1～45体の色
-        if (point == 0)
+        //1～50体の色
+        for (int i = 0; i <= 16; i++)//Fish.Length
         {
-            Fish[0].color = Color.green;
-            if (Input.GetKeyDown(KeyCode.KeypadEnter)) Resources.Load("Picture1");
+            if (point == i)Fish[i].color = Color.green;
+            else Fish[i].color = Color.white;
         }
-        else Fish[0].color = Color.white;
-
-        if (point == 1)
-        {
-            Fish[1].color = Color.green;
-            if (Input.GetKeyDown(KeyCode.KeypadEnter)) Resources.Load("Picture1");
-        }
-        else Fish[1].color = Color.white;
-
-        if (point == 2)
-        {
-            Fish[2].color = Color.green;
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-
-            }
-        }
-        else Fish[2].color = Color.white;
-
-        if (point == 3)
-        {
-            Fish[3].color = Color.green;
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-
-            }
-        }
-        else Fish[3].color = Color.white;
         //戻るボタンの色の処理
         //戻るボタンを選択したときタイトルに戻る処理
         if (point == 50)
