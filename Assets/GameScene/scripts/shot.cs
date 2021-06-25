@@ -39,6 +39,7 @@ public class shot : MonoBehaviour
             Debug.Log("powerup");
             
         }
+        Debug.Log(Power);
     }
     public void DownPower()
     {
@@ -111,13 +112,13 @@ public class shot : MonoBehaviour
                     break;
 
                 case 5:
-                for (int v = -2; v < 3; v++)
-                {
-                    Fire(transform.position, new Vector2(Mathf.Sin(v * 5f * Mathf.PI / q) * 5, Mathf.Cos(v * 5f * Mathf.PI / q) * 5));
-                }
-                shoot(1);
-                shoot(-1);
-            break;
+                    for (int v = -2; v < 3; v++)
+                    {
+                        Fire(transform.position, new Vector2(Mathf.Sin(v * 5f * Mathf.PI / q) * 5, Mathf.Cos(v * 5f * Mathf.PI / q) * 5));
+                    }
+                    shoot(1);
+                    shoot(-1);
+                    break;
           
         }
     }

@@ -1347,6 +1347,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13f2404027bf174c9edfea3fcdbc57f, type: 3}
+--- !u!1 &1709556134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4080646365285996228, guid: d5e5f90c5e773274792f93db6f956d86,
+    type: 3}
+  m_PrefabInstance: {fileID: 7407650045326084088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1709556140
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709556134}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &5447978143301424148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,7 +1537,7 @@ PrefabInstance:
     - target: {fileID: 5673814026070227409, guid: d5e5f90c5e773274792f93db6f956d86,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.17
       objectReference: {fileID: 0}
     - target: {fileID: 5673814026070227409, guid: d5e5f90c5e773274792f93db6f956d86,
         type: 3}
