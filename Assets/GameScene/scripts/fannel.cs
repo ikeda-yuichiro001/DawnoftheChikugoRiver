@@ -22,7 +22,7 @@ public class fannel : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Z) && timecount % 10 == 0)
         {
-            Instantiate(Resources.Load("bullet"), transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("fan_bul"), transform.position, Quaternion.identity);
         }
     }
 }

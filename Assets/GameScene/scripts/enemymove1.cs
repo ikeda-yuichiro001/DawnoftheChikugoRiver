@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemymove1 : MonoBehaviour
 {
+    int w = 0, a = 0;
     public int hp = 10;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,22 @@ public class enemymove1 : MonoBehaviour
         GetComponent<Rigidbody>().position += new Vector3(0,0,-0.1f);
         if (hp <= 0)
         {
-            Instantiate(Resources.Load("Item"), transform.position,Quaternion.identity);
+
+            while (w<50){
+                Debug.Log(a);
+                Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3)), Quaternion.identity);
+                }else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+            
             Debug.Log("+100point");
             Destroy(gameObject);
         }

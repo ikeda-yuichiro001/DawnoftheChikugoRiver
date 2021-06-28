@@ -36,10 +36,10 @@ public class shot : MonoBehaviour
             fannels[N] = (GameObject)Instantiate(Resources.Load("fannel"), transform.position, Quaternion.identity);
             fannels[N].transform.parent = transform;
             N++;
-            Debug.Log("powerup");
+            //Debug.Log("powerup");
             
         }
-        Debug.Log(Power);
+        //Debug.Log(Power);
     }
     public void DownPower()
     {
