@@ -17,10 +17,12 @@ public class player_ctrl : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             slow = 0.4f;
+            GetComponent<BoxCollider>().size = new Vector3(2,2,2);
         }
         else
         {
             slow = 1f;
+            GetComponent<BoxCollider>().size = new Vector3(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
