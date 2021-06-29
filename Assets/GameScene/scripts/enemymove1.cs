@@ -25,10 +25,10 @@ public class enemymove1 : MonoBehaviour
 
                 if (a % 2 == 0)
                 {
-                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity);
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
                 }else
                 {
-                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity);
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
                 }
                 a = Random.Range(0, 99);
                 w = Random.Range(0, 99);
