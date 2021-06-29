@@ -25,17 +25,17 @@ public class SceneContollor : MonoBehaviour
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
         BackButton = GameObject.Find("Canvas/BackButton").GetComponent<Image>();
     }
-    
+
     void Update()
     {
         //矢印キーで動かす処理
         if (Input.GetKeyDown(KeyCode.UpArrow)) { point--; Panel_pos.y = a - h; xxx.position += new Vector3(0, Panel_pos.y, 0); }
-        if (Input.GetKeyDown(KeyCode.DownArrow)){point++; Panel_pos.y = a + h ; xxx.position += new Vector3(0, Panel_pos.y, 0); }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))point2--;
-        if (Input.GetKeyDown(KeyCode.RightArrow))point2++;
+        if (Input.GetKeyDown(KeyCode.DownArrow)) { point++; Panel_pos.y = a + h; xxx.position += new Vector3(0, Panel_pos.y, 0); }
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) point2--;
+        if (Input.GetKeyDown(KeyCode.RightArrow)) point2++;
         //1～50体と戻るボタンを上下でループさせる処理
-        if (point == 51)point = 0;
-        if (point == -1)point = 50;
+        if (point == 51){ point = 0;  xxx.position = new Vector2(xxx.position.x, 125); }
+        if (point == -1){ point = 50; xxx.position = new Vector2(xxx.position.x, 1410); }
         //左右で"戻るボタン"に飛ぶ処理
         if (point2 == 1){point = 50;point2--;}
         if (point2 == -1){point = 50;point2++;}Debug.Log(Panel_pos);
@@ -43,7 +43,14 @@ public class SceneContollor : MonoBehaviour
         //1～50体の色
         for (int i = 0; i < Fish.Length; i++)
         {
-            if (point == i) { Fish[i].color = Color.green; }
+            if (point == i)
+            {
+                Fish[i].color = Color.green;
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    Resources.Load("Picture"+ i);
+                }
+            }
             else Fish[i].color = Color.white;
         } 
         
@@ -52,7 +59,7 @@ public class SceneContollor : MonoBehaviour
         if (point == 50)
         {
             BackButton.color = Color.red;
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 SceneManager.LoadScene("title");
             }
