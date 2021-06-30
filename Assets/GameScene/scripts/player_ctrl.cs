@@ -40,5 +40,12 @@ public class player_ctrl : MonoBehaviour
         {
             GetComponent<Rigidbody>().position += new Vector3(0, 0, -1) * slow;
         }
+        if (transform.position.z > 33)  transform.position = new Vector3(transform.position.x, transform.position.y, 32);
+        if (transform.position.z < -16) transform.position = new Vector3(transform.position.x, transform.position.y, -15);
+        if (transform.position.x > 34)  transform.position = new Vector3(33, transform.position.y, transform.position.z);
+        if (transform.position.x < -28) transform.position = new Vector3(-27, transform.position.y, transform.position.z);
+        {
+
+        }
     }
 }

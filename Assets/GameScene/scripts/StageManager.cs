@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    int stage = 1;
+    public int stage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,13 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(stage <= 4)
+        {
+            stage++;
+        }
+        else
+        {
+            stage = 5;
+        }
     }
 }
