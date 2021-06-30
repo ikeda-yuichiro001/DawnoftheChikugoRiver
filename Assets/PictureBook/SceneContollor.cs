@@ -10,7 +10,7 @@ public class SceneContollor : MonoBehaviour
     Image Panel;
     RectTransform xxx;
     Image [] Fish = new Image[50];
-
+    
     public float point = 0,point2 = 0,a = 0,h = 30;
     private Vector2 Panel_pos;
 
@@ -23,6 +23,7 @@ public class SceneContollor : MonoBehaviour
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
         BackButton = GameObject.Find("Canvas/BackButton").GetComponent<Image>();
+
     }
 
     void Update()

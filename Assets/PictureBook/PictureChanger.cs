@@ -16,7 +16,7 @@ public class PictureChanger : SceneContollor
     // Update is called once per frame
     void Update()
     {
-        image.sprite = Resources.Load<Sprite>("0" + point);
+        image.sprite = Resources.Load<Sprite>("I" + point);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))  point--;
         if (Input.GetKeyDown(KeyCode.DownArrow))point++;
