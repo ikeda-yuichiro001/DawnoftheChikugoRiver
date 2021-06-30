@@ -20,7 +20,6 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[t] = GameObject.Find("Canvas/Panel/Fish" + t).GetComponent<Image>();
         }
-
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
         BackButton = GameObject.Find("Canvas/BackButton").GetComponent<Image>();
@@ -38,7 +37,7 @@ public class SceneContollor : MonoBehaviour
         if (point == -1){ point = 50; xxx.position = new Vector2(xxx.position.x, 1410); }
         //左右で"戻るボタン"に飛ぶ処理
         if (point2 == 1){point = 50;point2--;}
-        if (point2 == -1){point = 50;point2++;}Debug.Log(Panel_pos);
+        if (point2 == -1){point = 50;point2++;}
         //スクロール
         //1～50体の色
         for (int i = 0; i < Fish.Length; i++)
@@ -46,10 +45,6 @@ public class SceneContollor : MonoBehaviour
             if (point == i)
             {
                 Fish[i].color = Color.green;
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    Resources.Load("Picture"+ i);
-                }
             }
             else Fish[i].color = Color.white;
         } 
@@ -65,5 +60,15 @@ public class SceneContollor : MonoBehaviour
             }
         }
         else BackButton.color = Color.white;
+    }
+    //魚の名前と説明のデータ
+    static void Main(string[] args)
+    {
+        string FishName0 = "";
+        string[] nameData =
+        {
+            FishName0 + ":" + "",
+
+        };
     }
 }
