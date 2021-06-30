@@ -24,6 +24,7 @@ public class TextChanger : SceneContollor
         if (point2 == 1) { point = 50; point2--; }
         if (point2 == -1) { point = 50; point2++; }
 
+        if (kill[i] == false) text.text = "まだこの敵を他をしていないため情報がないよ。";
         if (point == 0) text.text = "魚";
         if (point == 1) text.text = "さかな";
     }

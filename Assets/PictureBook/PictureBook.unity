@@ -452,7 +452,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 6.56
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1374,10 +1374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757dd35d8078cbf46b932c0190ccf026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kill: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   point: 0
   point2: 0
   a: 0
   h: 30
+  i: 0
 --- !u!1 &428613246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,10 +3162,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c195ac126a149224bb5e0f4f8cbfddf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kill: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   point: 0
   point2: 0
   a: 0
   h: 30
+  i: 0
   image: {fileID: 675647953}
 --- !u!1 &692221495
 GameObject:
@@ -5724,6 +5728,7 @@ GameObject:
   - component: {fileID: 1118891355}
   - component: {fileID: 1118891357}
   - component: {fileID: 1118891356}
+  - component: {fileID: 1118891358}
   m_Layer: 5
   m_Name: Syoukaibun
   m_TagString: Untagged
@@ -5763,7 +5768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5792,6 +5797,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118891354}
   m_CullTransparentMesh: 0
+--- !u!114 &1118891358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118891354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d27758c6582fe47a397a7ec8426ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  point: 0
+  point2: 0
+  a: 0
+  h: 30
+  i: 0
+  text: {fileID: 1118891356}
 --- !u!1 &1127936090
 GameObject:
   m_ObjectHideFlags: 0
