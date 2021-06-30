@@ -19,7 +19,7 @@ public class enemyShotPattern : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!ishit && other.GetComponent<player_ctrl>() != null)
+        if (!ishit && other.GetComponent<player_ctrl>().GetComponent<SphereCollider>() != null)
         {
             Destroy(Player);
             Destroy(gameObject);
