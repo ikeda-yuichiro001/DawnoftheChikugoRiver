@@ -14,13 +14,6 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(stage <= 4)
-        {
-            stage++;
-        }
-        else
-        {
-            stage = 5;
-        }
+          
     }
 }

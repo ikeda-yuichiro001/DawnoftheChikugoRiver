@@ -8,22 +8,31 @@ public class MovieScene : StageManager
 {
     public VideoPlayer RawImage;
     float time = 0f;
+    VideoClip clip;
 
     // Start is called before the first frame update
     void Start()
     {
-        RawImage = GameObject.Find("RawImage").GetComponent<VideoPlayer>();
+        RawImage = GameObject.Find("Canvas/RawImage").GetComponent<VideoPlayer>();
+        clip = Resources.Load("mov_hts-samp00" + stage) as VideoClip;
+        GameObject obj = (GameObject)Resources.Load("mov_hts-samp00" + stage);
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        RawImage.url = "file://C:/Users/Owner/Desktop/mp4file_sample/mov_hts-samp00"+ stage +".mp4";
+        RawImage.clip= clip;
         if (Time.deltaTime >= /*ムービーの長さ*/ +1)
         {
             if (SceneLoader.IsFade) return;
-            SceneLoader.Load("title");
+            SceneLoader.Load("battle"+stage);
         }
     }
+    public void playvideo()
+    {
+        RawImage.clip = clip;
+        RawImage.Play();
+    }
 }
+ 
