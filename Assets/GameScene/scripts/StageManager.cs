@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageManager : MonoBehaviour
+public class StageManager 
 {
-    public int stage = 1;
+    public static int stage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +14,6 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(stage <= 4)
-        {
-            stage++;
-        }
-        else
-        {
-            stage = 5;
-        }
+          
     }
 }

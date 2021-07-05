@@ -6,7 +6,11 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/LogoScens/Logo_Anim.anim
+  m_Name: Logo_Anim
+=======
   m_Name: Fade
+>>>>>>> 4b674b4917cb6eca7ce2d0cc16c2b824d938cc3a:Assets/LogoScens/Fade.anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
