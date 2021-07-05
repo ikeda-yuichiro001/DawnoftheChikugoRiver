@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameClearScene/GameClear.unity
     guid: 143999c659c091f4db0d701367847f46
+  - enabled: 1
+    path: Assets/StageScene_1/StageScene_1.unity
+    guid: cd6e684fb45211248b2a2687f066e069
+  - enabled: 1
+    path: Assets/SceneChange/SceneChange.unity
+    guid: c73790eafbccb2a4aa6a2ca3fbdbe6e3
   m_configObjects: {}

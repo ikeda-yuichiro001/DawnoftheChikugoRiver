@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class MovieScene : StageManager
+public class MovieScene : MonoBehaviour
 {
     public VideoPlayer RawImage;
     float time = 0f;
@@ -14,25 +14,30 @@ public class MovieScene : StageManager
     void Start()
     {
         RawImage = GameObject.Find("Canvas/RawImage").GetComponent<VideoPlayer>();
-        clip = Resources.Load("mov_hts-samp00" + stage) as VideoClip;
-        GameObject obj = (GameObject)Resources.Load("mov_hts-samp00" + stage);
+        clip = Resources.Load("mov_hts-samp00" + StageManager.stage) as VideoClip;
+        RawImage.clip = clip;
+        RawImage.Play();
+        //StageManager.stage = 5;
+        StageManager.stage ++;
+        if(StageManager.stage == 6)
+        {
+            StageManager.stage = 0;
+            SceneLoader.LoadN("GameClear");
+            
+        }
+        /* GameObject obj = (GameObject)Resources.Load("mov_hts-samp00" + stage);*/
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        RawImage.clip= clip;
-        if (Time.deltaTime >= /*ムービーの長さ*/ +1)
+        if (time >= clip.length +1)
         {
-            if (SceneLoader.IsFade) return;
-            SceneLoader.Load("battle"+stage);
+           // if (SceneLoader.IsFade) return;
+            SceneLoader.Load("battle"+ StageManager.stage);
         }
-    }
-    public void playvideo()
-    {
-        RawImage.clip = clip;
-        RawImage.Play();
+        
     }
 }
  

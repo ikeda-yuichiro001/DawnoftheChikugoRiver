@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageManager 
+public class stageclearcomand : MonoBehaviour
 {
-    public static int stage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +13,11 @@ public class StageManager
     // Update is called once per frame
     void Update()
     {
-          
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneLoader.LoadN("SceneChange");
+
+        }
+        
     }
 }
