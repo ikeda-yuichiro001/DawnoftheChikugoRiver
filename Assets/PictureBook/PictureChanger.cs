@@ -16,8 +16,12 @@ public class PictureChanger : SceneContollor
     // Update is called once per frame
     void Update()
     {
-        if (kill[i] == false) { image.sprite = Resources.Load<Sprite>("I"); }
-        image.sprite = Resources.Load<Sprite>("I" + point);
+        //killのbool型
+        if (!kill)
+        {
+            if(kill == true)image.sprite = Resources.Load<Sprite>("I50");
+            else if(kill == false)image.sprite = Resources.Load<Sprite>("I" + point);
+        }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))  point--;
         if (Input.GetKeyDown(KeyCode.DownArrow))point++;
@@ -28,6 +32,6 @@ public class PictureChanger : SceneContollor
         if (point2 == 1) { point = 50; point2--; }
         if (point2 == -1) { point = 50; point2++; }
 
-        Debug.Log(point);
+        
     }
 }

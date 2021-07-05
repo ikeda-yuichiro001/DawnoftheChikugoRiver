@@ -23,8 +23,13 @@ public class TextChanger : SceneContollor
         if (point == -1) point = 50;
         if (point2 == 1) { point = 50; point2--; }
         if (point2 == -1) { point = 50; point2++; }
-
-        if (kill[i] == false) text.text = "まだこの敵を他をしていないため情報がないよ。";
+        //killのbool型
+        if (!kill)
+        {
+            kill = false;
+            text.text = "まだこの敵を他をしていないため情報がないよ。";
+        }
+        //説明文
         if (point == 0) text.text = "魚";
         if (point == 1) text.text = "さかな";
     }

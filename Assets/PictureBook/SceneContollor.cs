@@ -10,11 +10,11 @@ public class SceneContollor : MonoBehaviour
     Image Panel;
     RectTransform xxx;
     Image [] Fish = new Image[50];
-    public bool[] kill = new bool[50];
+    public bool kill ;
     Text[] Text = new Text[50];
     
     public float point = 0,point2 = 0,a = 0,h = 30;
-    public int i;
+    public int i,k;
     private Vector2 Panel_pos;
     void Start()
     {
@@ -22,11 +22,11 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[t] = GameObject.Find("Canvas/Panel/Fish" + t).GetComponent<Image>();
             Text[t] = GameObject.Find("Canvas/Panel/Fish"+ t +"/Text").GetComponent<Text>();
+
         }
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
         BackButton = GameObject.Find("Canvas/BackButton").GetComponent<Image>();
-        
     }
 
     void Update()
@@ -46,16 +46,18 @@ public class SceneContollor : MonoBehaviour
         //1～50体の色
         for (i = 0; i < Fish.Length; i++)
         {
-            if (point == i)Fish[i].color = Color.green;
+            if (point == i) Fish[i].color = Color.green;
             else Fish[i].color = Color.white;
-            Fish[i].enabled = point <= i && i <= point + 7;
-            Text[i].enabled = point <= i && i <= point + 7;
-            if(kill[i] == true)
+            Fish[i].enabled = point - 7 <= i && i <= point;
+            Text[i].enabled = point - 7 <= i && i <= point;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
+                Fish[i].enabled = point <= i && i <= point + 7;
+                Text[i].enabled = point <= i && i <= point + 7;
             }
         }
-        //戻るボタンの色の処理と選択したときタイトルに戻る処理
+
+         //戻るボタンの色の処理と選択したときタイトルに戻る処理
         if (point == 50)
         {
             BackButton.color = Color.red;
