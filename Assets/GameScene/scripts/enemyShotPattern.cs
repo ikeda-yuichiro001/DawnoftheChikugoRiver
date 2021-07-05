@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class enemyShotPattern : MonoBehaviour
 {
-    public bool ishit;
+    //public bool ishit;
     GameObject sphere;
     GameObject Player;
+    GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sphere = GameObject.Find("Sphere");
+        sphere = GameObject.Find("enemy_bul");
         Player = GameObject.Find("player");
+        core = GameObject.Find("player/core");
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (!ishit && other.GetComponent<player_ctrl>().GetComponent<SphereCollider>() != null)
+        if (/*!ishit &&*/ other.GetComponent<SphereCollider>() != null)
         {
             Destroy(Player);
             Destroy(gameObject);
-            ishit = true;
+            //ishit = true;
         }
     }
     // Update is called once per frame
