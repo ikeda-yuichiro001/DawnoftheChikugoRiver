@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,3 +34,4 @@ public class TextChanger : SceneContollor
         if (point == 1) text.text = "さかな";
     }
 }
+*/
