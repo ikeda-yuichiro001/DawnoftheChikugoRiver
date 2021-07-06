@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemyShotPattern : MonoBehaviour
 {
-    //public bool ishit;
+    public bool ishit;
     GameObject sphere;
     GameObject Player;
     GameObject core;
@@ -19,15 +19,6 @@ public class enemyShotPattern : MonoBehaviour
         core = GameObject.Find("player/core");
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (/*!ishit &&*/ other.GetComponent<SphereCollider>() != null)
-        {
-            Destroy(Player);
-            Destroy(gameObject);
-            //ishit = true;
-        }
-    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -41,6 +32,12 @@ public class enemyShotPattern : MonoBehaviour
         }*/
         if (transform.position.z > 33 || transform.position.z < -16 || transform.position.x < -28 || transform.position.x > 34)
         {
+            Destroy(gameObject);
+        }
+
+        if (Vector3.Distance(transform.position, Player.transform.position) < 0.5f)
+        {
+            Destroy(Player);
             Destroy(gameObject);
         }
     }
