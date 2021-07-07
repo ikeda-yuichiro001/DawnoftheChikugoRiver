@@ -7,25 +7,18 @@ public class enemyShotPattern : MonoBehaviour
     public bool ishit;
     GameObject sphere;
     GameObject Player;
+    GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sphere = GameObject.Find("Sphere");
+        sphere = GameObject.Find("enemy_bul");
         Player = GameObject.Find("player");
+        core = GameObject.Find("player/core");
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (!ishit && other.GetComponent<player_ctrl>().GetComponent<SphereCollider>() != null)
-        {
-            Destroy(Player);
-            Destroy(gameObject);
-            ishit = true;
-        }
-    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -39,6 +32,12 @@ public class enemyShotPattern : MonoBehaviour
         }*/
         if (transform.position.z > 33 || transform.position.z < -16 || transform.position.x < -28 || transform.position.x > 34)
         {
+            Destroy(gameObject);
+        }
+
+        if (Vector3.Distance(transform.position, Player.transform.position) < 0.5f)
+        {
+            Destroy(Player);
             Destroy(gameObject);
         }
     }

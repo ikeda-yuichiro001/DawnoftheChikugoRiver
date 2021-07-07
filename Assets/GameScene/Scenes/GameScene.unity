@@ -1281,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.19
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}
@@ -1291,7 +1291,7 @@ PrefabInstance:
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.13
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}
@@ -1564,6 +1564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 1464724674636026624, guid: 5899ed6819a2c744092fca809218e227,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5987263857335071369, guid: 5899ed6819a2c744092fca809218e227,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1617,11 +1622,6 @@ PrefabInstance:
     - target: {fileID: 5987263857335071369, guid: 5899ed6819a2c744092fca809218e227,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464724674636026624, guid: 5899ed6819a2c744092fca809218e227,
-        type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5330215394859393582, guid: 5899ed6819a2c744092fca809218e227,
