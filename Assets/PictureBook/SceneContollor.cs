@@ -43,7 +43,7 @@ public class SceneContollor : MonoBehaviour
             }
             else
             {
-                Text[t].text = "*******";
+                Text[t].text = "-------";
             }
         }
         Picture = GameObject.Find("Canvas/Picture").GetComponent<RawImage>();
@@ -101,16 +101,16 @@ public class SceneContollor : MonoBehaviour
              }
              else
              {
-                Syoukaibun.text = "***************";
-                FishName.text = "*******";
+                Syoukaibun.text = "---------------";
+                FishName.text = "-------";
                 Picture.texture = null;
              }
 
         }
         else
         {
-            Syoukaibun.text = "***************";
-            FishName.text = "*******";
+            Syoukaibun.text = "---------------";
+            FishName.text = "-------";
             Picture.texture = null;
         }
         
