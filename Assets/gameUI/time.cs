@@ -9,8 +9,8 @@ public class time : MonoBehaviour
 {
 
     public int timeS;
-    public int timeT;
-    public int[] timenumber = new int[3];
+    public float timeT;
+    public float[] timenumber = new float[3];
 
     public Sprite[] timeKetanumber = new Sprite[10];
     public Image[] timebox = new Image[3];
@@ -19,7 +19,7 @@ public class time : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeT = 110;
+        timeT = 120;
 
 
 
@@ -30,9 +30,11 @@ public class time : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeT -= (int)Time.deltaTime;
-        if ( kari == 0)
-        {
+        
+        //if ( kari == 0)
+        
+       // {
+            timeT -= Time.deltaTime ;
 
             for (int i = 0; i < 4; i++)
             {
@@ -40,20 +42,20 @@ public class time : MonoBehaviour
                 switch (i)
                 {
                     case 1:
-                        timenumber[2] = (int)((int)timeT / 60);
-                        timebox[2].sprite = timeKetanumber[timenumber[2]];
+                        timenumber[2] = (int)(timeT / 60);
+                        timebox[2].sprite = timeKetanumber[(int)timenumber[2]];
                         break;
                     case 2:
-                        timenumber[1] = (int)((int)(timeT-(timenumber[2]*60)) / 10 % 10);
-                        timebox[1].sprite = timeKetanumber[timenumber[1]];
+                        timenumber[1] = (int)((timeT-(timenumber[2]*60)) / 10 % 10);
+                        timebox[1].sprite = timeKetanumber[(int)timenumber[1]];
                         break;
                     case 3:
-                        timenumber[0] = (int)((int)timeT % 10);
-                        timebox[0].sprite = timeKetanumber[timenumber[0]];
+                        timenumber[0] = (int)(timeT % 10);
+                        timebox[0].sprite = timeKetanumber[(int)timenumber[0]];
                         break;
                 }
                 
             }
-        }
+       // }
     }
 }
