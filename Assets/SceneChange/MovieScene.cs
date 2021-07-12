@@ -34,8 +34,8 @@ public class MovieScene : MonoBehaviour
         time += Time.deltaTime;
         if (time >= clip.length +1)
         {
-           // if (SceneLoader.IsFade) return;
-            SceneLoader.Load("battle"+ StageManager.stage);
+            if (SceneLoader.IsFade) return;
+            SceneLoader.Load("StageScene_"+ StageManager.stage);
         }
         
     }
