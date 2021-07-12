@@ -58,7 +58,7 @@ public class title : MonoBehaviour
                     SceneManager.LoadScene("DifficultySelect");
                     break;
                 case 1:
-                    SceneManager.LoadScene("CollectionScene");
+                    SceneManager.LoadScene("PictureBook");
                     break;
                 case 2:
                     SceneManager.LoadScene("Option");
