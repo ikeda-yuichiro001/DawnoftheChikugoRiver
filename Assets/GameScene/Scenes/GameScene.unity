@@ -965,6 +965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  t: 40
+  Speed: 10.82
+  PlacementDistance: 2.85
 --- !u!65 &1575933511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1281,7 +1284,7 @@ PrefabInstance:
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.6
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 5054084728274584529, guid: 953d27a9199adee43ae8de949affa2f4,
         type: 3}

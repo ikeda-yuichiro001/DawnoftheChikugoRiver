@@ -6,6 +6,10 @@ public class enemymove1 : MonoBehaviour
 {
     int w = 0, a = 0;
     public int hp = 10;
+    float cnt;
+    public int t = 40;
+    public float Speed;
+    public float PlacementDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +19,16 @@ public class enemymove1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cnt += Time.deltaTime * Speed;                        //new
+        if (cnt >= 1)                                  //new
+        {
+            for (int v = 0; v < t; v++)
+            {
+                GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position * PlacementDistance, Quaternion.identity) as GameObject; //new
+                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2));
+            }
+            cnt = 0;
+        }
         GetComponent<Rigidbody>().position += new Vector3(0,0,-0.1f);
         if (hp <= 0)
         {
