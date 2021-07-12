@@ -112,6 +112,10 @@ public class SceneContollor : MonoBehaviour
             Syoukaibun.text = "---------------";
             FishName.text = "-------";
             Picture.texture = null;
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                SceneManager.LoadScene("Title");
+            }
         }
         
     }
