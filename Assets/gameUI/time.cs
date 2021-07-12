@@ -31,9 +31,9 @@ public class time : MonoBehaviour
     void Update()
     {
         
-        if ( kari == 0)
+        //if ( kari == 0)
         
-        {
+       // {
             timeT -= Time.deltaTime ;
 
             for (int i = 0; i < 4; i++)
@@ -56,6 +56,6 @@ public class time : MonoBehaviour
                 }
                 
             }
-        }
+       // }
     }
 }
