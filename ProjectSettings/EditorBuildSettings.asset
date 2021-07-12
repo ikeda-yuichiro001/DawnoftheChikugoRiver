@@ -27,12 +27,24 @@ EditorBuildSettings:
     path: Assets/GameClearScene/GameClear.unity
     guid: 143999c659c091f4db0d701367847f46
   - enabled: 1
-    path: Assets/StageScene_1/StageScene_1.unity
-    guid: cd6e684fb45211248b2a2687f066e069
-  - enabled: 1
     path: Assets/SceneChange/SceneChange.unity
     guid: c73790eafbccb2a4aa6a2ca3fbdbe6e3
   - enabled: 1
     path: Assets/PictureBook/PictureBook.unity
     guid: 00c33e37d4a4cc049a065f56ee402428
+  - enabled: 1
+    path: Assets/StageScene_1/StageScene_1.unity
+    guid: cd6e684fb45211248b2a2687f066e069
+  - enabled: 1
+    path: Assets/StageScene_2/StageScene_2.unity
+    guid: 419771d35cf4ac1418b0f5ea888991f3
+  - enabled: 1
+    path: Assets/StageScene_3/StageScene_3.unity
+    guid: 4bb825c7e1f493b4f9402a35d0bdb531
+  - enabled: 1
+    path: Assets/StageScene_4/StageScene_4.unity
+    guid: 94bcc89b32fa6fc438ae156c95163345
+  - enabled: 1
+    path: Assets/Stagescene_5/StageScene_5.unity
+    guid: a15732784358a4b4788bc9cf77deedb8
   m_configObjects: {}
