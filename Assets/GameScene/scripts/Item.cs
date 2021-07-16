@@ -22,7 +22,7 @@ public class Item : MonoBehaviour
         if (other.GetComponent<shot>() != null) {
 
             other.GetComponent<shot>().UpPower();
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

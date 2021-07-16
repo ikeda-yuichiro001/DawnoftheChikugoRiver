@@ -22,7 +22,7 @@ public class PointItem : MonoBehaviour
         if (other.GetComponent<shot>() != null)
         {
             Debug.Log("+10000point");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

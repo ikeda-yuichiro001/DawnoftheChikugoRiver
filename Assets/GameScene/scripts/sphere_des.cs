@@ -25,6 +25,13 @@ public class sphere_des : MonoBehaviour
             Destroy(gameObject);
             ishit = true;
         }
+        if (!ishit && other.GetComponent<enemymove2>() != null)
+        {
+            other.GetComponent<enemymove2>().hp--;
+            Debug.Log("+10point");
+            Destroy(gameObject);
+            ishit = true;
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

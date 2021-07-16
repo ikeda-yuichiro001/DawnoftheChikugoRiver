@@ -32,8 +32,6 @@ public class enemyShotPattern : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.forward*100);
         }*/
-        if (transform.position.y <= 2 || transform.position.y > 2) new Vector3(transform.position.x, 2, transform.position.z);
-
         if (transform.position.z > 33 || transform.position.z < -16 || transform.position.x < -28 || transform.position.x > 34)
         {
             Destroy(gameObject);
@@ -47,6 +45,7 @@ public class enemyShotPattern : MonoBehaviour
         if (d < 0.5f)
         {
             Destroy(gameObject);
+            Destroy(Player.gameObject);
             Debug.Log("ピチューン！");
         }
     }
