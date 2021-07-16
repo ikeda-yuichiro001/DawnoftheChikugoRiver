@@ -36,20 +36,15 @@ public class MovieScene : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
+        Debug.Log(time);
         if (time >= clip.length + 1.0f)
         {
             GetComponent<Image>().color = new Color(255, 255, 255, alfa);
             alfa += speed;
             if (alfa >= 1)
             {
-                speed = -0.005f;
-
-            }
-            if (alfa < 0)
-            {
                 SceneManager.LoadScene("StageScene_" + StageManager.stage);
             }
-            Debug.Log(time);
 
         }
 
