@@ -46,8 +46,8 @@ public class enemyShotPattern : MonoBehaviour
 
         if (d < 0.5f)
         {
-            Destroy(Player);
             Destroy(gameObject);
+            Debug.Log("ピチューン！");
         }
     }
 }
