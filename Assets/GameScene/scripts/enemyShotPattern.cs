@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyShotPattern : MonoBehaviour
 {
+    float d = 1;
     public bool ishit;
     GameObject sphere;
     GameObject Player;
@@ -38,7 +39,12 @@ public class enemyShotPattern : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (Vector3.Distance(transform.position, Player.transform.position) < 0.5f)
+        if (Player.GetComponent<Transform>())
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 0.5f)
         {
             Destroy(Player);
             Destroy(gameObject);
