@@ -15,7 +15,7 @@ public class playerInst : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player == null || !Zanki)
+        if (Player == null && !Zanki)
         {
             Instantiate(Resources.Load("player"),new Vector3(0,2,-14),Quaternion.identity);
             Zanki = true;

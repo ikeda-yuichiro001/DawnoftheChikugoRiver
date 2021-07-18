@@ -37,16 +37,17 @@ public class enemyShotPattern : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (Player.GetComponent<Transform>())
+        if (Player != null)
         {
             d = Vector3.Distance(transform.position, Player.transform.position);
         }
 
-        if (d < 0.5f)
+        if (d < 0.5f&&!ishit)
         {
             Destroy(gameObject);
             Destroy(Player.gameObject);
             Debug.Log("ピチューン！");
+            ishit = true;
         }
     }
 }
