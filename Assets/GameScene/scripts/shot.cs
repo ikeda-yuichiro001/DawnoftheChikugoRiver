@@ -5,7 +5,8 @@ using UnityEngine;
 public class shot : MonoBehaviour
 {
     int N;
-    int Power = 0;
+    public int Power = 0;
+    public static int PowData;
     public float PlacementDistance;
     [Range(0, 10)] public float Speed;
     public GameObject obj;
@@ -16,7 +17,7 @@ public class shot : MonoBehaviour
     GameObject Obj;
     public GameObject[] fannels = new GameObject[4];
     // Start is called before the first frame update
-    void Start()
+    public void Start_()
     {
         fannels = new GameObject[4];
         Player = GameObject.Find("player");

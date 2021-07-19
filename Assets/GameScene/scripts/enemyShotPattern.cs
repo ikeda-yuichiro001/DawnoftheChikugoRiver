@@ -45,7 +45,8 @@ public class enemyShotPattern : MonoBehaviour
         if (d < 0.5f&&!ishit)
         {
             Destroy(gameObject);
-            Destroy(Player.gameObject);
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
             Debug.Log("ピチューン！");
             ishit = true;
         }
