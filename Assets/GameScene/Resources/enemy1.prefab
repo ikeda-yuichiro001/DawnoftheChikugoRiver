@@ -123,5 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   t: 40
-  Speed: 4.62
-  PlacementDistance: 4.01
+  Speed: 1.49
+  PlacementDistance: 2.41
