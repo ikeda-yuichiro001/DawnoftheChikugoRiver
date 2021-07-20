@@ -4,38 +4,46 @@ using UnityEngine;
 
 public class enemyMove3 : MonoBehaviour
 {
-
+    bool lockon = false;
     int w = 0, a = 0;
     public int hp = 300;
     float cnt;
     public int t = 40;
     public float Speed;
     public float PlacementDistance;
-    public GameObject Player = GameObject.Find("player");
-    Quaternion tra;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        tra = Player.transform.rotation;
-}
+    }
 
     // Update is called once per frame
     void Update()
-    {
-        cnt += Time.deltaTime * Speed;                        //new
+    {                       //new
+        if (Player == null && !lockon)
+        {
+            Player = player_ctrl.pc.gameObject;
+            lockon = true;
+        }
+
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time*4)+0.1f, 0, Mathf.Cos(Time.time*4)*-1);
+        cnt += Time.deltaTime * Speed;
+
         if (cnt >= 1)                                  //new
         {
-            GameObject a = Instantiate(Resources.Load("enemy_bul_big"), transform.position, Quaternion.LookRotation(new Vector3(tra.x,tra.y,tra.z))) as GameObject; //いま仮置き
-            a.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -1);
+            Vector3 jikinerai = Player.transform.position - transform.position;
+            jikinerai.Normalize();
+
+            GameObject a = Instantiate(Resources.Load("enemy_bul_big"), transform.position, Quaternion.identity) as GameObject;
+            a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z);
+            Debug.Log(a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z));
             cnt = 0;
         }
 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(0.1f), 0, Mathf.Cos(0.1f));
-
-        if (transform.position.z > 35 || transform.position.z < -18 || transform.position.x > 36 || transform.position.x < -30)
-            Destroy(gameObject);
+        //if (transform.position.z > 35 || transform.position.z < -35 || transform.position.x > 35 || transform.position.x < -35)
+        //  Destroy(gameObject);
 
         if (hp <= 0)
         {
@@ -58,11 +66,6 @@ public class enemyMove3 : MonoBehaviour
             }
 
             Debug.Log("+100point");
-            Destroy(gameObject);
-        }
-
-        if (transform.position.z > 37 || transform.position.z < -20 || transform.position.x < -32 || transform.position.x > 38)
-        {
             Destroy(gameObject);
         }
     }

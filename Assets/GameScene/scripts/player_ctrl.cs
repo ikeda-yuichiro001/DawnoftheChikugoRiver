@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class player_ctrl : MonoBehaviour
 {
+    public static player_ctrl pc;
     float slow;
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        pc = this;
     }
 
     // Update is called once per frame

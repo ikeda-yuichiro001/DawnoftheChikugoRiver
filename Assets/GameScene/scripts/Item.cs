@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public bool get;
-    GameObject Player;
+    public static GameObject Player;
     // Start is called before the first frame update
     void Start()
     {

@@ -7,6 +7,7 @@ public class enemyShotPattern : MonoBehaviour
     float d = 1;
     public bool ishit;
     GameObject sphere;
+    GameObject bsphere;
     GameObject Player;
     GameObject core;
     public Rigidbody rb;
@@ -16,6 +17,7 @@ public class enemyShotPattern : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sphere = GameObject.Find("enemy_bul");
+        bsphere = GameObject.Find("enemy_bul_big");
         Player = GameObject.Find("player");
         core = GameObject.Find("player/core");
         
