@@ -41,7 +41,7 @@ public class time : MonoBehaviour
     {
         
             timeT -= Time.deltaTime ;
-        if (x == -360)
+        if (x <= -366)
         { /*gameovre画面へ*/};
 
 

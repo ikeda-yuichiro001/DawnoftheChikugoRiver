@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public int count;
-    Image RetryButton; 
-    Image TitleButton;
+    public Image RetryButton;//+
+    public Image TitleButton;//+
     public static int RetryRemain = 3;
     // Start is called before the first frame update
     void Start()
     {
-        RetryButton = GameObject.Find("Canvas/RetryButton").GetComponent<Image>();
-        TitleButton = GameObject.Find("Canvas/TitleButton").GetComponent<Image>();
-        Invoke("ChangeScene", 1.5f);
+        //RetryButton = GameObject.Find("Canvas/RetryButton").GetComponent<Image>();
+        //TitleButton = GameObject.Find("Canvas/TitleButton").GetComponent<Image>();
+        //Invoke("ChangeScene", 1.5f);
 
     }
 
@@ -25,7 +25,7 @@ public class GameOver : MonoBehaviour
         if (RetryRemain > 0)
         {
 
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 count = 1 - count;
             }

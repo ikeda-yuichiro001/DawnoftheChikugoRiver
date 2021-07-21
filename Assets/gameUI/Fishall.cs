@@ -13,21 +13,21 @@ public class Fishall : MonoBehaviour
     public Text fishTWname;　// 学名
     public Text fishint;   //解説　解説も画像で取り込ました法がいいのではないか
     public Sprite[] fishe = new Sprite[10];//魚画像
+    public Image fishimage;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        fishN = 0;
+        fishN = 0;//０はブランクとして置いておく
 
     }
 
     // Update is called once per frame
     void Update()
     {
-      //魚を倒したら　x=1 A魚　=2 Ｂ魚　を代入でどうにか
-
+        //魚を倒したら　x=1 A魚　=2 Ｂ魚　を代入でどうにか
 
         switch (fishN)//名前
         {
@@ -64,5 +64,17 @@ public class Fishall : MonoBehaviour
             case 6: fishint.text = "魚G"; break;
             case 7: fishint.text = "魚H"; break;
         }
+
+       /* switch (fishN)//saknagazou
+        {
+            case 0: fishimage.sprite = fishe[fishN]; break;
+            case i: fishimage.sprite = fishe[fishN]; break;
+        }*/
+
+        if(fishN >= -1)
+        {
+            fishimage.sprite = fishe[fishN];
+        }
+
     }
 }
