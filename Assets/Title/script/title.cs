@@ -55,7 +55,7 @@ public class title : MonoBehaviour
             switch (point)
             {
                 case 0:
-                    SceneManager.LoadScene("DifficultySelect");
+                    SceneManager.LoadScene("Difficulty");
                     break;
                 case 1:
                     SceneManager.LoadScene("PictureBook");
