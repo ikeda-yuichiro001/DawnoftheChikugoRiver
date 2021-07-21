@@ -61,7 +61,7 @@ public class DifficultyScene : MonoBehaviour
                 if (point2 == 0)
                 {
                     GameLevel.Level = point;
-                    SceneManager.LoadScene("Game");
+                    SceneManager.LoadScene("GameScene");
                 }
                 else
                 {
