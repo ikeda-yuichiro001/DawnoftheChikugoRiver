@@ -41,6 +41,8 @@ public class time : MonoBehaviour
     {
         
             timeT -= Time.deltaTime ;
+        if (x == -360)
+        { /*gameovre画面へ*/};
 
 
         y -= Time.deltaTime;
@@ -49,13 +51,15 @@ public class time : MonoBehaviour
         //Quaternion movehari = Quaternion.identity;
         x -= Time.deltaTime*3;//時計の針を動かす　２分しかできない
        movehari.transform.rotation = Quaternion.Euler( 0, 0,(int)x);
+        if (timeT == 0)
+        { };
 
         
 
 
 
 
-        for (int i = 0; i < 4; i++)
+      /*  for (int i = 0; i < 4; i++)
         {
 
             switch (i)
@@ -75,6 +79,6 @@ public class time : MonoBehaviour
             }
 
 
-        }
+        }*/
     }
 }

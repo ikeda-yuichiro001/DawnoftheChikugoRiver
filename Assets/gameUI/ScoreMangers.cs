@@ -32,15 +32,15 @@ public class ScoreMangers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        herl = 0;
-        herlBit = 0;
-        Invincible = 0;
-        InvincibleBit = 0;
-        Boom = 0;
-        BoomBit = 0;
-        Power = 0;
-        RetryRemain = 3;
-        RetryRemainBit = 0;
+        herl = 7;
+        herlBit = 2;
+        Invincible = 7;
+        InvincibleBit = 2;
+        Boom = 7;
+        BoomBit = 2;
+        Power = 7;
+        RetryRemain = 7;
+        RetryRemainBit = 2;
 
         Debug.Log(gameObject.name);
         /*Recover = GameObject.Find("Canvas/Recover").GetComponent<Text>();

@@ -11,7 +11,8 @@ public class Fishall : MonoBehaviour
 
     public Text fishT;　　　　//名前
     public Text fishTWname;　// 学名
-    public Text fishint;   //解説
+    public Text fishint;   //解説　解説も画像で取り込ました法がいいのではないか
+    public Sprite[] fishe = new Sprite[10];//魚画像
 
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Fishall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+      //魚を倒したら　x=1 A魚　=2 Ｂ魚　を代入でどうにか
 
 
         switch (fishN)//名前
