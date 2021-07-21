@@ -6,20 +6,20 @@ public class enemyShotPattern : MonoBehaviour
 {
     float d = 1;
     public bool ishit;
-    GameObject sphere;
-    GameObject bsphere;
+    //GameObject sphere;
+    //GameObject bsphere;
     GameObject Player;
-    GameObject core;
+    //GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sphere = GameObject.Find("enemy_bul");
-        bsphere = GameObject.Find("enemy_bul_big");
+        //sphere = GameObject.Find("enemy_bul");
+        //bsphere = GameObject.Find("enemy_bul_big");
         Player = GameObject.Find("player");
-        core = GameObject.Find("player/core");
+        //core = GameObject.Find("player/core");
         
     }
 
