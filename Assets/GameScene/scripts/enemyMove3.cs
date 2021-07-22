@@ -65,7 +65,7 @@ public class enemymove3 : MonoBehaviour
                 }
                 a = Random.Range(0, 99);
                 w = Random.Range(0, 99);
-                SceneLoader.Load("StageScene_1");
+                SceneLoader.Load("SceneChange");
             }
 
             Debug.Log("+100point");
