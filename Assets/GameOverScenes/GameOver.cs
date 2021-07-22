@@ -55,11 +55,12 @@ public class GameOver : MonoBehaviour
             if(count == 0 )
             {
                 RetryRemain--;
-                //ƒŠƒgƒ‰ƒC
+                SceneManager.LoadScene("GameScene");
 
             }
             else
             {
+                ChangeScene();
                 //title
             }
                 
