@@ -20,7 +20,7 @@ public class playerInst : MonoBehaviour
         if (SceneLoader.IsFade) return;
         if (Player == null && Zanki>0)
         {
-            Player = Instantiate(Resources.Load("player"),new Vector3(0,2,-14),Quaternion.identity) as GameObject;
+            Player = Instantiate(Resources.Load("player"),new Vector3(0,2,-30),Quaternion.identity) as GameObject;
             Player.name = "player";
             Player.GetComponent<shot>().Start_();
             for(int d = 0; d < shot.PowData; d++)
@@ -32,7 +32,7 @@ public class playerInst : MonoBehaviour
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {
-            Instantiate(Resources.Load("player_ghost"), new Vector3(0, 2, -14), Quaternion.identity);
+            //Instantiate(Resources.Load("player_ghost"), new Vector3(0, 2, -14), Quaternion.identity);
             SceneManager.LoadScene("GameOver");
             gameover = true;
         }

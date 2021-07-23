@@ -53,7 +53,7 @@ public class enemymove1 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (transform.position.z > 37 || transform.position.z < -20 || transform.position.x < -32 || transform.position.x > 38)
+        if (transform.position.z > player_ctrl.zlimit || transform.position.z < -player_ctrl.zlimit || transform.position.x < -player_ctrl.xlimit || transform.position.x > player_ctrl.xlimit)
         {
             Destroy(gameObject);
         }

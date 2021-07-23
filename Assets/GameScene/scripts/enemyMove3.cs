@@ -66,6 +66,10 @@ public class enemymove3 : MonoBehaviour
                 }
                 a = Random.Range(0, 99);
                 w = Random.Range(0, 99);
+
+                float time = 0;
+                time += Time.deltaTime;
+                if(time > 1)
                 SceneManager.LoadScene("GameClear");
             }
 

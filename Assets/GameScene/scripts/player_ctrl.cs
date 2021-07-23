@@ -5,8 +5,8 @@ using UnityEngine;
 public class player_ctrl : MonoBehaviour
 {
     public static player_ctrl pc;
-    public static int xlimit = 50;
-    public static int zlimit = 50;
+    public static int xlimit = 30;
+    public static int zlimit = 33;
     float slow;
     // Start is called before the first frame update
     void Start()
@@ -44,10 +44,10 @@ public class player_ctrl : MonoBehaviour
         {
             GetComponent<Rigidbody>().position += new Vector3(0, 0, -1) * slow;
         }
-        if (transform.position.z > 33)  transform.position = new Vector3(transform.position.x, transform.position.y, 32);
-        if (transform.position.z < -16) transform.position = new Vector3(transform.position.x, transform.position.y, -15);
-        if (transform.position.x > 34)  transform.position = new Vector3(33, transform.position.y, transform.position.z);
-        if (transform.position.x < -28) transform.position = new Vector3(-27, transform.position.y, transform.position.z);
+        if (transform.position.z > zlimit)  transform.position = new Vector3(transform.position.x, transform.position.y, zlimit - 1);
+        if (transform.position.z < -zlimit) transform.position = new Vector3(transform.position.x, transform.position.y, -(zlimit - 1));
+        if (transform.position.x > xlimit)  transform.position = new Vector3(xlimit - 1, transform.position.y, transform.position.z);
+        if (transform.position.x < -xlimit) transform.position = new Vector3(-(xlimit - 1), transform.position.y, transform.position.z);
         if (gameObject == null)
         {
             Instantiate(Resources.Load("player"),new Vector3( 0,2,-14),Quaternion.identity);

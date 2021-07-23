@@ -34,7 +34,7 @@ public class enemyShotPattern : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.forward*100);
         }*/
-        if (transform.position.z > 33 || transform.position.z < -16 || transform.position.x < -28 || transform.position.x > 34)
+        if (transform.position.z > player_ctrl.zlimit || transform.position.z < -player_ctrl.zlimit || transform.position.x < -player_ctrl.xlimit || transform.position.x > player_ctrl.xlimit)
         {
             Destroy(gameObject);
         }
