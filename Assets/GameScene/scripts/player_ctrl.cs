@@ -5,6 +5,8 @@ using UnityEngine;
 public class player_ctrl : MonoBehaviour
 {
     public static player_ctrl pc;
+    public static int xlimit = 50;
+    public static int zlimit = 50;
     float slow;
     // Start is called before the first frame update
     void Start()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerInst : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class playerInst : MonoBehaviour
         else if(Player == null && Zanki == 0 && !gameover)
         {
             Instantiate(Resources.Load("player_ghost"), new Vector3(0, 2, -14), Quaternion.identity);
-            SceneLoader.Load("GameOver");
+            SceneManager.LoadScene("GameOver");
             gameover = true;
         }
     }

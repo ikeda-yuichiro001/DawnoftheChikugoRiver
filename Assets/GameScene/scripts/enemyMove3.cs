@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemymove3 : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class enemymove3 : MonoBehaviour
                 }
                 a = Random.Range(0, 99);
                 w = Random.Range(0, 99);
-                SceneLoader.Load("SceneChange");
+                SceneManager.LoadScene("GameClear");
             }
 
             Debug.Log("+100point");
