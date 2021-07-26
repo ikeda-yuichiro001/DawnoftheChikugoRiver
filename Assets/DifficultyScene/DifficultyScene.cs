@@ -17,7 +17,8 @@ public class DifficultyScene : MonoBehaviour
     public GameObject window;
     public int point = 0;
     public int point2 = 0;
-  
+    public static int difspd;
+
 
     void Start()
     {
@@ -92,6 +93,7 @@ public class DifficultyScene : MonoBehaviour
             if (point == 0)
             {
                 Easy.color = Color.white;
+                difspd = point + 1;
             }
             else
             {
@@ -102,6 +104,7 @@ public class DifficultyScene : MonoBehaviour
             if (point == 1)
             {
                 Normal.color = Color.white;
+                difspd = point + 1;
             }
             else
             {
@@ -112,6 +115,7 @@ public class DifficultyScene : MonoBehaviour
             if (point == 2)
             {
                 Hard.color = Color.white;
+                difspd = point + 1;
             }
             else
             {
@@ -122,6 +126,7 @@ public class DifficultyScene : MonoBehaviour
             if (point == 3)
             {
                 VeryHard.color = Color.white;
+                difspd = point + 1;
             }
             else
             {
