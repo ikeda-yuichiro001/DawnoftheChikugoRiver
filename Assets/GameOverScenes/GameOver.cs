@@ -55,7 +55,7 @@ public class GameOver : MonoBehaviour
             if(count == 0 )
             {
                 RetryRemain--;
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("Stage1");
 
             }
             else
