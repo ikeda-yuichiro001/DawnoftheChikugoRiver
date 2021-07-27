@@ -22,11 +22,11 @@ public class DifficultyScene : MonoBehaviour
 
     void Start()
     {
-        Easy = GameObject.Find("Canvas/Panel/Easy").GetComponent<Image>();
-        Normal = GameObject.Find("Canvas/Panel/Normal").GetComponent<Image>();
-        Hard = GameObject.Find("Canvas/Panel/Hard").GetComponent<Image>();
-        VeryHard = GameObject.Find("Canvas/Panel/VeryHard").GetComponent<Image>();
-        Reset = GameObject.Find("Canvas/Panel/Reset").GetComponent<Image>();
+        Easy = GameObject.Find("Canvas/Easy").GetComponent<Image>();
+        Normal = GameObject.Find("Canvas/Normal").GetComponent<Image>();
+        Hard = GameObject.Find("Canvas/Hard").GetComponent<Image>();
+        VeryHard = GameObject.Find("Canvas/VeryHard").GetComponent<Image>();
+        Reset = GameObject.Find("Canvas/Reset").GetComponent<Image>();
         Yes = GameObject.Find("Canvas_window/Yes").GetComponent<Image>();
         No = GameObject.Find("Canvas_window/No").GetComponent<Image>();
         window = GameObject.Find("Canvas_window");
