@@ -13,6 +13,6 @@ public class GameClearScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        title.esc();
     }
 }

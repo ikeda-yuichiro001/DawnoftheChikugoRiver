@@ -17,7 +17,7 @@ public class DifficultyScene : MonoBehaviour
     public GameObject window;
     public int point = 0;
     public int point2 = 0;
-    public static int difspd;
+    public static int difspd = 1;
 
 
     void Start()
@@ -37,6 +37,8 @@ public class DifficultyScene : MonoBehaviour
     
     void Update()
     {
+        title.esc();
+
         if (window.activeSelf)
         {
             Debug.Log("aaaaa");

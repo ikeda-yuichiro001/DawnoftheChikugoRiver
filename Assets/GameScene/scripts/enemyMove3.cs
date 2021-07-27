@@ -18,20 +18,16 @@ public class enemymove3 : MonoBehaviour
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {                       //new
-        /*if (Player == null && !lockon)
-        {
-            
-            lockon = true;
-        }*/
         Player = player_ctrl.pc.gameObject;
-
+        //gameObject.transform.position = 
         GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time*3)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
-        cnt += Time.deltaTime * Speed;
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;
 
         if (cnt >= 1)                                  //new
         {
@@ -68,7 +64,7 @@ public class enemymove3 : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            Debug.Log("+100point");
+            Debug.Log("+1000000point");
             Destroy(gameObject);
         }
     }

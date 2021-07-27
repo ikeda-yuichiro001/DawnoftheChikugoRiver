@@ -43,6 +43,8 @@ public class title : MonoBehaviour
             point = 3;
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape)) point = 3;
+
         //選ばれたカーソルの色を変更＋それぞれの処理------------------------------
 
         GameStart.color  = point == 0 ? new Color(1, 1, 1, 1) : new Color(0.5f, 0.5f, 0.5f, 1);
@@ -68,6 +70,14 @@ public class title : MonoBehaviour
                     Debug.Log("quit");
                     break;
             }
+        }
+    }
+
+    public static void esc()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
         }
     }
 }
