@@ -35,7 +35,7 @@ public class enemymove3 : MonoBehaviour
             jikinerai.Normalize();
 
             GameObject a = Instantiate(Resources.Load("enemy_bul_big"), transform.position, Quaternion.identity) as GameObject;
-            a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z);
+            a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z) * DifficultyScene.difspd * 0.75f;
             //Debug.Log(a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z));
             cnt = 0;
         }
