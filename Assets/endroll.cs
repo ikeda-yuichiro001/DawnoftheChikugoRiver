@@ -21,7 +21,7 @@ public class endroll : MonoBehaviour
 
         if (pos.y < goal)
         {
-            pos.y += speed * Time.deltaTime;
+            pos.y += speed * UnityEngine.Time.deltaTime;
         }
         else
         {

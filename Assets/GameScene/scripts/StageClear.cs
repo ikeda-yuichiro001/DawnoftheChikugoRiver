@@ -19,8 +19,8 @@ public class StageClear : MonoBehaviour
     {
         if ( stage1boss == null)
         {
-            
-            time += Time.deltaTime;
+
+            time += UnityEngine.Time.deltaTime;
             if (time > 1)
                 SceneManager.LoadScene("GameClear");
         }

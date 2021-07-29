@@ -19,7 +19,7 @@ public class enemymove2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
+        cnt += UnityEngine.Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
         if (cnt >= 1)                                  //new
         {
             GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new

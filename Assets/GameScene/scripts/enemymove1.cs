@@ -19,7 +19,7 @@ public class enemymove1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
+        cnt += UnityEngine.Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
         if (cnt >= 1)                                  //new
         {
             for (int v = 0; v < t; v++)

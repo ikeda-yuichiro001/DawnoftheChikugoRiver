@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishAll: {fileID: 8702691176100349268}
-  fishN: 0
+  fishN: -4
   fishT: {fileID: 8702691176488733214}
   fishTWname: {fileID: 8702691177257322786}
   fishint: {fileID: 8702691175912025784}

@@ -31,38 +31,39 @@ public class Fishall : MonoBehaviour
 
         switch (fishN)//名前
         {
-            case 0: fishT.text = "魚A"; break;
-            case 1: fishT.text = "魚B"; break;
-            case 2: fishT.text = "魚C"; break;
-            case 3: fishT.text = "魚D"; break;
-            case 4: fishT.text = "魚E"; break;
-            case 5: fishT.text = "魚F"; break;
-            case 6: fishT.text = "魚G"; break;
-            case 7: fishT.text = "魚H"; break;
+            case 0: fishT.text = "魚"; break;
+            case 1: fishT.text = "ニッポンバラタナゴ"; break;
+            case 2: fishT.text = "オヤニラミ"; break;
+            case 3: fishT.text = "二ホンウナギ"; break;
+            case 4: fishT.text = "ドンコ"; break;
+            case 5: fishT.text = "ナマズ"; break;
+            case 6: fishT.text = "ヤリタナゴ"; break;
+            case 7: fishT.text = "アブラボテ"; break;
         }
 
         switch (fishN)//学名
         {
-            case 0: fishTWname.text = "魚A"; break;
-            case 1: fishTWname.text = "魚B"; break;
-            case 2: fishTWname.text = "魚C"; break;
-            case 3: fishTWname.text = "魚D"; break;
-            case 4: fishTWname.text = "魚E"; break;
-            case 5: fishTWname.text = "魚F"; break;
-            case 6: fishTWname.text = "魚G"; break;
-            case 7: fishTWname.text = "魚H"; break;
+            case 0: fishTWname.text = "fish"; break;
+            case 1: fishTWname.text = "Rhodeus ocellatus kurumeus"; break;
+            case 2: fishTWname.text = "Coreoperca kawamebari"; break;
+            case 3: fishTWname.text = "Anguilla japonica"; break;
+            case 4: fishTWname.text = "Odontobutis obscura)"; break;
+            case 5: fishTWname.text = "Silurus asotus"; break;
+            case 6: fishTWname.text = "Tanakia lanceolata"; break;
+            case 7: fishTWname.text = "Tanakia limbata"; break;
         }
 
-        switch (fishN)//解説
+        switch (fishN)//解説 90文字ていど
         {
-            case 0: fishint.text = "あごの鋭いトゲでほかの小さな魚を捕まえて食べる筑後川の下流のほうで生息している"; break;
-            case 1: fishint.text = "魚B"; break;
+            case 0: fishint.text = "まだ見つけられてないよ"; break;
+            case 1: fishint.text = "メスよりもオスのほうが大きく育つ" +
+                    "体は銀色だが虹色の光沢が出る"; break;
             case 2: fishint.text = "魚C"; break;
             case 3: fishint.text = "魚D"; break;
-            case 4: fishint.text = "魚E"; break;
-            case 5: fishint.text = "魚F"; break;
-            case 6: fishint.text = "魚G"; break;
-            case 7: fishint.text = "魚H"; break;
+            case 4: fishint.text = ""; break;
+            case 5: fishint.text = ""; break;
+            case 6: fishint.text = " "; break;
+            case 7: fishint.text = ""; break;
         }
 
        /* switch (fishN)//saknagazou
@@ -71,7 +72,7 @@ public class Fishall : MonoBehaviour
             case i: fishimage.sprite = fishe[fishN]; break;
         }*/
 
-        if(fishN >= -1)
+        if(fishN >= 0)
         {
             fishimage.sprite = fishe[fishN];
         }

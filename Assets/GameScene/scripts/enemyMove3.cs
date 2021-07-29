@@ -26,8 +26,8 @@ public class enemymove3 : MonoBehaviour
     {                       //new
         Player = player_ctrl.pc.gameObject;
         //gameObject.transform.position = 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time*3)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(UnityEngine.Time.time*3)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        cnt += UnityEngine.Time.deltaTime * Speed * DifficultyScene.difspd;
 
         if (cnt >= 1)                                  //new
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class time : MonoBehaviour
+public class Time : MonoBehaviour
 {
 
     public float x,y;//時計の針
@@ -39,17 +39,17 @@ public class time : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-            timeT -= Time.deltaTime ;
+
+        timeT -= UnityEngine.Time.deltaTime ;
         if (x <= -366)
         { /*gameovre画面へ*/};
 
 
-        y -= Time.deltaTime;
+        y -= UnityEngine.Time.deltaTime;
         //timeT 
 
         //Quaternion movehari = Quaternion.identity;
-        x -= Time.deltaTime*3;//時計の針を動かす　２分しかできない
+        x -= UnityEngine.Time.deltaTime*3;//時計の針を動かす　２分しかできない
        movehari.transform.rotation = Quaternion.Euler( 0, 0,(int)x);
         if (timeT == 0)
         { };
