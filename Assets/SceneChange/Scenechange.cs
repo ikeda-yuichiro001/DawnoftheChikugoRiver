@@ -18,7 +18,7 @@ public class Scenechange : MovieScene
     // Update is called once per frame
     void Update()
     {
-        time += UnityEngine.Time.deltaTime;
+        time += Time.deltaTime;
         Debug.Log(time);
         if (time >= 10)
         {

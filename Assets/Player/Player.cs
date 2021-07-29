@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         {
             x += speed;
         }
-        rigidBody.position += new Vector3(x, 0, z) * UnityEngine.Time.deltaTime;
+        rigidBody.position += new Vector3(x, 0, z) * Time.deltaTime;
         if((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
             speed = Lowspeed;

@@ -20,8 +20,8 @@ public class DamageCnt : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rigidBody.position += new Vector3(move.x, 0, move.y) * UnityEngine.Time.deltaTime;
-        cnt += (Mathf.Abs(move.x) + Mathf.Abs(move.y)) * UnityEngine.Time.deltaTime;
+        rigidBody.position += new Vector3(move.x, 0, move.y) * Time.deltaTime;
+        cnt += (Mathf.Abs(move.x) + Mathf.Abs(move.y)) * Time.deltaTime;
         if (cnt > LifeTime)
         {
             Destroy(gameObject);

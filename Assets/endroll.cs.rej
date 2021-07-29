@@ -1,0 +1,10 @@
+diff a/Assets/endroll.cs b/Assets/endroll.cs	(rejected hunks)
+@@ -21,7 +21,7 @@
+ 
+         if (pos.y < goal)
+         {
+-            pos.y += speed * Time.deltaTime;
++            pos.y += speed * UnityEngine.Time.deltaTime;
+         }
+         else
+         {

@@ -215,11 +215,11 @@ public class Fader : MonoBehaviour
 
      
     void Update()
-    {
-        Fadeings -= UnityEngine.Time.deltaTime / (mode == FADEMODE.OUT ? SceneLoader.FadeOutTime : SceneLoader.FadeInTime);
+    { 
+        Fadeings -= Time.deltaTime / (mode == FADEMODE.OUT ? SceneLoader.FadeOutTime : SceneLoader.FadeInTime);
         if (Fadeings < -1) Fadeings = -1;
         print("fadeings:::" + Fadeings_);
-        vals += UnityEngine.Time.deltaTime;
+        vals += Time.deltaTime;
 
         if (type_ == FADETYPE.DX)
         {

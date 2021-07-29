@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         {
             case AttackPattern.Single:
                 {
-                    cnt += UnityEngine.Time.deltaTime * Speed;
+                    cnt += Time.deltaTime * Speed;
                     if (cnt >= 1)
                     {
                         cnt = 0;
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
                 break;
             case AttackPattern.Round:
                 {
-                    cnt += UnityEngine.Time.deltaTime * Speed;
+                    cnt += Time.deltaTime * Speed;
                     if (cnt >= 1)
                     {
                         for (int v = 0; v < 40; v++)

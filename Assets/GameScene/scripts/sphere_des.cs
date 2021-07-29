@@ -57,7 +57,7 @@ public class sphere_des : MonoBehaviour
         if (float.IsNaN(arrow.x)) arrow.x = 0;
         if (float.IsNaN(arrow.y)) arrow.y = 0;
         rb.position += new Vector3(arrow.x, 0, arrow.y);
-        b += UnityEngine.Time.deltaTime;
+        b += Time.deltaTime;
         /*if (equipment == missile)
         {
             rb.AddRelativeForce(Vector3.forward*100);
