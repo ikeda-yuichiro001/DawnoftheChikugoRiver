@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class ScoreMangers : MonoBehaviour
 {
     public GameObject score_object = null; //テキストオブジェクト
-    public int herl;
+    public static int herl;
     public int herlBit;
-    public int Invincible;
+    public static int Invincible;
     public int InvincibleBit;
-    public int Boom;
+    public static int Boom;
     public int BoomBit;
-    public int Power;
-    public int RetryRemain;
+    public static int Power;
+    public static int RetryRemain;
     public int RetryRemainBit;
 
     public Text Recover;
@@ -26,7 +26,7 @@ public class ScoreMangers : MonoBehaviour
     public Text RetryRemainT;
     public Text RetryRemainBitT;
 
-    public Image[] aiconall = new Image[42];
+    public Image[] aiconall = new Image[45];
     public Sprite[] aicon = new Sprite[10];
 
     // Start is called before the first frame update
@@ -57,7 +57,7 @@ public class ScoreMangers : MonoBehaviour
     void Update()
     {
         //オブジェクトからテキストコンポーネントを取得
-        Text score_text = score_object.GetComponent<Text>();
+        //Text score_text = score_object.GetComponent<Text>();
 
         //
         switch (herl)//回復
@@ -362,6 +362,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
                 break;
+
             case 1:// PowerT.text = "ちから ：★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[0];
@@ -371,6 +372,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
                 break;
+
             case 2:// PowerT.text = "ちから ：★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
@@ -380,6 +382,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
                 break;
+
             case 3:// PowerT.text = "ちから ：★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
@@ -398,6 +401,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
                 break;
+
             case 5:// PowerT.text = "ちから ：★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
@@ -407,6 +411,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
                 break;
+
             case 6:// PowerT.text = "ちから ：★★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
@@ -415,8 +420,8 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[7];
                 aiconall[39].sprite = aicon[7];
                 aiconall[40].sprite = aicon[0];
-
                 break;
+
             case 7:// PowerT.text = "ちから ：★★★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
