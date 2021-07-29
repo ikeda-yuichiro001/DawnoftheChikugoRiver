@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<<< HEAD:Assets/endroll.cs.rej.meta
+guid: ef7a4fb1c213fe6419f43c88734f8e17
+========
+guid: abe34dc621d6b824b93ab62c83541f56
+folderAsset: yes
+>>>>>>>> 7c9f74828801ff85d55d49682b199c3718cac5a8:Assets/GameScene/gameUI.meta
+=======
+<<<<<<< HEAD
 guid: 0be53b3fefb714b4990c0fd3f094cbc3
 =======
 guid: cf638ccc37401b747b62690da6d0a96a
 >>>>>>> bf6affb54811ed293deeb9ae779a1d6bdc7208d6
+>>>>>>> 7c9f74828801ff85d55d49682b199c3718cac5a8
 DefaultImporter:
   externalObjects: {}
   userData: 
