@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92f7d8f5ebdf4f4ebfb93e4ba1954f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mirror: 0
   hp: 33
-  t: 40
-  Speed: 1.49
-  PlacementDistance: 2.41
+  t: 10
+  Speed: 1.12
+  PlacementDistance: 1.44

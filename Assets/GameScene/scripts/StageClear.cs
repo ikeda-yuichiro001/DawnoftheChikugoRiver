@@ -21,7 +21,7 @@ public class StageClear : MonoBehaviour
         {
             
             time += Time.deltaTime;
-            if (time > 1)
+            if (time > 5)
                 SceneManager.LoadScene("GameClear");
         }
     }
