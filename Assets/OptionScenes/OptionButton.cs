@@ -23,14 +23,15 @@ public class OptionButton : MonoBehaviour
     Text Default;
     public  int point = 0;
 
+    //定義したやつの取得
     void Start()
     {
-        Decision = GameObject.Find("Canvas/Panel/Decision").GetComponent<Image>();
-        BGM = GameObject.Find("Canvas/Panel/Decision/BGM").GetComponent<Text>();
-        SE = GameObject.Find("Canvas/Panel/Decision/SE").GetComponent<Text>();
-        Default = GameObject.Find("Canvas/Panel/Decision/Default").GetComponent<Text>();
-        Number = GameObject.Find("Canvas/Panel/Decision/Number").GetComponent<Text>();
-        Number2 = GameObject.Find("Canvas/Panel/Decision/Number2").GetComponent<Text>();
+        Decision = GameObject.Find("Canvas/Decision").GetComponent<Image>();
+        BGM = GameObject.Find("Canvas/BGM").GetComponent<Text>();
+        SE = GameObject.Find("Canvas/SE").GetComponent<Text>();
+        Default = GameObject.Find("Canvas/Default").GetComponent<Text>();
+        Number = GameObject.Find("Canvas/Number").GetComponent<Text>();
+        Number2 = GameObject.Find("Canvas/Number2").GetComponent<Text>();
         
     }
 
@@ -61,7 +62,7 @@ public class OptionButton : MonoBehaviour
 
         if (point == 0)
         {
-            BGM.color = Color.red;
+            BGM.color = Color.cyan;
         }
         else
         {
@@ -71,7 +72,7 @@ public class OptionButton : MonoBehaviour
 
         if (point == 1)
         {
-            SE.color = Color.red;
+            SE.color = Color.cyan;
         }
         else
         {
@@ -81,7 +82,7 @@ public class OptionButton : MonoBehaviour
 
         if (point == 2)
         {
-            Default.color = Color.red;
+            Default.color = Color.cyan;
         }
         else
         {
@@ -90,7 +91,7 @@ public class OptionButton : MonoBehaviour
 
         if (point == 3)
         {
-            Decision.color = Color.red;
+            Decision.color = Color.cyan;
         }
         else
         {
