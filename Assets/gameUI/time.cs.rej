@@ -1,0 +1,10 @@
+diff a/Assets/gameUI/time.cs b/Assets/gameUI/time.cs	(rejected hunks)
+@@ -5,7 +5,7 @@
+ using UnityEngine.UI;
+ 
+ 
+-public class time : MonoBehaviour
++public class Time : MonoBehaviour
+ {
+ 
+     public float x,y;//時計の針
