@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class enemymove2 : MonoBehaviour
 {
+    public bool mirror = false;
+    int MirrorDirection;
     int w = 0, a = 0;
     public int hp = 300;
     float cnt;
@@ -19,6 +21,9 @@ public class enemymove2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MirrorDirection = 1;
+        if (mirror) MirrorDirection = -1;
+
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
         if (cnt >= 1)                                  //new
         {
@@ -27,10 +32,12 @@ public class enemymove2 : MonoBehaviour
             cnt = 0;
         }
 
-        GetComponent<Rigidbody>().position += new Vector3(-0.1f, 0, 0);
+        GetComponent<Rigidbody>().position += new Vector3(-0.3f * MirrorDirection, 0, 0);
 
-        if (transform.position.z > 35 || transform.position.z < -18 || transform.position.x > 36 || transform.position.x < -30)
-            Destroy(gameObject);
+        if (transform.position.x < -27)
+            transform.position = new Vector3(27,transform.position.y,transform.position.z);
+        if (transform.position.x > 27)
+            transform.position = new Vector3(-27, transform.position.y, transform.position.z);
 
         if (hp <= 0)
         {
@@ -52,14 +59,11 @@ public class enemymove2 : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            Debug.Log("+100point");
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
         }
 
-        if (transform.position.z > 37 || transform.position.z < -20 || transform.position.x < -32 || transform.position.x > 38)
-        {
-            Destroy(gameObject);
-        }
     }
 
 }
