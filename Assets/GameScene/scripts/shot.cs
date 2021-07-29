@@ -29,7 +29,8 @@ public class shot : MonoBehaviour
         Power++;
         if (Power >= 9)
         {
-            Debug.Log("+10000point");
+            imageTest.kari += 10000 * ((int)gameObject.transform.position.z + 30);
+            imageTest.scorejudge = 1;
             Power = 8;
         }
         if (Power / 2 != L)
@@ -77,8 +78,7 @@ public class shot : MonoBehaviour
             timecount = 0;
         }
 
-        
-
+        ScoreMangers.Power = Power;
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {

@@ -18,6 +18,9 @@ public class playerInst : MonoBehaviour
     void Update()
     {
         if (SceneLoader.IsFade) return;
+
+        ScoreMangers.RetryRemain = Zanki;
+
         if (Player == null && Zanki>0)
         {
             Player = Instantiate(Resources.Load("player"),new Vector3(0,2,-30),Quaternion.identity) as GameObject;

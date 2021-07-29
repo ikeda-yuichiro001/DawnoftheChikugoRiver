@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2073756440965726662}
   - component: {fileID: 4151672496273529475}
   - component: {fileID: 5786675523313492637}
-  - component: {fileID: 5082141948329739418}
+  - component: {fileID: 6187394854240148241}
   m_Layer: 0
   m_Name: PointItem
   m_TagString: Untagged
@@ -88,7 +88,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4080646365285996228}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   get: 0
---- !u!54 &5082141948329739418
+--- !u!54 &6187394854240148241
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

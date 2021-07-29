@@ -21,21 +21,24 @@ public class sphere_des : MonoBehaviour
         if (!ishit && other.GetComponent<enemymove1>() != null)
         {
             other.GetComponent<enemymove1>().hp--;
-            Debug.Log("+10point");
+            imageTest.kari += 10;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
             ishit = true;
         }
         if (!ishit && other.GetComponent<enemymove2>() != null)
         {
             other.GetComponent<enemymove2>().hp--;
-            Debug.Log("+10point");
+            imageTest.kari += 10;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
             ishit = true;
         }
         if (!ishit && other.GetComponent<enemymove3>() != null)
         {
-            other.GetComponent<enemymove3>().hp--;
-            Debug.Log("+10point");
+            enemymove3.hp--;
+            imageTest.kari += 10;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
             ishit = true;
         }
