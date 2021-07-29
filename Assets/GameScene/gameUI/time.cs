@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class time : MonoBehaviour
 {
-
+    bool timeup = false;
     public float x,y;//時計の針
     public float timeT;
     public float[] timenumber = new float[3];
@@ -40,8 +40,12 @@ public class time : MonoBehaviour
     void Update()
     {
         
-            timeT -= Time.deltaTime ;
+        timeT -= Time.deltaTime ;
 
+        if(timeT < 0 && !timeup)
+        {
+            enemymove3.hp = 0;
+        }
 
         y -= Time.deltaTime;
         //timeT 

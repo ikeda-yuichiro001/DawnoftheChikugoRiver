@@ -36,7 +36,7 @@ public class sphere_des : MonoBehaviour
         }
         if (!ishit && other.GetComponent<enemymove3>() != null)
         {
-            other.GetComponent<enemymove3>().hp--;
+            enemymove3.hp--;
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             Destroy(gameObject);

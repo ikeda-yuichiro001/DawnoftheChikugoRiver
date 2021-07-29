@@ -78,8 +78,7 @@ public class shot : MonoBehaviour
             timecount = 0;
         }
 
-        
-
+        ScoreMangers.Power = Power;
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {
