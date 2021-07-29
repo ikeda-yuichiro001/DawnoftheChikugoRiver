@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class enemymove3 : MonoBehaviour
 {
@@ -18,15 +17,14 @@ public class enemymove3 : MonoBehaviour
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
-    {                       //new
+    {
         Player = player_ctrl.pc.gameObject;
         //gameObject.transform.position = 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time*3)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * 4)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd;
 
         if (cnt >= 1)                                  //new
@@ -64,7 +62,8 @@ public class enemymove3 : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            Debug.Log("+1000000point");
+            imageTest.kari += 10000000;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
         }
     }

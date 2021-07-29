@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class enemymove1 : MonoBehaviour
 {
+    public bool mirror = false;
+    int MirrorDirection;
     int w = 0, a = 0;
     public int hp = 500;
     float cnt;
-    public int t = 40;
+    public int t = 10;
     public float Speed;
     public float PlacementDistance;
     // Start is called before the first frame update
@@ -19,17 +21,20 @@ public class enemymove1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MirrorDirection = 1;
+        if (mirror) MirrorDirection = -1;
+
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
         if (cnt >= 1)                                  //new
         {
-            for (int v = 0; v < t; v++)
+            for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
                 GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position , Quaternion.identity) as GameObject; //new
-                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2));
+                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2), Mathf.Cos(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2));
             }
             cnt = 0;
         }
-        GetComponent<Rigidbody>().position += new Vector3(0,0,-0.1f);
+        GetComponent<Rigidbody>().position += new Vector3(0,0,-0.2f * MirrorDirection);
 
         if (hp <= 0)
         {
@@ -48,14 +53,15 @@ public class enemymove1 : MonoBehaviour
                 a = Random.Range(0, 99);
                 w = Random.Range(0, 99);
             }
-            
-            Debug.Log("+100point");
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
             Destroy(gameObject);
         }
 
-        if (transform.position.z > player_ctrl.zlimit || transform.position.z < -player_ctrl.zlimit || transform.position.x < -player_ctrl.xlimit || transform.position.x > player_ctrl.xlimit)
+        if (transform.position.z < -player_ctrl.zlimit)
         {
-            Destroy(gameObject);
+            transform.position = new Vector3(transform.position.x,transform.position.y,player_ctrl.zlimit);
         }
     }
 

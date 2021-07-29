@@ -51,8 +51,10 @@ public class time : MonoBehaviour
         //Quaternion movehari = Quaternion.identity;
         x -= Time.deltaTime*3;//時計の針を動かす　２分しかできない
        movehari.transform.rotation = Quaternion.Euler( 0, 0,(int)x);
-        if (timeT == 0)
-        { };
+        if (timeT <= 0)
+        {
+            
+        };
 
         
 
