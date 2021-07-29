@@ -6,7 +6,8 @@ public class enemymove3 : MonoBehaviour
 {
     //bool lockon = false;
     int w = 0, a = 0;
-    public int hp = 300;
+    public static int maxhp = 300;
+    public static int hp = maxhp;
     float cnt;
     public int t = 40;
     public float Speed;
