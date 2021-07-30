@@ -13,7 +13,7 @@ public class time : MonoBehaviour
     public float[] timenumber = new float[3];
 
     public Sprite[] timeKetanumber = new Sprite[10];
-    public Image[] timebox = new Image[3];
+    //public Image[] timebox = new Image[3];
     public int kari;
     public Image movehari;
     public Quaternion movehuri;
@@ -58,7 +58,7 @@ public class time : MonoBehaviour
 
 
 
-
+        /*
         for (int i = 0; i < 4; i++)
         {
 
@@ -79,6 +79,6 @@ public class time : MonoBehaviour
             }
 
 
-        }
+        }*/
     }
 }

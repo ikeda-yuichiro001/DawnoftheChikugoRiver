@@ -57,7 +57,7 @@ public class ScoreMangers : MonoBehaviour
     void Update()
     {
         //オブジェクトからテキストコンポーネントを取得
-        Text score_text = score_object.GetComponent<Text>();
+        //Text score_text = score_object.GetComponent<Text>();
 
         //
         switch (herl)//回復

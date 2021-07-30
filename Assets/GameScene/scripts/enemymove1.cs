@@ -9,7 +9,7 @@ public class enemymove1 : MonoBehaviour
     int w = 0, a = 0;
     public int hp = 500;
     float cnt;
-    public int t = 10;
+    public int t = 8;
     public float Speed;
     public float PlacementDistance;
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class enemymove1 : MonoBehaviour
         {
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
-                GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position , Quaternion.identity) as GameObject; //new
-                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2), Mathf.Cos(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2));
+                GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2), Mathf.Cos(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2))/6;
             }
             cnt = 0;
         }
@@ -62,6 +62,10 @@ public class enemymove1 : MonoBehaviour
         if (transform.position.z < -player_ctrl.zlimit)
         {
             transform.position = new Vector3(transform.position.x,transform.position.y,player_ctrl.zlimit);
+        }
+        if (transform.position.z > player_ctrl.zlimit)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
         }
     }
 
