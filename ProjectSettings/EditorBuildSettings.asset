@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/GameOverScenes/GameOver.unity
     guid: 30edd07082869b8458e6d380c3ed91cf
   - enabled: 1
-    path: Assets/GameScene/gameUI/Scenes/gameUI CS.unity
+    path: Assets/GameScene/gameUI/gameUI CS.unity
     guid: e5fe88683961f0042a5f7a08d7f9be27
   - enabled: 1
     path: Assets/LogoScens/Logo.unity
