@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: 552ac7b1eb2512242b7cf2fc50f05803
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sozai_0: {fileID: 21300000, guid: 4ec9278c68745f54a9893fd4a1edeca1, type: 3}
+  - sozai_1: {fileID: 21300000, guid: bb6dddc70c821b347aa159f7c93042b1, type: 3}
+  - sozai_2: {fileID: 21300000, guid: c422a7fd6964a194a99997994de7a560, type: 3}
+  - sozai_3: {fileID: 21300000, guid: deb682a08e4b50f4da5c913f574840ef, type: 3}
+  - sozai_4: {fileID: 21300000, guid: 780abd599f085344f84190f8a45dd417, type: 3}
+  - sozai_5: {fileID: 21300000, guid: 409275c06d3bf1147821867c0b18f65c, type: 3}
+  - sozai_6: {fileID: 21300000, guid: d40c5acddcaed3449b6be26953db7482, type: 3}
+  - sozai_7: {fileID: 21300000, guid: fa3a5234757f17a44aa83a729cb79631, type: 3}
+  - sozai_8: {fileID: 21300000, guid: 398f9727ee9d89b4c8147e5a04ccf57f, type: 3}
+  - sozai_9: {fileID: 21300000, guid: 3f508860a2abb864fafb9ea8259f9233, type: 3}
+  - s12: {instanceID: 0}
+  - s11: {instanceID: 0}
+  - s10: {instanceID: 0}
+  - s9: {instanceID: 0}
+  - s8: {instanceID: 0}
+  - s7: {instanceID: 0}
+  - s6: {instanceID: 0}
+  - s5: {instanceID: 0}
+  - s4: {instanceID: 0}
+  - s3: {instanceID: 0}
+  - s2: {instanceID: 0}
+  - s1: {instanceID: 0}
+  - hs12: {instanceID: 0}
+  - hs11: {instanceID: 0}
+  - hs10: {instanceID: 0}
+  - hs9: {instanceID: 0}
+  - hs8: {instanceID: 0}
+  - hs7: {instanceID: 0}
+  - hs6: {instanceID: 0}
+  - hs5: {instanceID: 0}
+  - hs4: {instanceID: 0}
+  - hs3: {instanceID: 0}
+  - hs2: {instanceID: 0}
+  - hs1: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

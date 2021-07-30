@@ -30,8 +30,7 @@ public class playerInst : MonoBehaviour
             Player.GetComponent<shot>().UpPower();
             Player.GetComponent<shot>().DownPower();
             Zanki --;
-            Debug.Log("残機：" + Zanki);
-            Debug.Log("Power:" +Player.GetComponent<shot>().Power);
+            ScoreMangers.RetryRemain = Zanki;
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {
