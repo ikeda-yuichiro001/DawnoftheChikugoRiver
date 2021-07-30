@@ -11,7 +11,7 @@ public class StageClear : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stage1boss = GameObject.Find("enemy3");
+        stage1boss = GameObject.Find("kurumeusu");
     }
 
     // Update is called once per frame

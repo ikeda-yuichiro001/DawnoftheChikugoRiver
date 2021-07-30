@@ -12,10 +12,14 @@ public class enemymove2 : MonoBehaviour
     public int t = 40;
     public float Speed;
     public float PlacementDistance;
+    GameObject Player;
+    float d = 100;
+    public bool ishit;
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("player");
     }
 
     // Update is called once per frame
@@ -62,6 +66,18 @@ public class enemymove2 : MonoBehaviour
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
             Destroy(gameObject);
+        }
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
         }
 
     }
