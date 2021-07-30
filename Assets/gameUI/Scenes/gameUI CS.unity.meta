@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/gameUI/Scenes/gameUI CS.unity.meta
 guid: 3907f616b2beb254c82f88cf276718f3
 DefaultImporter:
+=======
+guid: 20a9947e3c3ac15479234ddd033959d9
+NativeFormatImporter:
+>>>>>>> 07988345126538df0a41b6cfe8c876acfb1403b5:Assets/sakana/Take 001.anim.meta
   externalObjects: {}
+  mainObjectFileID: 7400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
