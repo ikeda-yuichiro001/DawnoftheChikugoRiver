@@ -1,5 +1,9 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 406518c59f342a1448510e41e0bd8329
+folderAsset: yes
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/GameScene/gameUI.meta
 guid: abe34dc621d6b824b93ab62c83541f56
 folderAsset: yes
@@ -10,6 +14,7 @@ guid: 73b984e32d6e4b141b26c6ccf73c5aad
 guid: a1e5744c1f96936479290fcdb7e0a5c1
 folderAsset: yes
 >>>>>>> e3297df220e9a775907aa4e1d48d338ae5d597a6
+>>>>>>> 07988345126538df0a41b6cfe8c876acfb1403b5
 DefaultImporter:
   externalObjects: {}
   userData: 
