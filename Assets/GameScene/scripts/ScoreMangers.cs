@@ -42,7 +42,7 @@ public class ScoreMangers : MonoBehaviour
         RetryRemain = 3;
         RetryRemainBit = 0;
 
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         /*Recover = GameObject.Find("Canvas/Recover").GetComponent<Text>();
         Invincible = GameObject.Find("Canvas/Invincible").GetComponent<Text>();
         RetryRemain = GameObject.Find("Canvas/RetryRemain").GetComponent<Text>();

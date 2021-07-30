@@ -15,6 +15,9 @@ public class PointItem : MonoBehaviour
     void Update()
     {
         GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.3f);
+        if (-player_ctrl.zlimit - 5 > transform.position.z) Destroy(gameObject);
+        if (player_ctrl.xlimit < transform.position.x) transform.position = new Vector3(player_ctrl.xlimit,transform.position.y,transform.position.z);
+        if (-player_ctrl.xlimit > transform.position.x) transform.position = new Vector3(-player_ctrl.xlimit, transform.position.y, transform.position.z);
     }
     // Update is called once per frame
     private void OnTriggerStay(Collider other)

@@ -30,7 +30,7 @@ public class enemymove1 : MonoBehaviour
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
                 GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2), Mathf.Cos(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2))/6;
+                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2))*DifficultyScene.difspd * Speed*PlacementDistance/15;
             }
             cnt = 0;
         }

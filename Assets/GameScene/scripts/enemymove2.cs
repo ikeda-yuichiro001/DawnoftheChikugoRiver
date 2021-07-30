@@ -28,7 +28,7 @@ public class enemymove2 : MonoBehaviour
         if (cnt >= 1)                                  //new
         {
             GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-            a.GetComponent<enemyShotPattern>().arrow = new Vector2(0,-DifficultyScene.difspd * 0.5f);
+            a.GetComponent<enemyShotPattern>().arrow = new Vector2(0,-DifficultyScene.difspd * 0.3f);
             cnt = 0;
         }
 
