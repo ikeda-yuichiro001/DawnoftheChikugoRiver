@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class endroll : MonoBehaviour
 {
@@ -25,8 +26,7 @@ public class endroll : MonoBehaviour
         }
         else
         {
-            if (SceneLoader.IsFade) return;
-            SceneLoader.Load("title");
+            SceneManager.LoadScene("Title");
         }
 
         myTransform.position = pos;
