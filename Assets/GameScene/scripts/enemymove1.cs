@@ -12,10 +12,14 @@ public class enemymove1 : MonoBehaviour
     public int t = 8;
     public float Speed;
     public float PlacementDistance;
+    GameObject Player;
+    float d = 100;
+    public bool ishit;
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("player");
     }
 
     // Update is called once per frame
@@ -24,13 +28,13 @@ public class enemymove1 : MonoBehaviour
         MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
 
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
+        cnt += Time.deltaTime * DifficultyScene.difspd * 0.5f;                        //new
         if (cnt >= 1)                                  //new
         {
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
                 GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2), Mathf.Cos(v * 1f / t * DifficultyScene.difspd * Mathf.PI * 2))/6;
+                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2))*DifficultyScene.difspd * Speed*PlacementDistance/15;
             }
             cnt = 0;
         }
@@ -66,6 +70,19 @@ public class enemymove1 : MonoBehaviour
         if (transform.position.z > player_ctrl.zlimit)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
+        }
+
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
         }
     }
 

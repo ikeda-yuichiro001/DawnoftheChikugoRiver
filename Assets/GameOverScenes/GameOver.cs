@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour
         //RetryButton = GameObject.Find("Canvas/RetryButton").GetComponent<Image>();
         //TitleButton = GameObject.Find("Canvas/TitleButton").GetComponent<Image>();
         //Invoke("ChangeScene", 1.5f);
-
+        ScoreMangers.herl = RetryRemain;
     }
 
     // Update is called once per frame

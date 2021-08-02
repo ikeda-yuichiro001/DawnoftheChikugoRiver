@@ -43,6 +43,10 @@ public class enemyShotPattern : MonoBehaviour
         {
             d = Vector3.Distance(transform.position, Player.transform.position);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         if (d < 0.5f&&!ishit)
         {
