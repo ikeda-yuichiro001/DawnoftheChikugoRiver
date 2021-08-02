@@ -44,7 +44,7 @@ public class GameOver : MonoBehaviour
         else
         {
             RetryButton.color = new Color(255, 255, 255, 0);
-            TitleButton.color = new Color(255, 255, 255, 255);
+            TitleButton.color = new Color(255, 255, 255, 255); 
         }
 
         if(Input.GetKeyDown(KeyCode.Z))
