@@ -110,8 +110,8 @@ public class shot : MonoBehaviour
                     shoot(-1);
                     break;
           
+            }
         }
-    }
         switch (Power/2)
         {
             default:
