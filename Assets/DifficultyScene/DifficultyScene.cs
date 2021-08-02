@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class DifficultyScene : MonoBehaviour
 {
-    Image Easy;
-    Image Normal;
+    Image Easy; 
+    Image Normal; 
     Image Hard;
     Image VeryHard;
     Image Reset;
