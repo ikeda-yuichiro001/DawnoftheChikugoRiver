@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 9b263f2d42201f24a9ae5be3673fa7dc
-=======
-guid: 4deb165da31f3a84786a06415180b632
->>>>>>> c2538b7e307fef56ae17f18202db97f34c65897d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -62,6 +58,7 @@ ModelImporter:
     2300000: donko_kurumeusu:pCube10
     3300000: donko_kurumeusu:pCube10
     4300000: donko_kurumeusu:pCube10
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -114,8 +111,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -142,7 +139,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
