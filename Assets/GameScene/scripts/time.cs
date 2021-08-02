@@ -19,6 +19,7 @@ public class time : MonoBehaviour
     public Quaternion movehuri;
     public float gizmoSize = 0.3f;
     public Color gizmoColor = Color.yellow;
+
     void OnDrawGizmos()
     {
         Gizmos.color = gizmoColor;
@@ -39,12 +40,19 @@ public class time : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        GameObject enemy1 = GameObject.Find("kawamutu");
+        GameObject enemy2 = GameObject.Find("enemy2");
+        GameObject boss = GameObject.Find("kurumeusu");
+
         timeT -= Time.deltaTime ;
 
         if(timeT < 0 && !timeup)
         {
             enemymove3.hp = 0;
+            enemy2.GetComponent<enemymove2>().hp = 0;
+            enemy1.GetComponent<enemymove1>().hp = 0;
+            timeup = true;
         }
 
         y -= Time.deltaTime;

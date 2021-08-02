@@ -5,11 +5,11 @@ using UnityEngine;
 public class PointItem : MonoBehaviour
 {
     public bool get;
-    GameObject Point;
+    GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
-        Point = GameObject.Find("player");
+        Player = GameObject.Find("player");
     }
 
     void Update()
@@ -18,6 +18,13 @@ public class PointItem : MonoBehaviour
         if (-player_ctrl.zlimit - 5 > transform.position.z) Destroy(gameObject);
         if (player_ctrl.xlimit < transform.position.x) transform.position = new Vector3(player_ctrl.xlimit,transform.position.y,transform.position.z);
         if (-player_ctrl.xlimit > transform.position.x) transform.position = new Vector3(-player_ctrl.xlimit, transform.position.y, transform.position.z);
+        //アイテム上部回収
+        Debug.Log(Player.transform.position.z);
+        Debug.Log(player_ctrl.zlimit - 15);
+        if (Player.transform.position.z > player_ctrl.zlimit - 15)
+        {
+            GetComponent<SphereCollider>().center = new Vector3(100, 100, 100);
+        }
     }
     // Update is called once per frame
     private void OnTriggerStay(Collider other)
