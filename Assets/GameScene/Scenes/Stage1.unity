@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: kurumeusu
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
+      propertyPath: m_Name
+      value: pCube2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062
@@ -565,10 +569,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: 0f0452f8907276342ad8efdf5283c107, type: 2}
-    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
-      propertyPath: m_Name
-      value: pCube2
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062000003
@@ -1810,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: kurumeusu
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
+      propertyPath: m_Name
+      value: pCube2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062
@@ -1906,10 +1910,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: 0f0452f8907276342ad8efdf5283c107, type: 2}
-    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
-      propertyPath: m_Name
-      value: pCube2
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062000003
@@ -2146,6 +2146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'kurumeusu '
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
+      propertyPath: m_Name
+      value: pCube2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062
@@ -2242,10 +2246,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: 0f0452f8907276342ad8efdf5283c107, type: 2}
-    - target: {fileID: 100006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
-      propertyPath: m_Name
-      value: pCube2
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 99b04629630544a46b855473620ff4f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.062000003
@@ -2832,6 +2832,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6045344429295227760, guid: 1338e9c0853116d4581bfa7bfc321be4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.008736556
+      objectReference: {fileID: 0}
     - target: {fileID: 102703206123129998, guid: 1338e9c0853116d4581bfa7bfc321be4,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2852,6 +2857,11 @@ PrefabInstance:
       propertyPath: PlacementDistance
       value: 1.33
       objectReference: {fileID: 0}
+    - target: {fileID: 253850619691303960, guid: 1338e9c0853116d4581bfa7bfc321be4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cdc0a7c5a5ea8d42bb3c97207447bc8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1338e9c0853116d4581bfa7bfc321be4, type: 3}
 --- !u!1001 &7396635134668185608
