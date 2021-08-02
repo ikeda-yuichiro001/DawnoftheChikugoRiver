@@ -38,15 +38,13 @@ public class GameOver : MonoBehaviour
 
         if (count == 0)
         {
-            
-            RetryButton.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-            TitleButton.color = new Color(0.6f, 0.6f, 0.6f, 1f);
+            RetryButton.color = new Color(255, 255, 255, 255);
+            TitleButton.color = new Color(255, 255, 255, 0);
         }
         else
         {
-            
-            TitleButton.color = new Color(1, 1,1,1);
-            RetryButton.color = new Color(0.6f, 0.6f, 0.6f, 1);
+            RetryButton.color = new Color(255, 255, 255, 0);
+            TitleButton.color = new Color(255, 255, 255, 255);
         }
 
         if(Input.GetKeyDown(KeyCode.Z))
@@ -60,16 +58,8 @@ public class GameOver : MonoBehaviour
             }
             else
             {
-                ChangeScene();
-                //title
-            }
-                
+                SceneManager.LoadScene("Title");
+            } 
         }
-
-       
-    }
-    void ChangeScene()
-    {
-        SceneManager.LoadScene("Title");
     }
 }
