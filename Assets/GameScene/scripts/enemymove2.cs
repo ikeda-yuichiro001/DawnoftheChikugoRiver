@@ -28,7 +28,7 @@ public class enemymove2 : MonoBehaviour
         MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
 
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;                        //new
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.2f;                        //new
         if (cnt >= 1)                                  //new
         {
             GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new

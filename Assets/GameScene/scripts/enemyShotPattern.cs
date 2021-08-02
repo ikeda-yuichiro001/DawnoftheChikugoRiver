@@ -12,6 +12,7 @@ public class enemyShotPattern : MonoBehaviour
     //GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
+
     // Start is called before the first frame update
     void Start()
     {

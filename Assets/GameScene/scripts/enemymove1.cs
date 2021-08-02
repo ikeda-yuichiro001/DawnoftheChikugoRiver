@@ -28,7 +28,7 @@ public class enemymove1 : MonoBehaviour
         MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
 
-        cnt += Time.deltaTime * DifficultyScene.difspd * 0.5f;                        //new
+        cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
         if (cnt >= 1)                                  //new
         {
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
