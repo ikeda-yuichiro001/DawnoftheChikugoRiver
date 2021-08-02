@@ -110,8 +110,8 @@ public class shot : MonoBehaviour
                     shoot(-1);
                     break;
           
+            }
         }
-    }
         switch (Power/2)
         {
             default:
@@ -145,6 +145,11 @@ public class shot : MonoBehaviour
                 //inst_fannel(-2, 0);
                 //inst_fannel(2, 0);
                 break;
+        }
+
+        if (Input.GetKeyDown(KeyCode.X)){
+            //ボム
+
         }
     }
     public void shoot(int a)

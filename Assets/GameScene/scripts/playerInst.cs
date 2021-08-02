@@ -33,7 +33,8 @@ public class playerInst : MonoBehaviour
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {
-            //Instantiate(Resources.Load("player_ghost"), new Vector3(0, 2, -14), Quaternion.identity);
+            Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
+            Player.GetComponent<shot>().Power = 8;
             SceneManager.LoadScene("GameOver");
             gameover = true;
         }
