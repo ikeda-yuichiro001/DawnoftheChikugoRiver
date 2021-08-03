@@ -422,7 +422,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[40].sprite = aicon[0];
                 break;
 
-            case 7:// PowerT.text = "ちから ：★★★★★★★";
+            default:// PowerT.text = "ちから ：★★★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
                 aiconall[36].sprite = aicon[7];
