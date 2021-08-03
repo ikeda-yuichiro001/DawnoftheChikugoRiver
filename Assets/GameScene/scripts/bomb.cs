@@ -25,6 +25,7 @@ public class bomb : MonoBehaviour
 
             enemymove3.hp -= 400;
             Destroy(GameObject.Find("enemy_bul(Clone)").GetComponent<enemyShotPattern>().gameObject);
+            Destroy(GameObject.Find("enemy_bul_big(Clone)").GetComponent<enemyShotPattern>().gameObject);
             ScoreMangers.Boom--;
             Debug.Log(ScoreMangers.Boom);
             //まだ未完成
