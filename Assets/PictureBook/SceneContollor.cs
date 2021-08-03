@@ -20,7 +20,7 @@ public class SceneContollor : MonoBehaviour
     private Vector2 Panel_pos;
     const int Max = 51;
     int Len = 14;
-    public float Space = 30;
+    public float Space = 0;
     public FishData[] DataBase;
     void Start()
     {
