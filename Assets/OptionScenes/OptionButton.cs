@@ -66,7 +66,7 @@ public class OptionButton : MonoBehaviour
         }
         else
         {
-            BGM.color = new Color32(70, 70, 70, 100);
+            BGM.color = new Color32(207, 207, 207, 255);
         }
 
 
@@ -76,7 +76,7 @@ public class OptionButton : MonoBehaviour
         }
         else
         {
-            SE.color = new Color32(70, 70, 70, 100);
+            SE.color = new Color32(207, 207, 207, 255);
         }
 
 
@@ -86,16 +86,16 @@ public class OptionButton : MonoBehaviour
         }
         else
         {
-            Default.color = new Color32(70, 70, 70, 100);
+            Default.color = new Color32(207, 207, 207, 255);
         }
 
         if (point == 3)
         {
-            Decision.color = Color.cyan;
+            Decision.color = Color.white;
         }
         else
         {
-            Decision.color = new Color32(70, 70, 70, 100);
+            Decision.color = new Color32(207, 207, 207, 255);
         }
 
         
