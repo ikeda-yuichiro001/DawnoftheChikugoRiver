@@ -69,13 +69,17 @@ public class shot : MonoBehaviour
             ScoreMangers.Boom--;
         }
 
+        
         ScoreMangers.Power = Power;
+        Debug.Log(ScoreMangers.Power);
+        Debug.Log(Power);
 
         timecount++;
         if (timecount == 3)
         {
             timecount = 0;
         }
+
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {
