@@ -22,7 +22,10 @@ public class StageClear : MonoBehaviour
             
             time += Time.deltaTime;
             if (time > 5)
-                SceneManager.LoadScene("GameClear");
+            {
+                SceneManager.LoadScene("Stage1");//ここステージクリアしたら次のステージへ
+                //SceneManager.LoadScene("GameClearScene");
+            }
         }
     }
 }
