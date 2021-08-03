@@ -29,7 +29,6 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[t] = GameObject.Find("Canvas/Panel/Fish" + t).GetComponent<Image>();
             Text[t] = GameObject.Find("Canvas/Panel/Fish"+ t +"/Text").GetComponent<Text>();
-
         }
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
@@ -84,12 +83,11 @@ public class SceneContollor : MonoBehaviour
             { 
                 Fish[y[i]].enabled = true;
                 Text[y[i]].enabled = true;
-
             }
         
         for (i = 0; i < Max; i++)
-            Fish[i].color = Color.white;
-        Fish[point].color = Color.green;
+            Fish[i].color = new Color32(255, 255, 255, 0);
+        Fish[point].color = Color.white;
         Debug.Log(point);
         if(point < 50)
         {
