@@ -19,10 +19,11 @@ public class SceneContollor : MonoBehaviour
     public int i,k;
     private Vector2 Panel_pos;
     const int Max = 51;
-    int Len = 14;
+    int Len = 15;
     public float Space;
     public FishData[] DataBase;
     public float abc;
+    public float aa;
     void Start()
     {
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
@@ -51,9 +52,9 @@ public class SceneContollor : MonoBehaviour
 
     void Update()
     {
-        Panel_pos.y = Fish[0].gameObject.GetComponent<RectTransform>().position.y;
-        Panel_pos.x = Fish[0].gameObject.GetComponent<RectTransform>().position.x;
-        Space = Screen.height / abc;
+        Panel_pos.y = Panel.gameObject.GetComponent<RectTransform>().position.y;
+        Panel_pos.x = Panel.gameObject.GetComponent<RectTransform>().position.x;
+        Space = Screen.height * abc;
         Debug.Log(Screen.height);
         //矢印キーで動かす処理
         if (Input.GetKeyDown(KeyCode.UpArrow)) { point--; }
@@ -72,7 +73,7 @@ public class SceneContollor : MonoBehaviour
         }
         for (int r = 0; r < Len; r++)
             Fish[y[r]].gameObject.GetComponent<RectTransform>().position
-               = new Vector3(Panel_pos.x, Panel_pos.y - Space * r, 0);
+               = new Vector3(Panel_pos.x, Panel_pos.y + aa - Space * r, 0);
             
             //1～50体の色
             for (i = 0; i < Max; i++)
@@ -87,9 +88,11 @@ public class SceneContollor : MonoBehaviour
                 Fish[y[i]].enabled = true;
                 Text[y[i]].enabled = true;
             }
-        
+
         for (i = 0; i < Max; i++)
-            Fish[i].color = new Color32(255, 255, 255, 0);
+        {
+            Fish[i].color = new Color32(100, 100, 100, 100);
+        }
         Fish[point].color = Color.white;
         Debug.Log(point);
         if(point < 50)
