@@ -8,10 +8,10 @@ public class playerInst : MonoBehaviour
     bool gameover = false;
     int Zanki = 5;
     GameObject Player;
+    //float t = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,6 +30,14 @@ public class playerInst : MonoBehaviour
             Player.GetComponent<shot>().DownPower();
             Zanki --;
             ScoreMangers.RetryRemain = Zanki;
+            /*
+            t += Time.deltaTime;
+            if (t > 7)
+            {
+                gameObject.AddComponent<BoxCollider>();
+                GetComponent<BoxCollider>().isTrigger = true;
+                Debug.Log("無敵消えた");
+            }*/
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {

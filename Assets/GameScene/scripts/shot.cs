@@ -59,6 +59,16 @@ public class shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0)
+        {
+            Debug.Log("bomb!!");
+            GetComponent<enemymove1>().hp -= 400;
+            GetComponent<enemymove2>().hp -= 400;
+            enemymove3.hp -= 400;
+            Destroy(GetComponent<enemyShotPattern>().gameObject);
+            ScoreMangers.Boom--;
+        }
+
         ScoreMangers.Power = Power;
 
         timecount++;
@@ -66,8 +76,6 @@ public class shot : MonoBehaviour
         {
             timecount = 0;
         }
-
-        ScoreMangers.Power = Power;
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {

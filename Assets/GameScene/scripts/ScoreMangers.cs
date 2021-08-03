@@ -34,13 +34,13 @@ public class ScoreMangers : MonoBehaviour
     {
         herl = 0;
         herlBit = 0;
-        Invincible = 0;
+        Invincible = 2;
         InvincibleBit = 0;
-        Boom = 0;
+        Boom = 3;
         BoomBit = 0;
         Power = 0;
         RetryRemain = 3;
-        RetryRemainBit = 0;
+        RetryRemainBit = 5;
 
         //Debug.Log(gameObject.name);
         /*Recover = GameObject.Find("Canvas/Recover").GetComponent<Text>();
