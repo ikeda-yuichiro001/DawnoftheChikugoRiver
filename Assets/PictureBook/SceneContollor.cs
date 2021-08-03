@@ -20,7 +20,7 @@ public class SceneContollor : MonoBehaviour
     private Vector2 Panel_pos;
     const int Max = 51;
     int Len = 14;
-    public float Space = 0;
+    public float Space;
     public FishData[] DataBase;
     void Start()
     {
@@ -48,6 +48,8 @@ public class SceneContollor : MonoBehaviour
         Picture = GameObject.Find("Canvas/Picture").GetComponent<RawImage>();
         FishName = GameObject.Find("Canvas/FishName/FishName").GetComponent<Text>();
         Syoukaibun = GameObject.Find("Canvas/Syoukaibun/Syoukaibun").GetComponent<Text>();
+        Space = Screen.height / 15;
+        Debug.Log(Screen.height);
     }
 
     void Update()
