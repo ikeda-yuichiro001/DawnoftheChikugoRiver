@@ -30,6 +30,7 @@ public class playerInst : MonoBehaviour
             Player.GetComponent<shot>().DownPower();
             Zanki --;
             ScoreMangers.RetryRemain = Zanki;
+            ScoreMangers.Boom = 3;
             /*
             t += Time.deltaTime;
             if (t > 7)
