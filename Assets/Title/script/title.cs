@@ -8,18 +8,18 @@ public class title : MonoBehaviour
 {
     int point = 0;
     // Textコンポーネントを取得
-    Text GameStart;
-    Text Collection;
-    Text Option;
-    Text Quit;
+    Image GameStart;
+    Image Collection;
+    Image Option;
+    Image Quit;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameStart = GameObject.Find("Canvas/GameStart").GetComponent<Text>();
-        Collection = GameObject.Find("Canvas/Collection").GetComponent<Text>();
-        Option = GameObject.Find("Canvas/Option").GetComponent<Text>();
-        Quit = GameObject.Find("Canvas/Quit").GetComponent<Text>();
+        GameStart = GameObject.Find("Canvas/GameStart").GetComponent<Image>();
+        Collection = GameObject.Find("Canvas/Collection").GetComponent<Image>();
+        Option = GameObject.Find("Canvas/Option").GetComponent<Image>();
+        Quit = GameObject.Find("Canvas/Quit").GetComponent<Image>();
     }
 
     // Update is called once per frame
