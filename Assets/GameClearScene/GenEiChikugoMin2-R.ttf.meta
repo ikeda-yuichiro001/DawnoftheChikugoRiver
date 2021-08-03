@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 974161620f53e174aa0d38c3c2fad4ab
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GenEi Chikugo Mincho v2
+  fontNames:
+  - GenEi Chikugo Mincho v2
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6412dcb1582303b47999f266cf7f75c1, type: 3}
+  - {fileID: 12800000, guid: 8f6627e56a8b4494e832db3b4e53e488, type: 3}
+  - {fileID: 12800000, guid: 280044bfa4e2c1d4fb95848e8bffd734, type: 3}
+  - {fileID: 12800000, guid: 02bd19cfca39eb34da4c37adcbcb4158, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

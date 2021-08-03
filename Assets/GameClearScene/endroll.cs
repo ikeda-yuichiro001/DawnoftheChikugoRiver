@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class endroll : MonoBehaviour
 {
-    public float speed =100;
+    public float speed;
     public float Newspeed = 300;
-    public float goal=3000;
+    public float goal = 1000;
     // Start is called before the first frame update
     void Start()
     {
