@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class endroll : MonoBehaviour
 {
-    public float speed =50;
+    public float speed =100;
+    public float Newspeed = 300;
     public float goal=3000;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,10 @@ public class endroll : MonoBehaviour
         if (pos.y < goal)
         {
             pos.y += speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.DownArrow))
+            {
+                pos.y += Newspeed * Time.deltaTime;
+            }
         }
         else
         {
