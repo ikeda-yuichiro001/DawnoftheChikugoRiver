@@ -38,13 +38,13 @@ public class GameOver : MonoBehaviour
 
         if (count == 0)
         {
-            RetryButton.color = new Color(255, 255, 255, 255);
-            TitleButton.color = new Color(255, 255, 255, 0);
+            RetryButton.color = new Color32(255, 255, 255, 255);
+            TitleButton.color = new Color32(100, 100, 100, 100);
         }
         else
         {
-            RetryButton.color = new Color(255, 255, 255, 0);
-            TitleButton.color = new Color(255, 255, 255, 255); 
+            RetryButton.color =  new Color32(100, 100, 100, 100);
+            TitleButton.color = new Color32(255, 255, 255, 255);
         }
 
         if(Input.GetKeyDown(KeyCode.Z))
