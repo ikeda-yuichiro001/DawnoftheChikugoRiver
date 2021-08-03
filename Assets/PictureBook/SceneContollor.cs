@@ -22,6 +22,7 @@ public class SceneContollor : MonoBehaviour
     int Len = 14;
     public float Space;
     public FishData[] DataBase;
+    public float abc;
     void Start()
     {
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
@@ -32,8 +33,6 @@ public class SceneContollor : MonoBehaviour
         }
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
-        Panel_pos.y = Fish[0].gameObject.GetComponent<RectTransform>().position.y;
-        Panel_pos.x = Fish[0].gameObject.GetComponent<RectTransform>().position.x;
         for (int t = 0; t < Max - 1; t++)
         {
             if(kill[t] == true) 
@@ -48,12 +47,14 @@ public class SceneContollor : MonoBehaviour
         Picture = GameObject.Find("Canvas/Picture").GetComponent<RawImage>();
         FishName = GameObject.Find("Canvas/FishName/FishName").GetComponent<Text>();
         Syoukaibun = GameObject.Find("Canvas/Syoukaibun/Syoukaibun").GetComponent<Text>();
-        Space = Screen.height / 15;
-        Debug.Log(Screen.height);
     }
 
     void Update()
     {
+        Panel_pos.y = Fish[0].gameObject.GetComponent<RectTransform>().position.y;
+        Panel_pos.x = Fish[0].gameObject.GetComponent<RectTransform>().position.x;
+        Space = Screen.height / abc;
+        Debug.Log(Screen.height);
         //矢印キーで動かす処理
         if (Input.GetKeyDown(KeyCode.UpArrow)) { point--; }
         if (Input.GetKeyDown(KeyCode.DownArrow)) { point++;}
