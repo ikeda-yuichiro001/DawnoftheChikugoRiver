@@ -51,12 +51,12 @@ public class DifficultyScene : MonoBehaviour
             if (point2 == 0)
             {
                 Yes.color = Color.white;
-                No.color = new Color32(255, 255, 255, 0);
+                No.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
             else
             {
                 No.color = Color.white;
-                Yes.color = new Color32(255, 255, 255, 0);
+                Yes.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
             if (Input.GetKeyDown(KeyCode.Z))
@@ -99,7 +99,7 @@ public class DifficultyScene : MonoBehaviour
             }
             else
             {
-                Easy.color = new Color32(255, 255, 255, 0);
+                Easy.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
 
@@ -110,7 +110,7 @@ public class DifficultyScene : MonoBehaviour
             }
             else
             {
-                Normal.color = new Color32(255, 255, 255, 0);
+                Normal.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
 
@@ -121,7 +121,7 @@ public class DifficultyScene : MonoBehaviour
             }
             else
             {
-                Hard.color = new Color32(255, 255, 255, 0);
+                Hard.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
 
@@ -132,7 +132,7 @@ public class DifficultyScene : MonoBehaviour
             }
             else
             {
-                VeryHard.color = new Color32(255, 255, 255, 0);
+                VeryHard.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
 
@@ -142,7 +142,7 @@ public class DifficultyScene : MonoBehaviour
             }
             else
             {
-                Reset.color = new Color32(255, 255, 255, 0);
+                Reset.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
 
