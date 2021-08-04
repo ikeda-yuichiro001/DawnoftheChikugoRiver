@@ -133,7 +133,7 @@ MonoBehaviour:
   t: 52
   Speed: 2.97
   PlacementDistance: 1.22
-  Player: {fileID: 0}
+  Player: {fileID: 5054084728274584526, guid: 953d27a9199adee43ae8de949affa2f4, type: 3}
   ishit: 0
 --- !u!136 &96041740
 CapsuleCollider:
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   t: 40
   Speed: 2.97
   PlacementDistance: 1.22
-  Player: {fileID: 0}
+  Player: {fileID: 5054084728274584526, guid: 953d27a9199adee43ae8de949affa2f4, type: 3}
   ishit: 0
 --- !u!136 &1059908298
 CapsuleCollider:
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   t: 40
   Speed: 2.97
   PlacementDistance: 1.22
-  Player: {fileID: 0}
+  Player: {fileID: 5054084728274584526, guid: 953d27a9199adee43ae8de949affa2f4, type: 3}
   ishit: 0
 --- !u!136 &1646004675
 CapsuleCollider:

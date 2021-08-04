@@ -22,13 +22,27 @@ public class bomb : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0)
         {
             Debug.Log("bomb!!");
-            if (GameObject.Find("kawamutu").GetComponent<enemymove1>() != null)
-            GameObject.Find("kawamutu").GetComponent<enemymove1>().hp -= 400;else
-
-            if(GameObject.Find("enemy2").GetComponent<enemymove2>() != null)
-            GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;else
 
             enemymove3.hp -= 400;
+
+            if (GameObject.Find("kawamutu").GetComponent<enemymove1>() != null)
+            {
+                GameObject.Find("kawamutu").GetComponent<enemymove1>().hp -= 400;
+            }
+            else
+            {
+                //null
+            }
+
+            if(GameObject.Find("enemy2").GetComponent<enemymove2>() != null)
+            {
+                GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;
+            }
+            else
+            {
+
+            }
+
             Destroy(Bullet.GetComponent<enemyShotPattern>().gameObject);
             Destroy(BigBullet.GetComponent<enemyShotPattern>().gameObject);
             ScoreMangers.Boom--;

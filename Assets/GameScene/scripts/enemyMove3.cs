@@ -28,7 +28,7 @@ public class enemymove3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player == null)
+        if(Player != null)
         Player = player_ctrl.pc.gameObject;
 
         //gameObject.transform.position = 
@@ -70,8 +70,6 @@ public class enemymove3 : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            imageTest.kari += 10000000;
-            imageTest.scorejudge = 1;
             Destroy(gameObject);
         }
 
