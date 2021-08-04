@@ -30,8 +30,9 @@ public class imageTest : MonoBehaviour
         //スコアの２桁目を取ってきてそれ
         //s12.sprite =
         //numbers i  = GetComponent<Image>();
-        kari = 0;
-        hikari = 1000000;           //10桁はできた
+        kari = kari;
+        hikari = 1000000;
+        hikari = hikari;           //10桁はできた
         for (int e = 0; e < 12; e++)
         {
             switch (e)
