@@ -28,7 +28,9 @@ public class enemymove3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Player == null)
         Player = player_ctrl.pc.gameObject;
+
         //gameObject.transform.position = 
         GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f;

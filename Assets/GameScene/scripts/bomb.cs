@@ -23,10 +23,10 @@ public class bomb : MonoBehaviour
         {
             Debug.Log("bomb!!");
             if (GameObject.Find("kawamutu").GetComponent<enemymove1>() != null)
-            GameObject.Find("kawamutu").GetComponent<enemymove1>().hp -= 400;
+            GameObject.Find("kawamutu").GetComponent<enemymove1>().hp -= 400;else
 
             if(GameObject.Find("enemy2").GetComponent<enemymove2>() != null)
-            GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;
+            GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;else
 
             enemymove3.hp -= 400;
             Destroy(Bullet.GetComponent<enemyShotPattern>().gameObject);
