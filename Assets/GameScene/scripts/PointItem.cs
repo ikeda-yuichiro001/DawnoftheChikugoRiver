@@ -22,9 +22,12 @@ public class PointItem : MonoBehaviour
         if (player_ctrl.xlimit < transform.position.x) transform.position = new Vector3(player_ctrl.xlimit,transform.position.y,transform.position.z);
         if (-player_ctrl.xlimit > transform.position.x) transform.position = new Vector3(-player_ctrl.xlimit, transform.position.y, transform.position.z);
         //アイテム上部回収
-        if (Player.transform.position.z > player_ctrl.zlimit - 10)
+        if (Player != null)
         {
-            transform.position = Player.transform.position;
+            if (Player.transform.position.z > player_ctrl.zlimit - 10)
+            {
+                transform.position = Player.transform.position;
+            }
         }
     }
     // Update is called once per frame

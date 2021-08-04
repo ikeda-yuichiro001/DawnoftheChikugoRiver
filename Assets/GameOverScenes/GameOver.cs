@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     public Image RetryButton;//+
     public Image TitleButton;//+
     public static int RetryRemain = 3;
+    public static int MaxRetry = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,7 @@ public class GameOver : MonoBehaviour
             if(count == 0 )
             {
                 RetryRemain--;
+                imageTest.kari = MaxRetry - RetryRemain;
                 SceneManager.LoadScene("Stage1");
 
             }

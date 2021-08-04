@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour
 {
-
+    GameObject Bullet;
+    GameObject BigBullet;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Bullet = GameObject.FindWithTag("Respawn");
+        BigBullet = GameObject.Find("enemy_bul_big(Clone)");
+
         if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0)
         {
             Debug.Log("bomb!!");
@@ -24,8 +29,8 @@ public class bomb : MonoBehaviour
             GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;
 
             enemymove3.hp -= 400;
-            Destroy(GameObject.Find("enemy_bul(Clone)").GetComponent<enemyShotPattern>().gameObject);
-            Destroy(GameObject.Find("enemy_bul_big(Clone)").GetComponent<enemyShotPattern>().gameObject);
+            Destroy(Bullet.GetComponent<enemyShotPattern>().gameObject);
+            Destroy(BigBullet.GetComponent<enemyShotPattern>().gameObject);
             ScoreMangers.Boom--;
             Debug.Log(ScoreMangers.Boom);
             //まだ未完成

@@ -14,9 +14,9 @@ public class imageTest : MonoBehaviour
 
     public Image[] numbers = new Image[10];
     public int[] scorenumber = new int[11];
-    public static long kari;
+    public static long kari = 0;
     public static int scorejudge = 1;
-    public static long hikari;
+    public static long hikari = 1000000;
     public Sprite[] sprites = new Sprite[10];
 
     // オブジェクトの取得
@@ -30,9 +30,17 @@ public class imageTest : MonoBehaviour
         //スコアの２桁目を取ってきてそれ
         //s12.sprite =
         //numbers i  = GetComponent<Image>();
-        kari = kari;
-        hikari = 1000000;
-        hikari = hikari;           //10桁はできた
+        //緑波線出てるけど気にしない by 西村
+        if (kari != 0)
+            kari = kari;
+        else
+            kari = 0;
+
+        if (hikari != 1000000)
+            hikari = hikari;            //10桁はできた
+        else
+            hikari = 1000000;
+
         for (int e = 0; e < 12; e++)
         {
             switch (e)
