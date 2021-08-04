@@ -94,7 +94,7 @@ public class SceneContollor : MonoBehaviour
 
         for (i = 0; i < Max; i++)
         {
-            Fish[i].color = new Color32(100, 100, 100, 100);
+            Fish[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
         Fish[(int)point].color = Color.white;
         Debug.Log(point);

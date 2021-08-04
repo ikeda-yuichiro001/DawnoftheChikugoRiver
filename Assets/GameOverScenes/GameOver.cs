@@ -40,11 +40,11 @@ public class GameOver : MonoBehaviour
         if (count == 0)
         {
             RetryButton.color = new Color32(255, 255, 255, 255);
-            TitleButton.color = new Color32(100, 100, 100, 100);
+            TitleButton.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
         else
         {
-            RetryButton.color =  new Color32(100, 100, 100, 100);
+            RetryButton.color = new Color(0.5f, 0.5f, 0.5f, 1);
             TitleButton.color = new Color32(255, 255, 255, 255);
         }
 
