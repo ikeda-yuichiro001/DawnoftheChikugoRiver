@@ -15,7 +15,8 @@ public class SceneContollor : MonoBehaviour
     Text[] Text = new Text[Max];
     public static bool[] kill = new bool[50];
     public int[] y;
-    public int point = 0,a = 0,h = 30;
+    public int a = 0, h = 30;
+    public float point;
     public int i,k;
     private Vector2 Panel_pos;
     const int Max = 51;
@@ -57,8 +58,8 @@ public class SceneContollor : MonoBehaviour
         Space = Screen.height * abc;
         Debug.Log(Screen.height);
         //矢印キーで動かす処理
-        if (Input.GetKeyDown(KeyCode.UpArrow)) { point--; }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) { point++;}
+        if (Input.GetKey(KeyCode.UpArrow)) { point -= 0.1f; }
+        if (Input.GetKey(KeyCode.DownArrow)) { point += 0.1f; }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) point = Max - 1;
         if (Input.GetKeyDown(KeyCode.RightArrow)) point = Max - 1;
         //1～50体と戻るボタンを上下でループさせる処理
@@ -67,7 +68,7 @@ public class SceneContollor : MonoBehaviour
         y = new int[Len];
         for (int r = 0; r < Len; r++)
         {
-            y[r] = point + r;
+            y[r] = (int)point + r;
             if (y[r] > Max - 1) y[r] -= Max;
             else if (y[r] < 0) y[r] += Max;
         }
@@ -93,15 +94,15 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[i].color = new Color32(100, 100, 100, 100);
         }
-        Fish[point].color = Color.white;
+        Fish[(int)point].color = Color.white;
         Debug.Log(point);
         if(point < 50)
         {
-             if (kill[point] == true)
+             if (kill[(int)point] == true)
              {
-                Syoukaibun.text = DataBase[point].discription;
-                FishName.text = DataBase[point].name;
-                Picture.texture = DataBase[point].image;
+                Syoukaibun.text = DataBase[(int)point].discription;
+                FishName.text = DataBase[(int)point].name;
+                Picture.texture = DataBase[(int)point].image;
              }
              else
              {
