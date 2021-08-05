@@ -19,8 +19,9 @@ public class BombShotBoom : MonoBehaviour
     {
         transform.localScale += new Vector3(1, 1, 1);
         //SphereCollider.center += new Vector3(1, 1, 1);
+        t += Time.deltaTime;
 
-        if (t > 5)
+        if (t > 2)
         {
             Destroy(gameObject);
             Destroy(this);
@@ -36,15 +37,18 @@ public class BombShotBoom : MonoBehaviour
         
         if(other.GetComponent<enemymove1>() != null)
         {
-            other.GetComponent<enemymove1>().hp -= 10;
+            other.GetComponent<enemymove1>().hp -= 4;
+            imageTest.kari += 100;
         }
         if (other.GetComponent<enemymove2>() != null)
         {
-            other.GetComponent<enemymove2>().hp -= 10;
+            other.GetComponent<enemymove2>().hp -= 4;
+            imageTest.kari += 100;
         }
         if (other.GetComponent<enemymove3>() != null)
         {
-            enemymove3.hp -= 10;
+            enemymove3.hp -= 4;
+            imageTest.kari += 100;
         }
     }
 }
