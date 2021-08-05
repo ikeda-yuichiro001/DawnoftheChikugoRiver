@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour
 {
-    GameObject Bullet;
-    GameObject BigBullet;
+    //GameObject Bullet;
+    //GameObject BigBullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +16,20 @@ public class bomb : MonoBehaviour
     void Update()
     {
 
-        Bullet = GameObject.FindWithTag("Respawn");
-        BigBullet = GameObject.Find("enemy_bul_big(Clone)");
+        //Bullet = GameObject.FindWithTag("Respawn");
+        //BigBullet = GameObject.Find("enemy_bul_big(Clone)");
 
         if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0)
         {
+
             Debug.Log("bomb!!");
 
             ScoreMangers.Boom--;
-
+            GameObject a = Instantiate(Resources.Load("BombShot!!"), transform.position, Quaternion.identity) as GameObject;
+            
+            //----------------------------------------------------
+            //自機からすっけすけの弾が出て広がって何秒か後には消滅
+            /*
             enemymove3.hp -= 400;
 
             if (GameObject.Find("kawamutu") != null)
@@ -44,10 +49,10 @@ public class bomb : MonoBehaviour
             {
 
             }
-
+            
             Destroy(Bullet.GetComponent<enemyShotPattern>().gameObject);
             Destroy(BigBullet.GetComponent<enemyShotPattern>().gameObject);
-            Debug.Log(ScoreMangers.Boom);
+            Debug.Log(ScoreMangers.Boom);*/
             //まだ未完成
         }
         if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom < 0)
