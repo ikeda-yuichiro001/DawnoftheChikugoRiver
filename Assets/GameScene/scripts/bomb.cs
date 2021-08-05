@@ -23,9 +23,11 @@ public class bomb : MonoBehaviour
         {
             Debug.Log("bomb!!");
 
+            ScoreMangers.Boom--;
+
             enemymove3.hp -= 400;
 
-            if (GameObject.Find("kawamutu").GetComponent<enemymove1>() != null)
+            if (GameObject.Find("kawamutu") != null)
             {
                 GameObject.Find("kawamutu").GetComponent<enemymove1>().hp -= 400;
             }
@@ -34,7 +36,7 @@ public class bomb : MonoBehaviour
                 //null
             }
 
-            if(GameObject.Find("enemy2").GetComponent<enemymove2>() != null)
+            if(GameObject.Find("enemy2") != null)
             {
                 GameObject.Find("enemy2").GetComponent<enemymove2>().hp -= 400;
             }
@@ -45,7 +47,6 @@ public class bomb : MonoBehaviour
 
             Destroy(Bullet.GetComponent<enemyShotPattern>().gameObject);
             Destroy(BigBullet.GetComponent<enemyShotPattern>().gameObject);
-            ScoreMangers.Boom--;
             Debug.Log(ScoreMangers.Boom);
             //まだ未完成
         }

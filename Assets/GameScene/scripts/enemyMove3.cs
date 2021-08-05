@@ -29,7 +29,9 @@ public class enemymove3 : MonoBehaviour
     void Update()
     {
         if(Player != null)
-        Player = player_ctrl.pc.gameObject;
+        {
+            Player = player_ctrl.pc.gameObject;
+        }
 
         //gameObject.transform.position = 
         GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
