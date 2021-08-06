@@ -47,11 +47,38 @@ public class title : MonoBehaviour
 
         //選ばれたカーソルの色を変更＋それぞれの処理------------------------------
 
-        GameStart.color  = point == 0 ? new Color(1, 1, 1, 1) : new Color(0.5f, 0.5f, 0.5f, 1);
-        Collection.color = point == 1 ? new Color(1, 1, 1, 1) : new Color(0.5f, 0.5f, 0.5f, 1);
-        Option.color     = point == 2 ? new Color(1, 1, 1, 1) : new Color(0.5f, 0.5f, 0.5f, 1);
-        Quit.color       = point == 3 ? new Color(1, 1, 1, 1) : new Color(0.5f, 0.5f, 0.5f, 1);
-
+        if(point == 0)
+        {
+            GameStart.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            GameStart.color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+        if(point == 1)
+        {
+            Collection.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            Collection.color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+        if (point == 2)
+        {
+            Option.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            Option.color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+        if (point == 3)
+        {
+            Quit.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            Quit.color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             switch (point)
