@@ -37,17 +37,17 @@ public class BombShotBoom : MonoBehaviour
         
         if(other.GetComponent<enemymove1>() != null)
         {
-            other.GetComponent<enemymove1>().hp -= 4;
+            other.GetComponent<enemymove1>().hp -= 2;
             imageTest.kari += 100;
         }
         if (other.GetComponent<enemymove2>() != null)
         {
-            other.GetComponent<enemymove2>().hp -= 4;
+            other.GetComponent<enemymove2>().hp -= 2;
             imageTest.kari += 100;
         }
         if (other.GetComponent<enemymove3>() != null)
         {
-            enemymove3.hp -= 4;
+            enemymove3.hp -= 2;
             imageTest.kari += 100;
         }
     }

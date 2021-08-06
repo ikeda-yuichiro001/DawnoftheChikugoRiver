@@ -37,7 +37,8 @@ public class ExtendItem : MonoBehaviour
         if (other.GetComponent<shot>() != null)
         {
 
-            //other.GetComponent<ScoreMangers>().RetryRemain++;
+            //ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
             Destroy(gameObject);
         }
     }

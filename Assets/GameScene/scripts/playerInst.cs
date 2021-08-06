@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class playerInst : MonoBehaviour
 {
     bool gameover = false;
-    int Zanki = 5;
+    public static int Zanki = 5;
     GameObject Player;
     //float t = 0;
     // Start is called before the first frame update
