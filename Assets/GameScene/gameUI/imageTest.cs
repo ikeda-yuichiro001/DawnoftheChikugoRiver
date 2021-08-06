@@ -235,4 +235,10 @@ public class imageTest : MonoBehaviour
             }
         }
     }
+
+    public static void ScoreReset()
+    {
+        imageTest.kari = 0;
+    }
+
 }
