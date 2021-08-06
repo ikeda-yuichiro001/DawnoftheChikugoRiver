@@ -151,6 +151,7 @@ public class DifficultyScene : MonoBehaviour
                 Debug.Log("bbbbb");
                 if (point == 4)
                 {
+                    imageTest.ScoreReset();
                     SceneManager.LoadScene("Title");
                 }
                 else
