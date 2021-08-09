@@ -8,6 +8,7 @@ public class StageClear : MonoBehaviour
     GameObject stage1boss;
     float time = 0;
     bool a = false;
+    bool stage = false;
     int StageNum = 1;
     //bool down = false;
     // Start is called before the first frame update
@@ -29,10 +30,16 @@ public class StageClear : MonoBehaviour
             }
 
             time += Time.deltaTime;
-            if (time > 5)
+            if (time > 5 && !stage)
             {
                 StageNum++;
-                SceneManager.LoadScene("Stage"+ StageNum);//ここステージクリアしたら次のステージへ
+                if (StageNum < 6)
+                    SceneManager.LoadScene("Stage" + StageNum);//ここステージクリアしたら次のステージへ
+                else
+                    SceneManager.LoadScene("GameClearScene");
+
+                time = 0;
+                stage = true;
                 //SceneManager.LoadScene("GameClearScene");
             }
         }
