@@ -11,7 +11,6 @@ public class BombShotBoom : MonoBehaviour
     void Start()
     {
         SphereCollider = GetComponent<SphereCollider>();
-
     }
 
     // Update is called once per frame
