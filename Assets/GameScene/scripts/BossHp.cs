@@ -9,12 +9,12 @@ public class BossHp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Slider.value = enemymove3.hp / enemymove3.maxhp;
+        Slider.value = enemyMove3.hp / enemyMove3.maxhp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Slider.value = (float)enemymove3.hp / (float)enemymove3.maxhp;
+        Slider.value = (float)enemyMove3.hp / (float)enemyMove3.maxhp;
     }
 }
