@@ -15,6 +15,7 @@ public class StageClear : MonoBehaviour
     void Start()
     {
         stage1boss = GameObject.Find("kurumeusu");
+        stage = false;
     }
 
     // Update is called once per frame

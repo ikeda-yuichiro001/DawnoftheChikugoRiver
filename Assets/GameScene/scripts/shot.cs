@@ -21,6 +21,7 @@ public class shot : MonoBehaviour
     {
         fannels = new GameObject[4];
         Player = GameObject.Find("player");
+        Power = Power;
     }
     
     public void UpPower()
