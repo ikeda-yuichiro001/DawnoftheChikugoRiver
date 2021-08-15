@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class fannel : MonoBehaviour
 {
-    int timecount = 0;
-    //bool get = false;
+    int timecount = 0;    //bool get = false;
     // Start is called before the first frame update
     void Start()
     {

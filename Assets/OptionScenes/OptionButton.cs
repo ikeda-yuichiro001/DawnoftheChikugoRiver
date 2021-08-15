@@ -18,18 +18,18 @@ public class OptionButton : MonoBehaviour
     Image Decision;
     Text Number;
     Text Number2;
-    Text BGM;
-    Text SE;
-    Text Default;
+    Image BGM;
+    Image SE;
+    Image Default;
     public  int point = 0;
 
     //定義したやつの取得
     void Start()
     {
         Decision = GameObject.Find("Canvas/Decision").GetComponent<Image>();
-        BGM = GameObject.Find("Canvas/BGM").GetComponent<Text>();
-        SE = GameObject.Find("Canvas/SE").GetComponent<Text>();
-        Default = GameObject.Find("Canvas/Default").GetComponent<Text>();
+        BGM = GameObject.Find("Canvas/BGM").GetComponent<Image>();
+        SE = GameObject.Find("Canvas/SE").GetComponent<Image>();
+        Default = GameObject.Find("Canvas/Default").GetComponent<Image>();
         Number = GameObject.Find("Canvas/Number").GetComponent<Text>();
         Number2 = GameObject.Find("Canvas/Number2").GetComponent<Text>();
         
@@ -62,40 +62,40 @@ public class OptionButton : MonoBehaviour
 
         if (point == 0)
         {
-            BGM.color = Color.cyan;
+            BGM.color = Color.white;
         }
         else
         {
-            BGM.color = new Color32(70, 70, 70, 100);
+            BGM.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
 
 
         if (point == 1)
         {
-            SE.color = Color.cyan;
+            SE.color = Color.white;
         }
         else
         {
-            SE.color = new Color32(70, 70, 70, 100);
+            SE.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
 
 
         if (point == 2)
         {
-            Default.color = Color.cyan;
+            Default.color = Color.white;
         }
         else
         {
-            Default.color = new Color32(70, 70, 70, 100);
+            Default.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
 
         if (point == 3)
         {
-            Decision.color = Color.cyan;
+            Decision.color = Color.white;
         }
         else
         {
-            Decision.color = new Color32(70, 70, 70, 100);
+            Decision.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
 
         

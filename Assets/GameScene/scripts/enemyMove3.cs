@@ -2,31 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemymove3 : MonoBehaviour
+public class enemyMove3 : MonoBehaviour
 {
     //bool lockon = false;
     int w = 0, a = 0;
-    public static int maxhp = 300;
+    public static int maxhp = 3000;
     public static int hp = maxhp;
     float cnt;
     public int t = 40;
     public float Speed;
     public float PlacementDistance;
     public GameObject Player;
+    GameObject layer;
+    float d = 100;
+    public bool ishit;
 
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        layer = GameObject.Find("player");
+        hp = maxhp;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player_ctrl.pc != null)
         Player = player_ctrl.pc.gameObject;
+        Debug.Log(1);
+        
         //gameObject.transform.position = 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * 4)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd;
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f;
 
         if (cnt >= 1)                                  //new
         {
@@ -39,8 +47,8 @@ public class enemymove3 : MonoBehaviour
             cnt = 0;
         }
 
-        //if (transform.position.z > 35 || transform.position.z < -35 || transform.position.x > 35 || transform.position.x < -35)
-        //  Destroy(gameObject);
+        if (transform.position.z > 35 || transform.position.z < -35 || transform.position.x > 35 || transform.position.x < -35)
+          transform.position = new Vector3(0,transform.position.y,transform.position.z);
         //Debug.Log(hp);
 
         if (hp <= 0)
@@ -63,9 +71,19 @@ public class enemymove3 : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            imageTest.kari += 10000000;
-            imageTest.scorejudge = 1;
             Destroy(gameObject);
+        }
+
+        if (layer != null)
+        {
+            d = Vector3.Distance(transform.position, layer.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = layer.gameObject.GetComponent<shot>().Power;
+            Destroy(layer);
+            Debug.Log("ピチューン！");
         }
     }
 

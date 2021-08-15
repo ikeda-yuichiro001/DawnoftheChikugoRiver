@@ -12,6 +12,7 @@ public class enemyShotPattern : MonoBehaviour
     //GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,10 @@ public class enemyShotPattern : MonoBehaviour
         if (Player != null)
         {
             d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
         if (d < 0.5f&&!ishit)

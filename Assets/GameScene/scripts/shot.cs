@@ -21,6 +21,7 @@ public class shot : MonoBehaviour
     {
         fannels = new GameObject[4];
         Player = GameObject.Find("player");
+        Power = Power;
     }
     
     public void UpPower()
@@ -58,27 +59,15 @@ public class shot : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Y))
-        {
-            UpPower();
-            Debug.Log(Power);
-        }
+    {       
+        ScoreMangers.Power = Power;
 
-        //Debug.Log(Power);
-
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            DownPower();
-            Debug.Log(Power);
-        }*/
         timecount++;
         if (timecount == 3)
         {
             timecount = 0;
         }
 
-        ScoreMangers.Power = Power;
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {
@@ -121,8 +110,8 @@ public class shot : MonoBehaviour
                     shoot(-1);
                     break;
           
+            }
         }
-    }
         switch (Power/2)
         {
             default:
@@ -156,6 +145,11 @@ public class shot : MonoBehaviour
                 //inst_fannel(-2, 0);
                 //inst_fannel(2, 0);
                 break;
+        }
+
+        if (Input.GetKeyDown(KeyCode.X)){
+            //ボム
+
         }
     }
     public void shoot(int a)

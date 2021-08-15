@@ -15,13 +15,16 @@ public class SceneContollor : MonoBehaviour
     Text[] Text = new Text[Max];
     public static bool[] kill = new bool[50];
     public int[] y;
-    public int point = 0,a = 0,h = 30;
-    public int i,k;
+    public int a = 0, h = 30;
+    public float point;
+    public int i,k,X;
     private Vector2 Panel_pos;
     const int Max = 51;
-    int Len = 14;
-    public float Space = 30;
+    int Len = 15;
+    public float Space;
     public FishData[] DataBase;
+    public float abc;
+    public float aa,ac;
     void Start()
     {
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
@@ -29,12 +32,9 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[t] = GameObject.Find("Canvas/Panel/Fish" + t).GetComponent<Image>();
             Text[t] = GameObject.Find("Canvas/Panel/Fish"+ t +"/Text").GetComponent<Text>();
-
         }
         Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
         xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
-        Panel_pos.y = Fish[0].gameObject.GetComponent<RectTransform>().position.y;
-        Panel_pos.x = Fish[0].gameObject.GetComponent<RectTransform>().position.x;
         for (int t = 0; t < Max - 1; t++)
         {
             if(kill[t] == true) 
@@ -53,9 +53,15 @@ public class SceneContollor : MonoBehaviour
 
     void Update()
     {
+        Panel_pos.y = Panel.gameObject.GetComponent<RectTransform>().position.y;
+        Panel_pos.x = Panel.gameObject.GetComponent<RectTransform>().position.x;
+        Space = Screen.height * abc;
+        X = Screen.width;
+        Debug.Log(Screen.width);
+        Debug.Log(Screen.height);
         //矢印キーで動かす処理
-        if (Input.GetKeyDown(KeyCode.UpArrow)) { point--; }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) { point++;}
+        if (Input.GetKey(KeyCode.UpArrow)) { point -= 0.1f; }
+        if (Input.GetKey(KeyCode.DownArrow)) { point += 0.1f; }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) point = Max - 1;
         if (Input.GetKeyDown(KeyCode.RightArrow)) point = Max - 1;
         //1～50体と戻るボタンを上下でループさせる処理
@@ -64,13 +70,13 @@ public class SceneContollor : MonoBehaviour
         y = new int[Len];
         for (int r = 0; r < Len; r++)
         {
-            y[r] = point + r;
+            y[r] = (int)point + r;
             if (y[r] > Max - 1) y[r] -= Max;
             else if (y[r] < 0) y[r] += Max;
         }
         for (int r = 0; r < Len; r++)
             Fish[y[r]].gameObject.GetComponent<RectTransform>().position
-               = new Vector3(Panel_pos.x, Panel_pos.y - Space * r, 0);
+               = new Vector3(Panel_pos.x , Panel_pos.y + X / ac - Space * r, 0);
             
             //1～50体の色
             for (i = 0; i < Max; i++)
@@ -84,20 +90,21 @@ public class SceneContollor : MonoBehaviour
             { 
                 Fish[y[i]].enabled = true;
                 Text[y[i]].enabled = true;
-
             }
-        
+
         for (i = 0; i < Max; i++)
-            Fish[i].color = Color.white;
-        Fish[point].color = Color.green;
+        {
+            Fish[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+        Fish[(int)point].color = Color.white;
         Debug.Log(point);
         if(point < 50)
         {
-             if (kill[point] == true)
+             if (kill[(int)point] == true)
              {
-                Syoukaibun.text = DataBase[point].discription;
-                FishName.text = DataBase[point].name;
-                Picture.texture = DataBase[point].image;
+                Syoukaibun.text = DataBase[(int)point].discription;
+                FishName.text = DataBase[(int)point].name;
+                Picture.texture = DataBase[(int)point].image;
              }
              else
              {

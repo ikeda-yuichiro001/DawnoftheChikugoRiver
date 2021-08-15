@@ -10,13 +10,14 @@ public class GameOver : MonoBehaviour
     public Image RetryButton;//+
     public Image TitleButton;//+
     public static int RetryRemain = 3;
+    public static int MaxRetry = 3;
     // Start is called before the first frame update
     void Start()
     {
         //RetryButton = GameObject.Find("Canvas/RetryButton").GetComponent<Image>();
         //TitleButton = GameObject.Find("Canvas/TitleButton").GetComponent<Image>();
         //Invoke("ChangeScene", 1.5f);
-
+        ScoreMangers.herl = RetryRemain;
     }
 
     // Update is called once per frame
@@ -38,15 +39,13 @@ public class GameOver : MonoBehaviour
 
         if (count == 0)
         {
-            
-            RetryButton.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-            TitleButton.color = new Color(0.6f, 0.6f, 0.6f, 1f);
+            RetryButton.color = new Color32(255, 255, 255, 255);
+            TitleButton.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
         else
         {
-            
-            TitleButton.color = new Color(1, 1,1,1);
-            RetryButton.color = new Color(0.6f, 0.6f, 0.6f, 1);
+            RetryButton.color = new Color(0.5f, 0.5f, 0.5f, 1);
+            TitleButton.color = new Color32(255, 255, 255, 255);
         }
 
         if(Input.GetKeyDown(KeyCode.Z))
@@ -55,21 +54,14 @@ public class GameOver : MonoBehaviour
             if(count == 0 )
             {
                 RetryRemain--;
+                imageTest.kari = MaxRetry - RetryRemain;
                 SceneManager.LoadScene("Stage1");
 
             }
             else
             {
-                ChangeScene();
-                //title
-            }
-                
+                SceneManager.LoadScene("Title");
+            } 
         }
-
-       
-    }
-    void ChangeScene()
-    {
-        SceneManager.LoadScene("Title");
     }
 }

@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 public class playerInst : MonoBehaviour
 {
     bool gameover = false;
-    int Zanki = 5;
+    public static int Zanki = 5;
     GameObject Player;
+    //float t = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Zanki++;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (SceneLoader.IsFade) return;
-
         ScoreMangers.RetryRemain = Zanki;
 
         if (Player == null && Zanki>0)
@@ -30,12 +30,21 @@ public class playerInst : MonoBehaviour
             Player.GetComponent<shot>().UpPower();
             Player.GetComponent<shot>().DownPower();
             Zanki --;
-            Debug.Log("残機：" + Zanki);
-            Debug.Log("Power:" +Player.GetComponent<shot>().Power);
+            ScoreMangers.RetryRemain = Zanki;
+            ScoreMangers.Boom = 3;
+            /*
+            t += Time.deltaTime;
+            if (t > 7)
+            {
+                gameObject.AddComponent<BoxCollider>();
+                GetComponent<BoxCollider>().isTrigger = true;
+                Debug.Log("無敵消えた");
+            }*/
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {
-            //Instantiate(Resources.Load("player_ghost"), new Vector3(0, 2, -14), Quaternion.identity);
+            Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
+            Player.GetComponent<shot>().Power = 8;
             SceneManager.LoadScene("GameOver");
             gameover = true;
         }

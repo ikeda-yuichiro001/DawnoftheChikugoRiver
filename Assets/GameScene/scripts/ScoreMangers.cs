@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class ScoreMangers : MonoBehaviour
 {
     public GameObject score_object = null; //テキストオブジェクト
-    public static int herl;
-    public int herlBit;
-    public static int Invincible;
-    public int InvincibleBit;
-    public static int Boom;
-    public int BoomBit;
-    public static int Power;
-    public static int RetryRemain;
-    public int RetryRemainBit;
+    public static int herl = 1;
+    public int herlBit = 0;
+    public static int Invincible = 2;
+    public int InvincibleBit = 0;
+    public static int Boom = 3;
+    public int BoomBit = 0;
+    public static int Power = 0;
+    public static int RetryRemain = 5;
+    public int RetryRemainBit = 0;
 
     public Text Recover;
     public Text RecoverBit;
@@ -32,17 +32,17 @@ public class ScoreMangers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        herl = 0;
-        herlBit = 0;
-        Invincible = 0;
-        InvincibleBit = 0;
-        Boom = 0;
-        BoomBit = 0;
-        Power = 0;
-        RetryRemain = 3;
-        RetryRemainBit = 0;
+        herl = herl;
+        herlBit = herlBit;
+        Invincible = Invincible;
+        InvincibleBit = InvincibleBit;
+        Boom = Boom;
+        BoomBit = BoomBit;
+        Power = Power;
+        RetryRemain = RetryRemain;
+        RetryRemainBit = RetryRemainBit;
 
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         /*Recover = GameObject.Find("Canvas/Recover").GetComponent<Text>();
         Invincible = GameObject.Find("Canvas/Invincible").GetComponent<Text>();
         RetryRemain = GameObject.Find("Canvas/RetryRemain").GetComponent<Text>();
@@ -57,7 +57,7 @@ public class ScoreMangers : MonoBehaviour
     void Update()
     {
         //オブジェクトからテキストコンポーネントを取得
-        //Text score_text = score_object.GetComponent<Text>();
+        Text score_text = score_object.GetComponent<Text>();
 
         //
         switch (herl)//回復
@@ -422,7 +422,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[40].sprite = aicon[0];
                 break;
 
-            case 7:// PowerT.text = "ちから ：★★★★★★★";
+            default:// PowerT.text = "ちから ：★★★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
                 aiconall[36].sprite = aicon[7];
