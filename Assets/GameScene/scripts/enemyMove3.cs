@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyMove3 : MonoBehaviour
+public class enemymove3 : MonoBehaviour
 {
     //bool lockon = false;
     int w = 0, a = 0;
@@ -30,7 +30,7 @@ public class enemyMove3 : MonoBehaviour
     {
         if(player_ctrl.pc != null)
         Player = player_ctrl.pc.gameObject;
-        Debug.Log(1);
+        //Debug.Log(1);
         
         //gameObject.transform.position = 
         GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);

@@ -44,9 +44,9 @@ public class BombShotBoom : MonoBehaviour
             other.GetComponent<enemymove2>().hp -= 2;
             imageTest.kari += 100;
         }
-        if (other.GetComponent<enemyMove3>() != null)
+        if (other.GetComponent<enemymove3>() != null)
         {
-            enemyMove3.hp -= 2;
+            enemymove3.hp -= 2;
             imageTest.kari += 100;
         }
     }

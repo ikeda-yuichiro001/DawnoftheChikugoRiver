@@ -6,7 +6,7 @@ public class bomb : MonoBehaviour
 {
     //GameObject Bullet;
     //GameObject BigBullet;
-    float t = 0;
+    //bool bomblimit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +22,11 @@ public class bomb : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0)
         {
-            
-            Debug.Log(t);
-            Debug.Log("bomb!!");
-
+            //bomblimit = true;
+            //float t = 0;
+            //t += Time.deltaTime;
             ScoreMangers.Boom--;
             GameObject a = Instantiate(Resources.Load("BombShot!!"), transform.position, Quaternion.identity) as GameObject;
-
-            
             //----------------------------------------------------
             //自機からすっけすけの弾が出て広がって何秒か後には消滅
 

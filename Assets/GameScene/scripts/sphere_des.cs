@@ -34,9 +34,9 @@ public class sphere_des : MonoBehaviour
             Destroy(gameObject);
             ishit = true;
         }
-        if (!ishit && other.GetComponent<enemyMove3>() != null)
+        if (!ishit && other.GetComponent<enemymove3>() != null)
         {
-            enemyMove3.hp--;
+            enemymove3.hp--;
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             Destroy(gameObject);

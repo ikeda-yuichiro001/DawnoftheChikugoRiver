@@ -49,7 +49,7 @@ public class time : MonoBehaviour
 
         if(timeT < 0 && !timeup)
         {
-            enemyMove3.hp = 0;
+            enemymove3.hp = 0;
             enemy2.GetComponent<enemymove2>().hp = 0;
             enemy1.GetComponent<enemymove1>().hp = 0;
             timeup = true;
