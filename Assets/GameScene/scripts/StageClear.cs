@@ -9,7 +9,7 @@ public class StageClear : MonoBehaviour
     float time = 0;
     bool a = false;
     bool stage = false;
-    int StageNum = 1;
+    //int StageNum = 1;
     //bool down = false;
     // Start is called before the first frame update
     void Start()
@@ -33,11 +33,12 @@ public class StageClear : MonoBehaviour
             time += Time.deltaTime;
             if (time > 5 && !stage)
             {
-                StageNum++;
-                if (StageNum < 6)
-                    SceneManager.LoadScene("Stage" + StageNum);//ここステージクリアしたら次のステージへ
+                StageManager.stage++;
+                Debug.Log("stage" + StageManager.stage);
+                if (StageManager.stage < 6)
+                    SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
                 else
-                    SceneManager.LoadScene("GameClearScene");
+                    SceneManager.LoadScene("GameClear");
 
                 time = 0;
                 stage = true;
