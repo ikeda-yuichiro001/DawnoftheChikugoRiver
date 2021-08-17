@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: 52
-  Speed: 2.97
+  Speed: 9.97
   PlacementDistance: 1.22
   Player: {fileID: 5054084728274584526, guid: 953d27a9199adee43ae8de949affa2f4, type: 3}
   ishit: 0
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: 40
-  Speed: 2.97
+  Speed: 10.43
   PlacementDistance: 1.22
   Player: {fileID: 5054084728274584526, guid: 953d27a9199adee43ae8de949affa2f4, type: 3}
   ishit: 0
