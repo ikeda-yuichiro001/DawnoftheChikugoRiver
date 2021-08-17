@@ -34,7 +34,7 @@ public class StageClear : MonoBehaviour
             if (time > 5 && !stage)
             {
                 StageManager.stage++;
-                Debug.Log("stage" + StageManager.stage);
+                //Debug.Log("stage" + StageManager.stage);
                 if (StageManager.stage < 6)
                     SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
                 else
