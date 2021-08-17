@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreMangers : MonoBehaviour
 {
     public GameObject score_object = null; //テキストオブジェクト
-    public static int herl = 1;
+    public static int herl = 3;
     public int herlBit = 0;
     public static int Invincible = 2;
     public int InvincibleBit = 0;

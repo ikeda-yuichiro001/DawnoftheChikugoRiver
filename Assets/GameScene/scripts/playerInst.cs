@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class playerInst : MonoBehaviour
 {
     bool gameover = false;
-    public static int Zanki = 5;
+    public static int Zanki = 3;
     GameObject Player;
     //float t = 0;
     // Start is called before the first frame update
@@ -45,6 +45,7 @@ public class playerInst : MonoBehaviour
         {
             Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
             Player.GetComponent<shot>().Power = 8;
+            Zanki = 3;
             SceneManager.LoadScene("GameOver");
             gameover = true;
         }
