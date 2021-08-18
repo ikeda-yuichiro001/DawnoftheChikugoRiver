@@ -7,6 +7,7 @@ public class playerInst : MonoBehaviour
 {
     bool gameover = false;
     public static int Zanki = 3;
+    public static int bomb = 3;
     GameObject Player;
     //float t = 0;
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class playerInst : MonoBehaviour
             Player.GetComponent<shot>().DownPower();
             Zanki --;
             ScoreMangers.RetryRemain = Zanki;
-            ScoreMangers.Boom = 3;
+            ScoreMangers.Boom = bomb;
             /*
             t += Time.deltaTime;
             if (t > 7)
