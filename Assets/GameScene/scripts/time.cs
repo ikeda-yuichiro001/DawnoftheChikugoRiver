@@ -48,16 +48,9 @@ public class time : MonoBehaviour
 
         timeT -= Time.deltaTime ;
 
-        if(timeT < 0 && !timeup)
+        if(timeT < 0)
         {
-            enemymove3.hp = 0;
-            enemy2.GetComponent<enemymove2>().hp = 0;
-            enemy1.GetComponent<enemymove1>().hp = 0;
-            timeup = true;
-            if(timeup == true)
-            {
-                SceneManager.LoadScene("GameOverScenes");
-            }
+            SceneManager.LoadScene("GameOver");
         }
 
         y -= Time.deltaTime;
