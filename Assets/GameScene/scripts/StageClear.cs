@@ -21,7 +21,7 @@ public class StageClear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( stage1boss == null)
+        if ( stage1boss == false)
         {
             if (!a)
             {
