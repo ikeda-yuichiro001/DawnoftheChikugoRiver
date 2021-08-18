@@ -15,8 +15,9 @@ public class Invinsible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && ScoreMangers.Invincible < 0)
         {
+            ScoreMangers.Invincible--;
             Switch = true;
         }
         if (Switch)
