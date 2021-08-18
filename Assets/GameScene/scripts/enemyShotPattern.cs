@@ -12,6 +12,7 @@ public class enemyShotPattern : MonoBehaviour
     //GameObject core;
     public Rigidbody rb;
     public Vector2 arrow;
+    public static float HitRange = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +50,7 @@ public class enemyShotPattern : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (d < 0.5f&&!ishit)
+        if (d < HitRange&&!ishit)
         {
             Destroy(gameObject);
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
