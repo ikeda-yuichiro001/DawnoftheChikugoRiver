@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class time : MonoBehaviour
@@ -53,6 +54,10 @@ public class time : MonoBehaviour
             enemy2.GetComponent<enemymove2>().hp = 0;
             enemy1.GetComponent<enemymove1>().hp = 0;
             timeup = true;
+            if(timeup == true)
+            {
+                SceneManager.LoadScene("GameOverScenes");
+            }
         }
 
         y -= Time.deltaTime;
