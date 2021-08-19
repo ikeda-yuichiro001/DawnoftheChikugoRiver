@@ -107,7 +107,7 @@ public class EnemyController : MonoBehaviour
                     cnt += Time.deltaTime * Speed;
                     if (cnt >= 1)
                     {
-                        GameObject g = Instantiate(Resources.Load("Barrage_"), transform.position, Quaternion.identity) as GameObject;
+                        GameObject g = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject;
                         cnt = 0;
                     }
                 }
@@ -119,8 +119,8 @@ public class EnemyController : MonoBehaviour
                     cnt += Time.deltaTime * Speed; //add !!
                     if (cnt >= 1)
                     {
-                        Instantiate(Resources.Load("Barrage_"), transform.position + new Vector3(1, 0, 0) * PlacementDistance, Quaternion.identity); //new
-                        Instantiate(Resources.Load("Barrage_"), transform.position + new Vector3(-1, 0, 0) * PlacementDistance, Quaternion.identity); //new
+                        Instantiate(Resources.Load("enemy_bul"), transform.position + new Vector3(1, 0, 0) * PlacementDistance, Quaternion.identity); //new
+                        Instantiate(Resources.Load("enemy_bul"), transform.position + new Vector3(-1, 0, 0) * PlacementDistance, Quaternion.identity); //new
                         cnt = 0;
                     }
                 }
@@ -133,8 +133,8 @@ public class EnemyController : MonoBehaviour
                     {
                         for (int v = 0; v < 40; v++)
                         {
-                            GameObject a = Instantiate(Resources.Load("Barrage_"), transform.position, Quaternion.identity) as GameObject;
-                            a.GetComponent<Barrage>().move = new Vector2(Mathf.Sin(v * 1f / 40 * Mathf.PI * 2), Mathf.Cos(v * 1f / 40 * Mathf.PI * 2));
+                            GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject;
+                            a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / 40 * Mathf.PI * 2), Mathf.Cos(v * 1f / 40 * Mathf.PI * 2));
                         }
                         cnt = 0;
                     }

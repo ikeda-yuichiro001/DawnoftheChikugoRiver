@@ -14,7 +14,7 @@ public class Enemy_AI_Behavior : MonoBehaviour
     public void Start()
     {
         enemyCtrler = GetComponent<EnemyController>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player = GameObject.Find("player");
         SETUP();
     }
 
@@ -24,11 +24,13 @@ public class Enemy_AI_Behavior : MonoBehaviour
     float timerCnt;
     bool timerFlag;
 
-    public Player player;
+    public GameObject player;
 
     public void Update()
     {
-        PlayerDistance = Vector3.Distance(player.transform.position, transform.position);
+        Debug.Log(player_ctrl.pc.transform.position);
+        Debug.Log(transform.position);
+        PlayerDistance = Vector3.Distance(player_ctrl.pc.gameObject.transform.position, transform.position);
         if (timerFlag)
         {
             timerCnt += Time.deltaTime;
