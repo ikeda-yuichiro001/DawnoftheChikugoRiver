@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameBGM : MonoBehaviour
 {
-    public  bool Destroy = true;
+    public  bool Destroy_ = true;
     
     void Start()
     {
-        if (Destroy)
+        if (Destroy_)
         {
             //シーン遷移してもオブジェクトが消えないようにする
             DontDestroyOnLoad(gameObject);
         }
 
-        //SceneManager.sceneLoaded += SceneLoaded;
+        SceneManager.sceneLoaded += SceneLoaded;
     }
 
 
@@ -23,7 +23,7 @@ public class GameBGM : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Title")
         {
-            //SceneManager.sceneLoaded -= SceneLoaded;
+            SceneManager.sceneLoaded -= SceneLoaded;
             Destroy(gameObject);
         }
     }
