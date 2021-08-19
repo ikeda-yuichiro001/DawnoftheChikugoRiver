@@ -2471,7 +2471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yuichiro IKEDA
+  m_Text: Yuichiro  IKEDA
 --- !u!222 &1592407033
 CanvasRenderer:
   m_ObjectHideFlags: 0
