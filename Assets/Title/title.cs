@@ -26,11 +26,11 @@ public class title : MonoBehaviour
     void Update()
     {
         //上下にカーソル移動 --------------------------------
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             point++;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             point--;
         }
