@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class time : MonoBehaviour
 {
-    bool timeup = false;
+    //bool timeup = false;
     public float x,y;//時計の針
     public float timeT;
-    public float[] timenumber = new float[3];
+    //public float[] timenumber = new float[3];
 
     public Sprite[] timeKetanumber = new Sprite[10];
     //public Image[] timebox = new Image[3];
@@ -19,11 +19,10 @@ public class time : MonoBehaviour
     public Image movehari;
     public Quaternion movehuri;
     public float gizmoSize = 0.3f;
-    public Color gizmoColor = Color.yellow;
 
     void OnDrawGizmos()
     {
-        Gizmos.color = gizmoColor;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, gizmoSize);
     }
 
@@ -42,9 +41,9 @@ public class time : MonoBehaviour
     void Update()
     {
 
-        GameObject enemy1 = GameObject.Find("kawamutu");
+        /*GameObject enemy1 = GameObject.Find("kawamutu");
         GameObject enemy2 = GameObject.Find("enemy2");
-        GameObject boss = GameObject.Find("kurumeusu");
+        GameObject boss = GameObject.Find("kurumeusu");*/
 
         timeT -= Time.deltaTime ;
 
@@ -59,10 +58,6 @@ public class time : MonoBehaviour
         //Quaternion movehari = Quaternion.identity;
         x -= Time.deltaTime*3;//時計の針を動かす　２分しかできない
        movehari.transform.rotation = Quaternion.Euler( 0, 0,(int)x);
-
-        
-
-
 
         /*
         for (int i = 0; i < 4; i++)
