@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyShotPattern : MonoBehaviour
+public class enmyShotPattern2 : MonoBehaviour
 {
     float d = 1;
     public bool ishit;
     GameObject Player;
     public Rigidbody rb;
     public Vector2 arrow;
-    public static float HitRange = 0.5f;
+    public static float HitRange = 1.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class enemyShotPattern : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.forward*100);
         }*/
-        if (transform.position.z > player_ctrl.zlimit +10 || transform.position.z < -player_ctrl.zlimit -10 || transform.position.x < -player_ctrl.xlimit -10|| transform.position.x > player_ctrl.xlimit +10)
+        if (transform.position.z > player_ctrl.zlimit + 10 || transform.position.z < -player_ctrl.zlimit - 10 || transform.position.x < -player_ctrl.xlimit - 10 || transform.position.x > player_ctrl.xlimit + 10)
         {
             Destroy(gameObject);
         }
@@ -43,7 +43,7 @@ public class enemyShotPattern : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (d < HitRange&&!ishit)
+        if (d < HitRange && !ishit)
         {
             Destroy(gameObject);
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
