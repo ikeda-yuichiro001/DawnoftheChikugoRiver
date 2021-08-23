@@ -5,11 +5,22 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public int i = 1;
+    public bool mirror = false;
+    public int MirrorDirection;
+    int w = 0, a = 0;
+    public int hp = 300;
+    float cnt;
+    public int t = 40;
+    public static float Speed = 3;
+    public static float PlacementDistance = 3;
+    GameObject Player;
+    float d = 100;
     //float t = 0;
     // Start is called before the first frame update
     void Start()
     {
-
+        Rigidbody rb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("player");
     }
 
     // Update is called once per frame
@@ -96,22 +107,7 @@ public class EnemyMove : MonoBehaviour
     }
 
     void enemymove1() {
-    bool mirror = false;
-    int MirrorDirection;
-    int w = 0, a = 0;
-    int hp = 300;
-    float cnt;
-    int t = 40;
-    float Speed = 3;
-    float PlacementDistance = 3;
-    GameObject Player;
-    float d = 100;
-    // Start is called before the first frame update
-    void _Start()
-    {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        Player = GameObject.Find("player");
-    }
+        
 
     // Update is called once per frame
     void _Update()

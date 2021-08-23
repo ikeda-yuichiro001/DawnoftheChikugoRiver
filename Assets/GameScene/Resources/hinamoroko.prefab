@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8885641426245253234}
   - component: {fileID: 4234570485425240142}
   m_Layer: 0
-  m_Name: enemy2
+  m_Name: hinamoroko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

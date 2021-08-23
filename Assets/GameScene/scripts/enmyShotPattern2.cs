@@ -9,7 +9,7 @@ public class enmyShotPattern2 : MonoBehaviour
     GameObject Player;
     public Rigidbody rb;
     public Vector2 arrow;
-    public static float HitRange = 1.5f;
+    public static float HitRange = 2f;
 
     // Start is called before the first frame update
     void Start()
