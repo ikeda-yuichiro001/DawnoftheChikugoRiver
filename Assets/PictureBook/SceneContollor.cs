@@ -110,15 +110,15 @@ public class SceneContollor : MonoBehaviour
              {
                 Syoukaibun.text = "---------------";
                 FishName.text = "-------";
-                Picture.texture = null;
-             }
+                Picture.color = new Color(0, 0, 0, 0);
+            }
 
         }
         else
         {
             Syoukaibun.text = "---------------";
             FishName.text = "-------";
-            Picture.texture = null;
+            Picture.color = new Color(0, 0, 0, 0);
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 SceneManager.LoadScene("Title");
