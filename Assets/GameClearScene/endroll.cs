@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class endroll : MonoBehaviour
 {
     public float speed;
-    public float Newspeed = 300;
+    public float Newspeed = 50;
     public float goal;
     public float Height;
     Image image;
