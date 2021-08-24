@@ -7562,10 +7562,6 @@ MonoBehaviour:
   x: 0
   y: 0
   timeT: 0
-  timenumber:
-  - 0
-  - 0
-  - 0
   timeKetanumber:
   - {fileID: 0}
   - {fileID: 0}
@@ -7581,7 +7577,6 @@ MonoBehaviour:
   movehari: {fileID: 460143219218580334}
   movehuri: {x: 0, y: 0, z: 0, w: 0}
   gizmoSize: 0.3
-  gizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &460143219280748794
 GameObject:
   m_ObjectHideFlags: 0
@@ -7956,7 +7951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B8B\u57FA \uFF1A"
+  m_Text: "\u6B8B\u6A5F \uFF1A"
 --- !u!1 &460143219382752345
 GameObject:
   m_ObjectHideFlags: 0
