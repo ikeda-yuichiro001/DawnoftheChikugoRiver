@@ -29,12 +29,16 @@ public class BombShotBoom : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.GetComponent<enemyShotPattern>() != null)
+        if (other.GetComponent<enemyShotPattern>() != null)
         {
             Destroy(other.gameObject);
         }
-        
-        if(other.GetComponent<enemymove1>() != null)
+        if (other.GetComponent<enmyShotPattern2>() != null)
+        {
+            Destroy(other.gameObject);
+        }
+
+        if (other.GetComponent<enemymove1>() != null)
         {
             other.GetComponent<enemymove1>().hp -= 2;
             imageTest.kari += 100;
