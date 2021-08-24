@@ -25,6 +25,7 @@ public class Invinsible : MonoBehaviour
             t += Time.deltaTime;
             GetComponent<Renderer>().material.color = new Color(255, 255, 0, 255);
             enemyShotPattern.HitRange = 0;
+            enmyShotPattern2.HitRange = 0;
             if (t > 5)
             {
                 GetComponent<Renderer>().material.color = new Color(255, 0, 0, 255);

@@ -146,11 +146,6 @@ public class shot : MonoBehaviour
                 //inst_fannel(2, 0);
                 break;
         }
-
-        if (Input.GetKeyDown(KeyCode.X)){
-            //ボム
-
-        }
     }
     public void shoot(int a)
     {

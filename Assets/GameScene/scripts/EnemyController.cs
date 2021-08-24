@@ -31,8 +31,8 @@ public class EnemyController : MonoBehaviour
     public float PlacementDistance;
 
     [Range(0, 5)] public float Speed;
-    public int HP = 100;
-    public int MaxHP = 100;//new!!
+    public int HP = 2000;
+    public int MaxHP = 2000;//new!!
 
     void Start()
     {

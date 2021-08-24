@@ -71,6 +71,10 @@ public class enemymove1 : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
         }
+        /*if (!GetComponent<Renderer>().isVisible)
+        {
+            Destroy(gameObject);
+        }*/
 
 
         if (Player != null)
