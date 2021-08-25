@@ -126,7 +126,7 @@ public class OptionButton : MonoBehaviour
         //決定Buttonを押したらタイトル画面へ
         if (point == 3)
         {
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
             {
                     //dataの保存
                     PlayerPrefs.SetFloat("Option.BGM", Option.BGM);
@@ -143,12 +143,12 @@ public class OptionButton : MonoBehaviour
         //BGMのText数字増減
         if (point == 0)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
                 Option.BGM += 0.001f;
                
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 Option.BGM -= 0.001f;
                
@@ -160,12 +160,12 @@ public class OptionButton : MonoBehaviour
         //SEのText数字増減
         if (point == 1)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
                 Option.SE += 0.001f;
                 
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 Option.SE -= 0.001f;
                 
@@ -176,7 +176,7 @@ public class OptionButton : MonoBehaviour
         //Defalutの処理
         if (point == 2)
         {
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
             {
                 Option.BGM = 0.1f;
                 Option.SE = 0.1f;

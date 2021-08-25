@@ -102,7 +102,7 @@ public class title : MonoBehaviour
         {
             Quit.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
-        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
         {
             switch (point)
             {

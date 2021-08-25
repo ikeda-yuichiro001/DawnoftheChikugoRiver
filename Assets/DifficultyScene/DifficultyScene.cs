@@ -64,7 +64,7 @@ public class DifficultyScene : MonoBehaviour
                 Yes.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
             {
                 if (point2 == 0)
                 {
@@ -177,7 +177,7 @@ public class DifficultyScene : MonoBehaviour
             }
 
 
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter)
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)
                 || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 Debug.Log("bbbbb");

@@ -120,15 +120,15 @@ public class SceneContollor : MonoBehaviour
         {
             Fish[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
-        Fish[(int)point].color = Color.white;
+        Fish[point].color = Color.white;
         Debug.Log(point);
         if(point < 50)
         {
              if (kill[(int)point] == true)
              {
-                Syoukaibun.text = DataBase[(int)point].discription;
-                FishName.text = DataBase[(int)point].name;
-                Picture.texture = DataBase[(int)point].image;
+                Syoukaibun.text = DataBase[point].discription;
+                FishName.text = DataBase[point].name;
+                Picture.texture = DataBase[point].image;
                 Picture.color = Color.white;
             }
              else
@@ -144,7 +144,7 @@ public class SceneContollor : MonoBehaviour
             Syoukaibun.text = "---------------";
             FishName.text = "-------";
             Picture.color = new Color(0, 0, 0, 0);
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter)
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)
                 || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 SceneManager.LoadScene("Title");
