@@ -234,20 +234,20 @@ public class EnemyMove : MonoBehaviour
         {
             for (int v = 0; v < 2 * DifficultyScene.difspd + 1; v++)
             {
-                GameObject a3 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+                GameObject a3 = Instantiate(Resources.Load("kani2"), transform.position, Quaternion.Euler(0,180,0)) as GameObject; //new
                 if (v % 2 == 0)
                 {
-                    a3.GetComponent<enemyShotPattern>().arrow = new Vector2(-Mathf.Cos(v * 1f / Mathf.PI * 2), -Mathf.Sin(v * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+                    a3.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v/2 * 1f / Mathf.PI * 2), -Mathf.Cos(v/2 * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
                 }
                 else
                 {
-
+                    a3.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v/2+1) * 1f / Mathf.PI * 2), -Mathf.Cos(-(v/2+1) * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
                 }
-                //a3.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / Mathf.PI * 2 ), -Mathf.Cos(v * 1f / Mathf.PI * 2 )) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+                //
             }
             cnt = 0;
         }
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Cos(Time.time * 3) * DifficultyScene.difspd, 0, 0);
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Cos(Time.time * 3), 0, 0);
 
         if (hp <= 0)
         {
