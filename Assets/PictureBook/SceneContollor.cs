@@ -25,6 +25,7 @@ public class SceneContollor : MonoBehaviour
     public FishData[] DataBase;
     public float abc;
     public float aa,ac;
+    public float uptime, downtime;
     void Start()
     {
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
@@ -60,10 +61,18 @@ public class SceneContollor : MonoBehaviour
         Debug.Log(Screen.width);
         Debug.Log(Screen.height);
         //矢印キーで動かす処理
-        if (Input.GetKey(KeyCode.UpArrow)) { point -= 0.1f; }
-        if (Input.GetKey(KeyCode.DownArrow)) { point += 0.1f; }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) point = Max - 1;
-        if (Input.GetKeyDown(KeyCode.RightArrow)) point = Max - 1;
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            for (uptime = 0;uptime > 1;uptime += Time.deltaTime) { point -= 0.1f; }
+            point--;
+            //if(uptime > 0) { uptime = 0; }
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            point += 0.1f;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) point = Max - 1;
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) point = Max - 1;
         //1～50体と戻るボタンを上下でループさせる処理
         if(point >= Max) { point -= Max; }
         if (point < 0) { point += Max; }
@@ -105,13 +114,14 @@ public class SceneContollor : MonoBehaviour
                 Syoukaibun.text = DataBase[(int)point].discription;
                 FishName.text = DataBase[(int)point].name;
                 Picture.texture = DataBase[(int)point].image;
-             }
+                Picture.color = Color.white;
+            }
              else
              {
                 Syoukaibun.text = "---------------";
                 FishName.text = "-------";
                 Picture.color = new Color(0, 0, 0, 0);
-            }
+             }
 
         }
         else
@@ -119,7 +129,8 @@ public class SceneContollor : MonoBehaviour
             Syoukaibun.text = "---------------";
             FishName.text = "-------";
             Picture.color = new Color(0, 0, 0, 0);
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter)
+                || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 SceneManager.LoadScene("Title");
             }
