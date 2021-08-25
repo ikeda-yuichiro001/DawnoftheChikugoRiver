@@ -16,7 +16,7 @@ public class SceneContollor : MonoBehaviour
     public static bool[] kill = new bool[50];
     public int[] y;
     public int a = 0, h = 30;
-    public float point;
+    public int point;
     public int i,k,X;
     private Vector2 Panel_pos;
     const int Max = 51;
@@ -26,6 +26,8 @@ public class SceneContollor : MonoBehaviour
     public float abc;
     public float aa,ac;
     public float uptime, downtime;
+    [Range(0.1f, 1.0f)]
+    public float cnt;
     void Start()
     {
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
@@ -61,15 +63,28 @@ public class SceneContollor : MonoBehaviour
         Debug.Log(Screen.width);
         Debug.Log(Screen.height);
         //矢印キーで動かす処理
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) { point--; }
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) { point++; }
+
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            for (uptime = 0;uptime > 1;uptime += Time.deltaTime) { point -= 0.1f; }
-            point--;
-            //if(uptime > 0) { uptime = 0; }
+            uptime += Time.deltaTime;
+            if (uptime > cnt) { point --; uptime = 0;}
+            
+        }
+        else
+        {
+            uptime = 0;
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            point += 0.1f;
+            downtime += Time.deltaTime;
+            if (downtime > cnt) { point++ ; downtime = 0; }
+
+        }
+        else
+        {
+            downtime = 0;
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) point = Max - 1;
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) point = Max - 1;
