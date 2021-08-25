@@ -22,6 +22,9 @@ public class OptionButton : MonoBehaviour
     Image SE;
     Image Default;
     public  int point = 0;
+    public float uptime, downtime;
+    [Range(0.1f, 1.0f)]
+    public float cnt;
 
     //定義したやつの取得
     void Start()
@@ -40,15 +43,35 @@ public class OptionButton : MonoBehaviour
     {
 
         //BGM等の画面の処理
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             point--;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             point++;
         }
 
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            uptime += Time.deltaTime;
+            if (uptime > cnt) { point--; uptime = 0; }
+
+        }
+        else
+        {
+            uptime = 0;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            downtime += Time.deltaTime;
+            if (downtime > cnt) { point++; downtime = 0; }
+
+        }
+        else
+        {
+            downtime = 0;
+        }
         if (point == 4)
         {
             point = 0;
@@ -103,7 +126,7 @@ public class OptionButton : MonoBehaviour
         //決定Buttonを押したらタイトル画面へ
         if (point == 3)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                     //dataの保存
                     PlayerPrefs.SetFloat("Option.BGM", Option.BGM);
@@ -151,10 +174,13 @@ public class OptionButton : MonoBehaviour
 
 
         //Defalutの処理
-        if (point == 2 && Input.GetKeyDown(KeyCode.Z))
+        if (point == 2)
         {
-            Option.BGM = 0.1f;
-            Option.SE = 0.1f;
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                Option.BGM = 0.1f;
+                Option.SE = 0.1f;
+            }
         }
 
         

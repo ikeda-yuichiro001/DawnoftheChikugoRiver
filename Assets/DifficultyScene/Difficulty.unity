@@ -1008,6 +1008,9 @@ MonoBehaviour:
   window: {fileID: 0}
   point: 0
   point2: 0
+  uptime: 0
+  downtime: 0
+  cnt: 0.15
 --- !u!1 &711268247
 GameObject:
   m_ObjectHideFlags: 0

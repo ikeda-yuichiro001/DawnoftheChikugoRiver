@@ -19,6 +19,10 @@ public class DifficultyScene : MonoBehaviour
     public int point2 = 0;
     public static int difspd = 1;
 
+    public float uptime, downtime;
+    [Range(0.1f, 1.0f)]
+    public float cnt;
+
 
     void Start()
     {
@@ -43,7 +47,8 @@ public class DifficultyScene : MonoBehaviour
         {
             Debug.Log("aaaaa");
 
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)
+                || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
             {
                 point2 = 1 - point2;
             }
@@ -59,7 +64,7 @@ public class DifficultyScene : MonoBehaviour
                 Yes.color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 if (point2 == 0)
                 {
@@ -79,13 +84,34 @@ public class DifficultyScene : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 point--;
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
             {
                 point++;
+            }
+
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            {
+                uptime += Time.deltaTime;
+                if (uptime > cnt) { point--; uptime = 0; }
+
+            }
+            else
+            {
+                uptime = 0;
+            }
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            {
+                downtime += Time.deltaTime;
+                if (downtime > cnt) { point++; downtime = 0; }
+
+            }
+            else
+            {
+                downtime = 0;
             }
             if (point == 5)
             {
@@ -151,7 +177,8 @@ public class DifficultyScene : MonoBehaviour
             }
 
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter)
+                || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 Debug.Log("bbbbb");
                 if (point == 4)

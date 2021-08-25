@@ -857,6 +857,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 0
+  uptime: 0
+  downtime: 0
+  cnt: 0.15
 --- !u!82 &911226028
 AudioSource:
   m_ObjectHideFlags: 0

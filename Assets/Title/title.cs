@@ -12,6 +12,9 @@ public class title : MonoBehaviour
     Image Collection;
     Image Option;
     Image Quit;
+    public float uptime, downtime;
+    [Range(0.1f, 1.0f)]
+    public float cnt;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +29,33 @@ public class title : MonoBehaviour
     void Update()
     {
         //上下にカーソル移動 --------------------------------
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             point++;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             point--;
+        }
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            uptime += Time.deltaTime;
+            if (uptime > cnt) { point--; uptime = 0; }
+
+        }
+        else
+        {
+            uptime = 0;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            downtime += Time.deltaTime;
+            if (downtime > cnt) { point++; downtime = 0; }
+
+        }
+        else
+        {
+            downtime = 0;
         }
         if (point >= 4)
         {
@@ -79,7 +102,7 @@ public class title : MonoBehaviour
         {
             Quit.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             switch (point)
             {
