@@ -18,30 +18,15 @@ public class sphere_des : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!ishit && other.GetComponent<enemymove1>() != null)
+        if (!ishit && other.GetComponent<EnemyMove>() != null)
         {
-            other.GetComponent<enemymove1>().hp--;
+            other.GetComponent<EnemyMove>().hp--;
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             Destroy(gameObject);
             ishit = true;
         }
-        if (!ishit && other.GetComponent<enemymove2>() != null)
-        {
-            other.GetComponent<enemymove2>().hp--;
-            imageTest.kari += 10;
-            imageTest.scorejudge = 1;
-            Destroy(gameObject);
-            ishit = true;
-        }
-        if (!ishit && other.GetComponent<enemymove3>() != null)
-        {
-            enemymove3.hp--;
-            imageTest.kari += 10;
-            imageTest.scorejudge = 1;
-            Destroy(gameObject);
-            ishit = true;
-        }
+
         /*for (int i =1; i<100;i++)
         {
             string enemymove = "enemymove";

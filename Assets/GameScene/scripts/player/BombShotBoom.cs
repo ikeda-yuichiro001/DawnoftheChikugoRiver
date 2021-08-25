@@ -33,24 +33,14 @@ public class BombShotBoom : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        if (other.GetComponent<enmyShotPattern2>() != null)
+        if (other.GetComponent<enemyShotPattern2>() != null)
         {
             Destroy(other.gameObject);
         }
 
-        if (other.GetComponent<enemymove1>() != null)
+        if (other.GetComponent<EnemyMove>() != null)
         {
-            other.GetComponent<enemymove1>().hp -= 2;
-            imageTest.kari += 100;
-        }
-        if (other.GetComponent<enemymove2>() != null)
-        {
-            other.GetComponent<enemymove2>().hp -= 2;
-            imageTest.kari += 100;
-        }
-        if (other.GetComponent<enemymove3>() != null)
-        {
-            enemymove3.hp -= 2;
+            other.GetComponent<EnemyMove>().hp -= 2;
             imageTest.kari += 100;
         }
     }

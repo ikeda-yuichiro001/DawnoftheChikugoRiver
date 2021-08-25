@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enmyShotPattern2 : MonoBehaviour
+public class enemyShotPattern2 : MonoBehaviour
 {
     float d = 1;
     public bool ishit;
@@ -46,7 +46,8 @@ public class enmyShotPattern2 : MonoBehaviour
         if (d < HitRange && !ishit)
         {
             Destroy(gameObject);
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            if(Player != null)
+                shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
             ishit = true;

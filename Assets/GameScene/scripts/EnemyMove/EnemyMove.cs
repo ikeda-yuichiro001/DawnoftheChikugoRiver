@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public int i = 1;//どの弾幕を撃つのかの設定
-    public bool mirror = false;//反対に移動するときとかに使って
-    public int MirrorDirection;
+    public bool mirror;//反対に移動するときとかに使って
+    int MirrorDirection = -1;
     int w = 0, a = 0;
     public int hp; //インスペクター上で設定して
     public int maxhp;//これも
@@ -106,7 +106,7 @@ public class EnemyMove : MonoBehaviour
                 break;
         }
     }
-
+    //下に一発
     void enemymove1() {
         
     MirrorDirection = 1;
@@ -164,7 +164,7 @@ public class EnemyMove : MonoBehaviour
         Debug.Log("ピチューン！");
     }
 }
-
+    //下に二発
     void enemymove2()
     {
 
@@ -225,9 +225,67 @@ public class EnemyMove : MonoBehaviour
             Debug.Log("ピチューン！");
         }
     }
+    //下にnway敵機依存弾幕e3n5h7l9
     void enemymove3()
     {
+        cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
+        if (cnt >= 1)                                  //new
+        {
+            for (int v = 0; v < 2 * DifficultyScene.difspd + 1; v++)
+            {
+                GameObject a3 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+                a3.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f + 45 / (Mathf.PI / 2) ), Mathf.Cos(v * 1f + 45 / (Mathf.PI / 2) )) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+            }
+            cnt = 0;
+        }
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Cos(Time.time * 3) * DifficultyScene.difspd, 0, 0);
 
+        if (hp <= 0)
+        {
+
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
+            Destroy(gameObject);
+        }
+        //ここを画面外から見えなくなったらにする
+        if (transform.position.z < -player_ctrl.zlimit)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit);
+        }
+        if (transform.position.z > player_ctrl.zlimit)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
+        }
+
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
     }
     void enemymove4()
     {
@@ -307,23 +365,6 @@ public class EnemyMove : MonoBehaviour
     }
     void enemymove7()
     {
-        //public 
-        bool mirror = false;
-        int MirrorDirection;
-        int w = 0, a = 0;
-        //public 
-        int hp = 500;
-        float cnt = 0;
-        //public 
-        int t = 8;
-        //public 
-        float Speed = 3;
-        //public 
-        float PlacementDistance = 3;
-        GameObject Player = GameObject.Find("player"); ;
-        float d = 100;
-        Rigidbody rb = GetComponent<Rigidbody>();
-        MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
 
         cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
