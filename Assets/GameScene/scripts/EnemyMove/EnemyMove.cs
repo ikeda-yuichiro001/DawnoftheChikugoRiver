@@ -6,14 +6,14 @@ public class EnemyMove : MonoBehaviour
 {
     public int i = 1;//どの弾幕を撃つのかの設定
     public bool mirror;//反対に移動するときとかに使って
-    int MirrorDirection = -1;
+    int MirrorDirection = 1;
     int w = 0, a = 0;
     public int hp; //インスペクター上で設定して
     public int maxhp;//これも
     float cnt;
-    public int t = 40;//全方位弾幕xwayに撃つ
-    public static float Speed = 3;//弾の連射速度の設定
-    public static float PlacementDistance = 3;//2つ撃たれた時の弾の間隔をここで取る
+    public int t;//全方位弾幕xwayに撃つ
+    public float Speed;//弾の連射速度の設定
+    public float PlacementDistance;//2つ撃たれた時の弾の間隔をここで取る
     GameObject Player;
     float d = 100;//弾と自機の距離はここで取る。－＞被弾判定に使う
     //float t = 0;
@@ -120,12 +120,12 @@ public class EnemyMove : MonoBehaviour
         cnt = 0;
     }
 
-    GetComponent<Rigidbody>().position += new Vector3(-0.3f * MirrorDirection, 0, 0);
+    GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
 
-    if (transform.position.x < -32)
-        transform.position = new Vector3(32, transform.position.y, transform.position.z);
-    if (transform.position.x > 32)
-        transform.position = new Vector3(-32, transform.position.y, transform.position.z);
+    if (transform.position.x < -37)
+        transform.position = new Vector3(37, transform.position.y, transform.position.z);
+    if (transform.position.x > 37)
+        transform.position = new Vector3(-37, transform.position.y, transform.position.z);
 
     if (hp <= 0)
     {
@@ -178,15 +178,16 @@ public class EnemyMove : MonoBehaviour
             GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x * -PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
             a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
             aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
+            Debug.Log(PlacementDistance);
             cnt = 0;
         }
 
-        GetComponent<Rigidbody>().position += new Vector3(-0.3f * MirrorDirection, 0, 0);
+        GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
 
-        if (transform.position.x < -32)
-            transform.position = new Vector3(32, transform.position.y, transform.position.z);
-        if (transform.position.x > 32)
-            transform.position = new Vector3(-32, transform.position.y, transform.position.z);
+        if (transform.position.x < -37)
+            transform.position = new Vector3(37, transform.position.y, transform.position.z);
+        if (transform.position.x > 37)
+            transform.position = new Vector3(-37, transform.position.y, transform.position.z);
 
         if (hp <= 0)
         {
@@ -234,7 +235,15 @@ public class EnemyMove : MonoBehaviour
             for (int v = 0; v < 2 * DifficultyScene.difspd + 1; v++)
             {
                 GameObject a3 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-                a3.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f + 45 / (Mathf.PI / 2) ), Mathf.Cos(v * 1f + 45 / (Mathf.PI / 2) )) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+                if (v % 2 == 0)
+                {
+                    a3.GetComponent<enemyShotPattern>().arrow = new Vector2(-Mathf.Cos(v * 1f / Mathf.PI * 2), -Mathf.Sin(v * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+                }
+                else
+                {
+
+                }
+                //a3.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / Mathf.PI * 2 ), -Mathf.Cos(v * 1f / Mathf.PI * 2 )) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
             }
             cnt = 0;
         }
@@ -373,11 +382,11 @@ public class EnemyMove : MonoBehaviour
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
                 GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-                a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed * PlacementDistance / 15;
+                a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 15;
             }
             cnt = 0;
         }
-        GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.2f * MirrorDirection);
+        GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.15f * MirrorDirection);
 
         if (hp <= 0)
         {
@@ -404,13 +413,13 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
-        if (transform.position.z < -player_ctrl.zlimit)
+        if (transform.position.z < -(player_ctrl.zlimit + 10))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit);
+            transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit + 10);
         }
-        if (transform.position.z > player_ctrl.zlimit)
+        if (transform.position.z > player_ctrl.zlimit + 10)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -(player_ctrl.zlimit + 10));
         }
 
 
