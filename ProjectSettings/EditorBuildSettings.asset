@@ -22,15 +22,27 @@ EditorBuildSettings:
     guid: 15a2a6cbaf92ebb4db8aa409c5810baf
   - enabled: 1
     path: Assets/GameScene/Scenes/Stage2.unity
-    guid: 98d74b8e481e6a447a6aa4cb63c7ff2c
+    guid: 28a2d36c4e8ada942bae0f7195180224
   - enabled: 1
     path: Assets/GameScene/Scenes/Stage3.unity
-    guid: 58bc2750e72d5904aa74f6146fe40f3c
+    guid: db22e7fb7dbad7048a559cb88bc986a0
   - enabled: 1
     path: Assets/GameScene/Scenes/Stage4.unity
-    guid: 6261974dd66fc764bb06adc4fc3d8952
+    guid: a5535e6a43bd29e43b8cc8dd8fe68d14
   - enabled: 1
     path: Assets/GameScene/Scenes/Stage5.unity
+    guid: 104a328ec6340e74d917a2c6f3bcf1a6
+  - enabled: 1
+    path: Assets/GameScene/Scenes/Stage2-2.unity
+    guid: 98d74b8e481e6a447a6aa4cb63c7ff2c
+  - enabled: 1
+    path: Assets/GameScene/Scenes/Stage3-2.unity
+    guid: 58bc2750e72d5904aa74f6146fe40f3c
+  - enabled: 1
+    path: Assets/GameScene/Scenes/Stage4-2.unity
+    guid: 6261974dd66fc764bb06adc4fc3d8952
+  - enabled: 1
+    path: Assets/GameScene/Scenes/Stage5-2.unity
     guid: 9b25df06d795bd4459d25e00b91c6a9e
   - enabled: 1
     path: Assets/GameClearScene/GameClear.unity

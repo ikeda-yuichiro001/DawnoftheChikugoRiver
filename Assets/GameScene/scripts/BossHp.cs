@@ -14,7 +14,7 @@ public class BossHp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boss1 = GameObject.Find("kurumeusu");
+        boss1 = GameObject.Find("kurumeusu2");
         boss2 = GameObject.Find("kuru");//karioki
         boss3 = GameObject.Find("kurume");//karioki
         boss4 = GameObject.Find("kurumeu");//karioki

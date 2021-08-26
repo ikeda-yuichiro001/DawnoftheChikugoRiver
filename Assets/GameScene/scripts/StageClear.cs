@@ -9,41 +9,51 @@ public class StageClear : MonoBehaviour
     float time = 0;
     bool a = false;
     bool stage = false;
+    public bool inst = false;
     //int StageNum = 1;
     //bool down = false;
     // Start is called before the first frame update
     void Start()
     {
-        stage1boss = GameObject.Find("kurumeusu");
-        stage = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( stage1boss == false && stage1boss.GetComponent<EnemyMove>().hp == 0)
+        if(stage1boss == null && !inst)
         {
-            if (!a)
-            {
-                imageTest.kari += 10000000;
-                imageTest.scorejudge = 1;
-                a = true;
-            }
-
-            time += Time.deltaTime;
-            if (time > 5 && !stage)
-            {
-                StageManager.stage++;
-                //Debug.Log("stage" + StageManager.stage);
-                if (StageManager.stage < 6)
-                    SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
-                else
-                    SceneManager.LoadScene("GameClear");
-
-                time = 0;
-                stage = true;
-                //SceneManager.LoadScene("GameClearScene");
-            }
+            stage1boss = GameObject.Find("kurumeusu2(Clone)");
+            inst = true;
         }
+
+
+            if (EnemyMove.bossHp == 0 && inst)
+            {
+                if (!a)
+                {
+                    imageTest.kari += 10000000;
+                    imageTest.scorejudge = 1;
+                    a = true;
+                }
+
+                //time += Time.deltaTime;
+                //Debug.Log(time);
+                //if (time > 5 && !stage)
+                //{
+                    StageManager.stage++;
+            //Debug.Log("stage" + StageManager.stage);
+
+            time = 0;
+            stage = true;
+            inst = false;
+            EnemyMove.bossHp = 1;
+            if (StageManager.stage < 6)
+                        SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
+                    else
+                        SceneManager.LoadScene("GameClear");
+                    //SceneManager.LoadScene("GameClearScene");
+                //}
+            }
+        
     }
 }

@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7330797793642985678}
   - component: {fileID: 6778041990285742940}
   m_Layer: 0
-  m_Name: hinamoroko_model1
+  m_Name: hinamoroko_model1l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,8 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 2
   mirror: 0
-  hp: 118
-  maxhp: 118
+  hp: 8
+  maxhp: 100
   t: 8
   Speed: 3.36
   PlacementDistance: 3.24

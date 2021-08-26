@@ -19,6 +19,8 @@ public class imageTest : MonoBehaviour
     public static long hikari = 1000000;
     public Sprite[] sprites = new Sprite[10];
 
+    int ScoreExceed = 0;//extendボーダーの制御
+
     // オブジェクトの取得
     // GameObject image_object = GameObject.Find("Image");
     // コンポーネントの取得
@@ -234,11 +236,27 @@ public class imageTest : MonoBehaviour
                 scorejudge = 0; //ほんとはゼロ
             }
         }
+        if (kari > 10000000 && ScoreExceed == 0)
+        {
+            Debug.Log("extend");
+            ScoreMangers.RetryRemain++;
+            ScoreExceed++;
+        }
+        if (kari > 50000000 && ScoreExceed == 1)
+        {
+            ScoreMangers.RetryRemain++;
+            ScoreExceed++;
+        }
+        if (kari > 100000000 && ScoreExceed == 2)
+        {
+            ScoreMangers.RetryRemain++;
+            ScoreExceed++;
+        }
     }
 
     public static void ScoreReset()
     {
-        imageTest.kari = 0;
+        kari = 0;
     }
 
 }

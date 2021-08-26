@@ -49,7 +49,6 @@ public class enemyShotPattern2 : MonoBehaviour
             if(Player != null)
                 shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
-            Debug.Log("ピチューン！");
             ishit = true;
         }
     }

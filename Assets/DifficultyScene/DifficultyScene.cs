@@ -45,7 +45,7 @@ public class DifficultyScene : MonoBehaviour
 
         if (window.activeSelf)
         {
-            Debug.Log("aaaaa");
+            //Debug.Log("aaaaa");
 
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)
                 || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
@@ -73,6 +73,7 @@ public class DifficultyScene : MonoBehaviour
                     GameOver.RetryRemain = 3;
                     ScoreMangers.herl = GameOver.RetryRemain;
                     ScoreMangers.RetryRemain = 3;
+                    Debug.Log(ScoreMangers.RetryRemain);
                     imageTest.kari = 0;
                     SceneManager.LoadScene("Stage" + StageManager.stage);
                 }
@@ -180,7 +181,7 @@ public class DifficultyScene : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)
                 || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
-                Debug.Log("bbbbb");
+                //Debug.Log("bbbbb");
                 if (point == 4)
                 {
                     imageTest.ScoreReset();
@@ -189,7 +190,7 @@ public class DifficultyScene : MonoBehaviour
                 else
                 {
                     window.SetActive(true);
-                    Debug.Log("cccc");
+                    //Debug.Log("cccc");
                 }
             }
         }

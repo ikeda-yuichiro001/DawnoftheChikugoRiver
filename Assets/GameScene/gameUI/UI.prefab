@@ -457,7 +457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &460143217597368416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -541,6 +541,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 460143217597368423}
+  boss1: {fileID: 5675095272612197524, guid: 2bb097e164654784390b0a8d0b707147, type: 3}
+  boss2: {fileID: 0}
+  boss3: {fileID: 0}
+  boss4: {fileID: 0}
+  boss5: {fileID: 0}
 --- !u!1 &460143217603710031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,7 +1699,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

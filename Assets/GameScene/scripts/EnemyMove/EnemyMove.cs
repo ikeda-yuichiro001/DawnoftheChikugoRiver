@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour
     int w = 0, a = 0;
     public int hp; //インスペクター上で設定して
     public int maxhp;//これも
+    public static int bossHp = 1;
     float cnt;
     public int t;//全方位弾幕xwayに撃つ
     public float Speed;//弾の連射速度の設定
@@ -122,12 +123,12 @@ public class EnemyMove : MonoBehaviour
 
     GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
 
-    if (transform.position.x < -37)
-        transform.position = new Vector3(37, transform.position.y, transform.position.z);
-    if (transform.position.x > 37)
-        transform.position = new Vector3(-37, transform.position.y, transform.position.z);
+        if (transform.position.x < -40)
+            Destroy(gameObject);
+        if (transform.position.x > 40)
+            Destroy(gameObject);
 
-    if (hp <= 0)
+        if (hp <= 0)
     {
 
         while (w < 50)
@@ -159,6 +160,7 @@ public class EnemyMove : MonoBehaviour
 
     if (d < 2.5f)
     {
+        if(Player != null)
         shot.PowData = Player.gameObject.GetComponent<shot>().Power;
         Destroy(Player);
         Debug.Log("ピチューン！");
@@ -178,16 +180,13 @@ public class EnemyMove : MonoBehaviour
             GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x * -PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
             a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
             aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
-            Debug.Log(PlacementDistance);
             cnt = 0;
         }
 
         GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
 
-        if (transform.position.x < -37)
-            transform.position = new Vector3(37, transform.position.y, transform.position.z);
-        if (transform.position.x > 37)
-            transform.position = new Vector3(-37, transform.position.y, transform.position.z);
+        if (transform.position.x < -40) Destroy(gameObject);
+        if (transform.position.x > 40) Destroy(gameObject);
 
         if (hp <= 0)
         {
@@ -226,7 +225,7 @@ public class EnemyMove : MonoBehaviour
             Debug.Log("ピチューン！");
         }
     }
-    //下にnway敵機依存弾幕e3n5h7l9
+    //下にnway敵機依存弾幕e3n5h7l9 stage1boss
     void enemymove3()
     {
         cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
@@ -271,17 +270,14 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
+            bossHp = 0;
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
         if (transform.position.z < -player_ctrl.zlimit)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit);
-        }
+            Destroy(gameObject);
         if (transform.position.z > player_ctrl.zlimit)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
-        }
+            Destroy(gameObject);
 
 
         if (Player != null)
@@ -291,9 +287,9 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
+            if(Player != null)
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
-            Debug.Log("ピチューン！");
         }
     }
     //自機狙い
