@@ -280,7 +280,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2627,11 +2627,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 253850619691303960, guid: 1338e9c0853116d4581bfa7bfc321be4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8cdc0a7c5a5ea8d42bb3c97207447bc8, type: 2}
     - target: {fileID: 7118943577111964301, guid: 1338e9c0853116d4581bfa7bfc321be4,
         type: 3}
       propertyPath: m_Enabled
@@ -2652,6 +2647,11 @@ PrefabInstance:
       propertyPath: maxhp
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 253850619691303960, guid: 1338e9c0853116d4581bfa7bfc321be4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cdc0a7c5a5ea8d42bb3c97207447bc8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1338e9c0853116d4581bfa7bfc321be4, type: 3}
 --- !u!1001 &7396635134668185608
