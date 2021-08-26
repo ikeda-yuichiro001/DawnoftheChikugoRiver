@@ -22,7 +22,7 @@ public class EnemyGenelatorBehavior : MonoBehaviour
             {
                 if(d[i].timer <= timer)
                 {
-                    Generate(d[i].name, d[i].pointX);
+                    Generate(d[i].name, d[i].pointX,d[i].pointZ);
                     d[i] = null;
                 }
             }
@@ -31,7 +31,7 @@ public class EnemyGenelatorBehavior : MonoBehaviour
         return d;
     }
 
-    protected GameObject Generate(string name_, float x)
+    protected GameObject Generate(string name_, float x, float z)
     {
         GameObject g = Instantiate(Resources.Load(name_) as GameObject);
         g.transform.position = new Vector3(g.transform.position.x, g.transform.position.y, g.transform.position.z);
@@ -54,5 +54,6 @@ public class GenerateData
 {
     public string name;
     public float pointX;
+    public float pointZ;
     public float timer;
 }

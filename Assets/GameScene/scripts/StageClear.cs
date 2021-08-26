@@ -21,7 +21,7 @@ public class StageClear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( stage1boss == false)
+        if ( stage1boss == false && stage1boss.GetComponent<EnemyMove>().hp == 0)
         {
             if (!a)
             {

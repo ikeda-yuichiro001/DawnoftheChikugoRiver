@@ -19,7 +19,11 @@ public class BossHp : MonoBehaviour
         boss3 = GameObject.Find("kurume");//karioki
         boss4 = GameObject.Find("kurumeu");//karioki
         boss5 = GameObject.Find("ku");//karioki
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
         if (boss1 != null)
         {
             Slider.value = boss1.GetComponent<EnemyMove>().hp / boss1.GetComponent<EnemyMove>().maxhp;
@@ -40,11 +44,7 @@ public class BossHp : MonoBehaviour
         {
             Slider.value = boss5.GetComponent<EnemyMove>().hp / boss5.GetComponent<EnemyMove>().maxhp;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         if (boss1 != null)
         {
             Slider.value = (float)boss1.GetComponent<EnemyMove>().hp / (float)boss1.GetComponent<EnemyMove>().maxhp;

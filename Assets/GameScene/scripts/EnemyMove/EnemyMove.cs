@@ -296,6 +296,7 @@ public class EnemyMove : MonoBehaviour
             Debug.Log("ピチューン！");
         }
     }
+    //自機狙い
     void enemymove4()
     {
         bool start = false;
@@ -372,6 +373,7 @@ public class EnemyMove : MonoBehaviour
     {
 
     }
+    //全方位
     void enemymove7()
     {
         if (mirror) MirrorDirection = -1;
@@ -413,14 +415,14 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
-        if (transform.position.z < -(player_ctrl.zlimit + 10))
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit + 10);
-        }
-        if (transform.position.z > player_ctrl.zlimit + 10)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -(player_ctrl.zlimit + 10));
-        }
+        //if (transform.position.z < -(player_ctrl.zlimit + 10))
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit + 10);
+        //}
+        //if (transform.position.z > player_ctrl.zlimit + 10)
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, -(player_ctrl.zlimit + 10));
+        //}
 
 
         if (Player != null)
