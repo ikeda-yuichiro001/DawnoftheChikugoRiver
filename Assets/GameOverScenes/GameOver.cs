@@ -50,7 +50,7 @@ public class GameOver : MonoBehaviour
             TitleButton.color = new Color32(255, 255, 255, 255);
         }
 
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
         {
      
             if(count == 0 )
