@@ -361,8 +361,83 @@ public class EnemyMove : MonoBehaviour
         
     }
 
-    void enemymove5()
+    void enemymove5()//要修正
     {
+        bool start = false;
+        if (hp != maxhp && !start)
+        {
+            hp = maxhp;
+            start = true;
+        }
+
+
+        if (player_ctrl.pc != null)
+            Player = player_ctrl.pc.gameObject;
+
+        //GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time)/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f;
+
+        if (cnt >= 1)                                  //new
+        {
+            Vector3 jikinerai = Player.transform.position - transform.position;
+            jikinerai.Normalize();
+
+            for (int v = 0; v < 2 * DifficultyScene.difspd + 1; v++)
+            {
+                GameObject a5 = Instantiate(Resources.Load("enemy_bul_big"), transform.position, Quaternion.identity) as GameObject;
+                if (v % 2 == 0) {
+                    //a3.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v/2 * 1f / Mathf.PI * 2), -Mathf.Cos(v/2 * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
+                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v / 2 * 1f / Mathf.PI * 2) + jikinerai.x, -Mathf.Cos(v / 2 * 1f / Mathf.PI * 2) + jikinerai.z) * DifficultyScene.difspd * 0.4f;
+                    //Debug.Log(a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z));
+                }
+                else
+                {
+                    //a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v/2+1) * 1f / Mathf.PI * 2), -Mathf.Cos(-(v/2+1) * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
+                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v / 2 + 1) * 1f / Mathf.PI * 2) + jikinerai.x, -Mathf.Cos(-(v / 2 + 1) * 1f / Mathf.PI * 2) + jikinerai.z) * DifficultyScene.difspd * 0.4f;
+                }
+            }
+                cnt = 0;
+        }
+
+        if (transform.position.z > 35 || transform.position.z < -35 || transform.position.x > 35 || transform.position.x < -35)
+            transform.position = new Vector3(0, transform.position.y, transform.position.z);
+        //Debug.Log(hp);
+
+        if (hp <= 0)
+        {
+
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            Destroy(gameObject);
+        }
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            if(Player != null)
+                shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
 
     }
     void enemymove6()
