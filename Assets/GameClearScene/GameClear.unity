@@ -2985,8 +2985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   Newspeed: 50
-  goal: 10000
-  Height: 2.7
+  goal: 2000
+  Height: 5
   spe: 0.005
 --- !u!1 &1061908072
 GameObject:
