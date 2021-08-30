@@ -13,18 +13,18 @@ public class SceneContollor : MonoBehaviour
     public Text FishName;
     public Text Syoukaibun;
     Text[] Text = new Text[Max];
-    public static bool[] kill = new bool[50];
-    public int[] y;
-    public int a = 0, h = 30;
+    public static bool[] kill = new bool[Max];
     public int point;
-    public int i,k,X;
+    public int i;
     private Vector2 Panel_pos;
-    const int Max = 51;
+    const int Max = 16;
+    public FishData[] DataBase;
+    /* public int[] y;
+    public int a = 0, h = 30, k, X;
     int Len = 15;
     public float Space;
-    public FishData[] DataBase;
     public float abc;
-    public float aa,ac;
+    public float aa,ac;*/
     public float uptime, downtime;
     [Range(0.1f, 1.0f)]
     public float cnt;
@@ -33,11 +33,11 @@ public class SceneContollor : MonoBehaviour
         for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
         for (int t = 0; t < Max; t++)
         {
-            Fish[t] = GameObject.Find("Canvas/Panel/Fish" + t).GetComponent<Image>();
-            Text[t] = GameObject.Find("Canvas/Panel/Fish"+ t +"/Text").GetComponent<Text>();
+            Fish[t] = GameObject.Find("Canvas/Fish" + t).GetComponent<Image>();
+            Text[t] = GameObject.Find("Canvas/Fish"+ t +"/Text").GetComponent<Text>();
         }
-        Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
-        xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
+        //Panel = GameObject.Find("Canvas/Panel").GetComponent<Image>();
+        //xxx = GameObject.Find("Canvas/Panel").GetComponent<RectTransform>();
         for (int t = 0; t < Max - 1; t++)
         {
             if(kill[t] == true) 
@@ -56,12 +56,13 @@ public class SceneContollor : MonoBehaviour
 
     void Update()
     {
-        Panel_pos.y = Panel.gameObject.GetComponent<RectTransform>().position.y;
+        /*Panel_pos.y = Panel.gameObject.GetComponent<RectTransform>().position.y;
         Panel_pos.x = Panel.gameObject.GetComponent<RectTransform>().position.x;
         Space = Screen.height * abc;
         X = Screen.width;
         Debug.Log(Screen.width);
-        Debug.Log(Screen.height);
+        Debug.Log(Screen.height);*/
+        
         //矢印キーで動かす処理
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) { point--; }
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) { point++; }
@@ -91,10 +92,10 @@ public class SceneContollor : MonoBehaviour
         //1～50体と戻るボタンを上下でループさせる処理
         if(point >= Max) { point -= Max; }
         if (point < 0) { point += Max; }
-        y = new int[Len];
+        /*y = new int[Len];
         for (int r = 0; r < Len; r++)
         {
-            y[r] = (int)point + r;
+            y[r] = point + r;
             if (y[r] > Max - 1) y[r] -= Max;
             else if (y[r] < 0) y[r] += Max;
         }
@@ -102,7 +103,6 @@ public class SceneContollor : MonoBehaviour
             Fish[y[r]].gameObject.GetComponent<RectTransform>().position
                = new Vector3(Panel_pos.x , Panel_pos.y + X / ac - Space * r, 0);
             
-            //1～50体の色
             for (i = 0; i < Max; i++)
             {
                 Fish[i].enabled = false; 
@@ -114,7 +114,7 @@ public class SceneContollor : MonoBehaviour
             { 
                 Fish[y[i]].enabled = true;
                 Text[y[i]].enabled = true;
-            }
+            }*/
 
         for (i = 0; i < Max; i++)
         {
@@ -122,15 +122,15 @@ public class SceneContollor : MonoBehaviour
         }
         Fish[point].color = Color.white;
         Debug.Log(point);
-        if(point < 50)
+        if(point < Max-1)
         {
-             if (kill[(int)point] == true)
+             if (kill[point] == true)
              {
                 Syoukaibun.text = DataBase[point].discription;
                 FishName.text = DataBase[point].name;
                 Picture.texture = DataBase[point].image;
                 Picture.color = Color.white;
-            }
+             }
              else
              {
                 Syoukaibun.text = "---------------";
