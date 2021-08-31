@@ -1140,17 +1140,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 0
   Page: 0
-  MaxPage: 6
+  MaxPage: 4
   a: 0
   uptime: 0
   downtime: 0
   DataBase:
   - image: {fileID: 0}
   - image: {fileID: 2800000, guid: 16d9e7c2725b8344a9de140be1c3aadb, type: 3}
-  - image: {fileID: 2800000, guid: 0af74a9282258f447b507a6af039d65f, type: 3}
-  - image: {fileID: 2800000, guid: f6b0776222552ce4587797b44475f12a, type: 3}
-  - image: {fileID: 2800000, guid: 0af74a9282258f447b507a6af039d65f, type: 3}
-  - image: {fileID: 2800000, guid: f6b0776222552ce4587797b44475f12a, type: 3}
+  - image: {fileID: 2800000, guid: 5fee8fbf4e2ea7a4daec55b0f7e9d13d, type: 3}
+  - image: {fileID: 2800000, guid: 4fe1ce2a648ec5c4ab7a84e250ebed54, type: 3}
   cnt: 0.15
 --- !u!1 &1172878971
 GameObject:

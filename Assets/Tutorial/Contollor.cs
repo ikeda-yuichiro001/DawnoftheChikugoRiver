@@ -52,7 +52,7 @@ public class Contollor : MonoBehaviour
             downtime = 0;
         }
         if (point < 0) { point = 3; }if(point > 3) { point = 0; }
-        if(Page < 1) { Page = 5; }if(Page > 5) { Page = 1;}
+        if(Page < 1) { Page = a; }if(Page > a) { Page = 1;}
         if (point == 0)
         {
             Left.color = new Color(1, 1, 1, 1);
