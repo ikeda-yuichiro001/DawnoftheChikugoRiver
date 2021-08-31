@@ -8,6 +8,7 @@ public class title : MonoBehaviour
 {
     int point = 0;
     // Textコンポーネントを取得
+    Image Tutorial;
     Image GameStart;
     Image Collection;
     Image Option;
@@ -19,6 +20,7 @@ public class title : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Tutorial = GameObject.Find("Canvas/Tutorial").GetComponent<Image>();
         GameStart = GameObject.Find("Canvas/GameStart").GetComponent<Image>();
         Collection = GameObject.Find("Canvas/Collection").GetComponent<Image>();
         Option = GameObject.Find("Canvas/Option").GetComponent<Image>();
@@ -59,9 +61,9 @@ public class title : MonoBehaviour
         }
         if (point >= 4)
         {
-            point =  0;
+            point = -1;
         }
-        if (point <= -1)
+        if (point <= -2)
         {
             point = 3;
         }
@@ -70,7 +72,15 @@ public class title : MonoBehaviour
 
         //選ばれたカーソルの色を変更＋それぞれの処理------------------------------
 
-        if(point == 0)
+        if (point == -1)
+        {
+            Tutorial.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            Tutorial.color = new Color(0.5f, 0.5f, 0.5f, 1);
+        }
+        if (point == 0)
         {
             GameStart.color = new Color(1, 1, 1, 1);
         }
@@ -106,6 +116,9 @@ public class title : MonoBehaviour
         {
             switch (point)
             {
+                case -1:
+                    SceneManager.LoadScene("Tutorial");
+                    break;
                 case 0:
                     SceneManager.LoadScene("Difficulty");
                     break;
