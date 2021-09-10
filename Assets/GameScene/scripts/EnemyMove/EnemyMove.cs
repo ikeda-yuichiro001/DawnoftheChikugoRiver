@@ -23,6 +23,8 @@ public class EnemyMove : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         Player = GameObject.Find("player");
+        if(i == 9)
+        StartCoroutine("uzumaki");
     }
 
     // Update is called once per frame
@@ -509,6 +511,7 @@ public class EnemyMove : MonoBehaviour
         }
 
     }
+    //全方位＊2
     void enemymove8()
     {
         if (mirror) MirrorDirection = -1;
@@ -572,10 +575,97 @@ public class EnemyMove : MonoBehaviour
             Debug.Log("ピチューン！");
         }
     }
+    //渦巻き
     void enemymove9()
     {
+        if (mirror) MirrorDirection = -1;
 
+        IEnumerator uzumaki()
+        {
+            for (int v = 0; v < t * 2 * DifficultyScene.difspd; v++)
+            {
+                GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+                a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 0.5f / t * Mathf.PI * 2), Mathf.Cos(v * 0.5f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 15;
+
+                yield return new WaitForSeconds(0.6f / DifficultyScene.difspd);
+            }
+        }
+
+        cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
+        if (cnt <= 1)                                  //new
+        {
+            //    for (int v = 0; v < t * 2 * DifficultyScene.difspd; v++)
+            //    {
+            //        GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+            //        a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 0.5f / t * Mathf.PI * 2), Mathf.Cos(v * 0.5f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 15;
+
+            //    }
+            uzumaki();
+            cnt = 0;
+        }
+
+        //GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.15f * MirrorDirection);
+
+        if (hp <= 0)
+        {
+
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
+            Destroy(gameObject);
+        }
+        //ここを画面外から見えなくなったらにする
+        //if (transform.position.z < -(player_ctrl.zlimit + 10))
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, player_ctrl.zlimit + 10);
+        //}
+        //if (transform.position.z > player_ctrl.zlimit + 10)
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, -(player_ctrl.zlimit + 10));
+        //}
+
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            if(Player != null)
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
     }
+    IEnumerator uzumaki()
+    {
+        for (int v = 0; v < t * 16 * DifficultyScene.difspd; v++)
+        {
+            GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+            a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin((v * 1f / 16) / t * Mathf.PI * 2), Mathf.Cos((v * 1f / 16) / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 30;
+
+            yield return new WaitForSeconds(0.05f / DifficultyScene.difspd);
+            if (v == t * 16 * DifficultyScene.difspd - 1) v = -1;
+        }
+    }
+
     void enemymove10()
     {
 
