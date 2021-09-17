@@ -160,6 +160,4 @@ public class FishData
     public string name;
     [Multiline(7)]
     public string discription;
-   
-
 }
