@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Stagetext : MonoBehaviour
+public class Stagetext : DifficultyScene
 {
     Text Stage;
+    Text Level;
     void Start()
     {
         Stage = GameObject.Find("Canvas/Stage").GetComponent<Text>();
+        Level = GameObject.Find("Canvas/Level").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,13 @@ public class Stagetext : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Stage5-2")
         {
             Stage.text = "ステージ:" + "5-2";
+        }
+        switch(difspd)
+        {
+            case 1: Level.text = "難易度:Easy"; break;
+            case 2: Level.text = "難易度:Normal"; break;
+            case 3: Level.text = "難易度:Hard"; break;
+            case 4: Level.text = "難易度:VeryHard"; break;
         }
     }
 }
