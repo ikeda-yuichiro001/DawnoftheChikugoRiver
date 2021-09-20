@@ -308,7 +308,7 @@ public class EnemyMove : MonoBehaviour
         if (player_ctrl.pc != null)
             Player = player_ctrl.pc.gameObject;
 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2, 4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        //GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2, 4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f;
 
         if (cnt >= 1)                                  //new
