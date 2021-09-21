@@ -683,7 +683,7 @@ public class EnemyMove : MonoBehaviour
             cnt = 0;
         }
 
-        GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
+        //GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
 
         if (transform.position.x < -40) Destroy(gameObject);
         if (transform.position.x > 40) Destroy(gameObject);
