@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Sakanadata : MonoBehaviour
 {
-    public int target;
+    public static int target;
     Text sakana_name;
     Text sakana_torisetu;
     Text gakumei;
@@ -17,13 +17,14 @@ public class Sakanadata : MonoBehaviour
         sakana_torisetu = GameObject.Find("Canvas/sakana torisetu/Fishint").GetComponent<Text>();
         gakumei = GameObject.Find("Canvas/gakuname/FishWname").GetComponent<Text>();
         sakana_gazou = GameObject.Find("Canvas/sakana gazou").GetComponent<RawImage>();
+        target = 15;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(target < 15)
+        if(target < 16)
         {
             sakana_name.text = "魚の名前:" + DataBase[target].name;
             sakana_torisetu.text = "解説:" + DataBase[target].discription;

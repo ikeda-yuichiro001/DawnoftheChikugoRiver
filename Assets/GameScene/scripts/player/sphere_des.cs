@@ -24,6 +24,7 @@ public class sphere_des : MonoBehaviour
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             //ここに魚の画像と説明を入れる処理
+            Sakanadata.target = 0;
             Destroy(gameObject);
             ishit = true;
         }
