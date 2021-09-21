@@ -665,10 +665,65 @@ public class EnemyMove : MonoBehaviour
             if (v == t * 16 * DifficultyScene.difspd - 1) v = -1;
         }
     }
-
+    //dualwave
     void enemymove10()
     {
+        MirrorDirection = 1;
+        if (mirror) MirrorDirection = -1;
 
+        float PlacementDistanceWave = 1;
+
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.2f;                        //new
+        if (cnt >= 1)                                  //new
+        {
+            GameObject a2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x * PlacementDistanceWave /* Mathf.Sin(Time.time)*/, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x * -PlacementDistanceWave /* Mathf.Sin(Time.time)*/, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
+            aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
+            cnt = 0;
+        }
+
+        GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
+
+        if (transform.position.x < -40) Destroy(gameObject);
+        if (transform.position.x > 40) Destroy(gameObject);
+
+        if (hp <= 0)
+        {
+
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
+            Destroy(gameObject);
+        }
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
     }
     void enemymove11()
     {
