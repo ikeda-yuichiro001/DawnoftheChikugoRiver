@@ -1319,7 +1319,32 @@ PrefabInstance:
         type: 3}
       propertyPath: DataBase.Array.data[15].image
       value: 
-      objectReference: {fileID: 2800000, guid: 3d028e93995a78f4fb2fde307c9bc4c4, type: 3}
+      objectReference: {fileID: 2800000, guid: af7fd7430aaeb034eaaf4b6929729a18, type: 3}
+    - target: {fileID: 5354726301163860888, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: DataBase.Array.data[0].name
+      value: hinamoroko
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354726301163860888, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: DataBase.Array.data[1].name
+      value: kawaamutu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354726301163860888, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: DataBase.Array.data[2].name
+      value: kurumeusu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354726301163860888, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: DataBase.Array.data[0].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 71416f5915358204c8dd16b7ba02e04f, type: 3}
+    - target: {fileID: 5354726301163860888, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: DataBase.Array.data[1].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 550986339791efd4a9b56cf4625ddc5d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b8e72ac0fe7cac4ea1755bd06de2933, type: 3}
 --- !u!54 &853427104 stripped
