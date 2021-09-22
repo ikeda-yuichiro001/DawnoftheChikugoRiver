@@ -7,7 +7,6 @@ public class sphere_des : MonoBehaviour
     public bool ishit;
     float b = 0;
     GameObject sphere;
-    GameObject kawamutu;
     public Rigidbody rb;
     public Vector2 arrow;
     // Start is called before the first frame update
@@ -15,7 +14,6 @@ public class sphere_des : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sphere = GameObject.Find("Sphere");
-        kawamutu = GameObject.Find("kawamutu");
     }
 
     private void OnTriggerStay(Collider other)
@@ -26,8 +24,8 @@ public class sphere_des : MonoBehaviour
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             //ここに魚の画像と説明を入れる処理
-            if (kawamutu) { }
-            Sakanadata.target = 0;
+            if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 0; }
+            if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 1; }
             Destroy(gameObject);
             ishit = true;
         }
