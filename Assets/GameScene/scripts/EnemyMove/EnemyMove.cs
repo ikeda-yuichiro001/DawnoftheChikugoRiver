@@ -670,13 +670,13 @@ public class EnemyMove : MonoBehaviour
     {
         MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
-        PlacementDistance *= 5;
+        float PlacementDistances = 20 ;
 
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.5f;                        //new
         if (cnt >= 1)                                  //new
         {
-            GameObject a2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x +PlacementDistance * DifficultyScene.difspd * Mathf.Sin(Time.time), transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
-            GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x -PlacementDistance * DifficultyScene.difspd * Mathf.Sin(Time.time), transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            GameObject a2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x +PlacementDistances * Mathf.Sin(Time.time), transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x -PlacementDistances  * Mathf.Sin(Time.time), transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
             a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
             aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
             cnt = 0;
