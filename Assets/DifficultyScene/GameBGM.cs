@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameBGM : MonoBehaviour
+
+public class GameBGM : OptionButton
 {
     public  bool Destroy_ = true;
+    AudioSource Audiosource;
     
     void Start()
     {
+        Audiosource = GetComponent<AudioSource>();
+
+        if (Option.BGM == 0) Audiosource.Stop();
+
         if (Destroy_)
         {
             //シーン遷移してもオブジェクトが消えないようにする

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SE : MonoBehaviour
+public class SE : OptionButton
 {
     //定義
     public AudioClip sound1;
@@ -17,6 +17,8 @@ public class SE : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        if (Option.SE == 0) audioSource.Stop();
     }
 
     
