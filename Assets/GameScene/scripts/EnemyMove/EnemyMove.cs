@@ -107,6 +107,8 @@ public class EnemyMove : MonoBehaviour
                 enemymove15();
                 //i = 1;
                 break;
+            default:
+                break;
         }
     }
     //下に一発
@@ -371,7 +373,9 @@ public class EnemyMove : MonoBehaviour
             hp = maxhp;
             start = true;
         }
-
+        GameObject lockon = GameObject.Find("jikinerai");
+        if(Player != null)
+        lockon.transform.LookAt(Player.transform);
 
         if (player_ctrl.pc != null)
             Player = player_ctrl.pc.gameObject;
@@ -381,21 +385,23 @@ public class EnemyMove : MonoBehaviour
 
         if (cnt >= 1)                                  //new
         {
-            Vector3 jikinerai = Player.transform.position - transform.position;
-            jikinerai.Normalize();
+            //Vector3 jikinerai = Player.transform.position - transform.position;
+            //jikinerai.Normalize();
 
             for (int v = 0; v < 2 * DifficultyScene.difspd + 1; v++)
             {
-                GameObject a5 = Instantiate(Resources.Load("enemy_bul_big"), transform.position, Quaternion.identity) as GameObject;
+                GameObject a5 = Instantiate(Resources.Load("enemy_bul_big"), new Vector3(transform.position.x,transform.position.y,transform.position.z-3), Quaternion.Euler(lockon.transform.rotation.x, lockon.transform.rotation.y, lockon.transform.rotation.z)) as GameObject;
                 if (v % 2 == 0) {
                     //a3.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v/2 * 1f / Mathf.PI * 2), -Mathf.Cos(v/2 * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
-                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v / 2 * 1f / Mathf.PI * 2) + jikinerai.x, -Mathf.Cos(v / 2 * 1f / Mathf.PI * 2) + jikinerai.z) * DifficultyScene.difspd * 0.4f;
+                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(v / 2 * 1f / Mathf.PI * 2) /* jikinerai.x*/, -Mathf.Cos(v / 2 * 1f / Mathf.PI * 2) /* jikinerai.z*/) * DifficultyScene.difspd * 0.4f;
+                    a5.transform.LookAt(Player.transform);
                     //Debug.Log(a.GetComponent<enemyShotPattern>().arrow = new Vector2(jikinerai.x, jikinerai.z));
                 }
                 else
                 {
                     //a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v/2+1) * 1f / Mathf.PI * 2), -Mathf.Cos(-(v/2+1) * 1f / Mathf.PI * 2)) * DifficultyScene.difspd * Speed  / 15;
-                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v / 2 + 1) * 1f / Mathf.PI * 2) + jikinerai.x, -Mathf.Cos(-(v / 2 + 1) * 1f / Mathf.PI * 2) + jikinerai.z) * DifficultyScene.difspd * 0.4f;
+                    a5.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(-(v / 2 + 1) * 1f / Mathf.PI * 2) /* jikinerai.x*/, -Mathf.Cos(-(v / 2 + 1) * 1f / Mathf.PI * 2) /* jikinerai.z*/) * DifficultyScene.difspd * 0.4f;
+                    a5.transform.LookAt(Player.transform);
                 }
             }
                 cnt = 0;

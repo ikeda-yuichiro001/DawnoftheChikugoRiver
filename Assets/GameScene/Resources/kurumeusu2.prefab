@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4950786717935154597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3689613405775293919}
+  - component: {fileID: 7250727837845146506}
+  - component: {fileID: 1401497362048734332}
+  m_Layer: 0
+  m_Name: jikinerai
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3689613405775293919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950786717935154597}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.003009627, y: 0.003009627, z: 0.003009627}
+  m_Children: []
+  m_Father: {fileID: 5675095272612161716}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &7250727837845146506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950786717935154597}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: 5
+  mirror: 0
+  hp: 1000
+  maxhp: 1000
+  t: 5
+  Speed: 3
+  PlacementDistance: 3
+--- !u!114 &1401497362048734332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950786717935154597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad073cfa32666bf4e89d8e9e63c8f8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMissilePrefab: {fileID: 5678424110958396956, guid: 209d14bfbcfcda54295bb9b819b445f7,
+    type: 3}
+  speed: 600
+  wayNumber: 5
+  enemyFireMissilePrefab: {fileID: 5678424110958396956, guid: 209d14bfbcfcda54295bb9b819b445f7,
+    type: 3}
 --- !u!1 &5675095272612197510
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +247,7 @@ Transform:
   - {fileID: 5675095272612161718}
   - {fileID: 5675095272612161714}
   - {fileID: 5675095272612161712}
+  - {fileID: 3689613405775293919}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
