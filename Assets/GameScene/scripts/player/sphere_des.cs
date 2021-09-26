@@ -24,9 +24,22 @@ public class sphere_des : MonoBehaviour
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
             //ここに魚の画像と説明を入れる処理
-            Sakanadata.target = 0; //hinamoroko
-            if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }//kawamutu
-            if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 2; }//kurumeusu
+            if(Sakanadata.target != 15)
+            {
+                if(Sakanadata.cunt > 3)
+                {
+                    Sakanadata.target = 0; //hinamoroko
+                    if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }//kawamutu
+                    if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 2; }//kurumeusu
+                    Sakanadata.cunt = 0;
+                }
+            }
+            else
+            {
+                Sakanadata.target = 0;
+                if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }
+                if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 2; }
+            }
             Destroy(gameObject);
             ishit = true;
         }

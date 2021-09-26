@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Sakanadata : MonoBehaviour
 {
     public static int target;
+    public static float cunt;
     Text sakana_name;
     Text sakana_torisetu;
     Text gakumei;
@@ -24,7 +25,8 @@ public class Sakanadata : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target < 16)
+        cunt += 1 * Time.deltaTime; Debug.Log(cunt);
+        if (target < 16)
         {
             sakana_name.text = "魚の名前:" + DataBase[target].name;
             sakana_torisetu.text = "解説:" + DataBase[target].discription;
