@@ -448,7 +448,7 @@ public class EnemyMove : MonoBehaviour
         }
 
     }
-    void enemymove6()
+    void enemymove6()//stage2Boss
     {
 
     }
@@ -576,12 +576,13 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
+            if(Player!=null)
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
     }
-    //渦巻き
+    //渦巻き stage3Boss
     void enemymove9()
     {
         if (mirror) MirrorDirection = -1;
@@ -725,6 +726,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
+            if(Player!=null)
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
@@ -734,7 +736,7 @@ public class EnemyMove : MonoBehaviour
     {
 
     }
-    void enemymove12()
+    void enemymove12()//stage4Boss
     {
 
     }
@@ -746,7 +748,7 @@ public class EnemyMove : MonoBehaviour
     {
 
     }
-    void enemymove15()
+    void enemymove15()//LastBoss
     {
 
     }
