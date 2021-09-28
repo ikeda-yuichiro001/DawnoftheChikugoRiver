@@ -9,14 +9,12 @@ public class Sakanadata : MonoBehaviour
     public static float cunt;
     Text sakana_name;
     Text sakana_torisetu;
-    Text gakumei;
     RawImage sakana_gazou;
     public UIData[] DataBase;
     void Start()
     {
         sakana_name = GameObject.Find("Canvas/sakana name/Fish").GetComponent<Text>();
         sakana_torisetu = GameObject.Find("Canvas/sakana torisetu/Fishint").GetComponent<Text>();
-        gakumei = GameObject.Find("Canvas/gakuname/FishWname").GetComponent<Text>();
         sakana_gazou = GameObject.Find("Canvas/sakana gazou").GetComponent<RawImage>();
         target = 15;
     }
@@ -30,7 +28,6 @@ public class Sakanadata : MonoBehaviour
         {
             sakana_name.text = "魚の名前:" + DataBase[target].name;
             sakana_torisetu.text = "解説:" + DataBase[target].discription;
-            gakumei.text = "学名:" + DataBase[target].gakumei;
             sakana_gazou.texture = DataBase[target].image;
         }
     }
@@ -40,7 +37,6 @@ public class UIData
 {
     public Texture2D image;
     public string name;
-    public string gakumei;
     [Multiline(7)]
     public string discription;
 }
