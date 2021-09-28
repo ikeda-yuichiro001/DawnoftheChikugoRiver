@@ -27,20 +27,21 @@ public class StageClear : MonoBehaviour
         }
 
 
-            if (EnemyMove.bossHp == 0 && inst)
+        if (EnemyMove.bossHp == 0 && inst)
+        {
+            if (!a)
             {
-                if (!a)
-                {
-                    imageTest.kari += 10000000;
-                    imageTest.scorejudge = 1;
-                    a = true;
-                }
+                Debug.Log("bossBreak!");
+                imageTest.kari += 10000000;
+                imageTest.scorejudge = 1;
+                a = true;
+            }
 
-                //time += Time.deltaTime;
-                //Debug.Log(time);
-                //if (time > 5 && !stage)
-                //{
-                    StageManager.stage++;
+            //time += Time.deltaTime;
+            //Debug.Log(time);
+            //if (time > 5 && !stage)
+            //{
+            StageManager.stage++;
             //Debug.Log("stage" + StageManager.stage);
 
             time = 0;
@@ -48,12 +49,13 @@ public class StageClear : MonoBehaviour
             inst = false;
             EnemyMove.bossHp = 1;
             if (StageManager.stage < 6)
-                        SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
-                    else
-                        SceneManager.LoadScene("GameClear");
-                    //SceneManager.LoadScene("GameClearScene");
-                //}
-            }
+                SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
+            else
+                SceneManager.LoadScene("GameClear");
+            //SceneManager.LoadScene("GameClearScene");
+            //}
+        }
+        
         
     }
 }
