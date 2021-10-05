@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemymove1 : MonoBehaviour
-{
+public class enemymove2 : MonoBehaviour
+{/*
     public bool mirror = false;
     int MirrorDirection;
     int w = 0, a = 0;
-    public int hp = 500;
+    public int hp = 300;
     float cnt;
-    public int t = 8;
+    public int t = 40;
     public float Speed;
     public float PlacementDistance;
     GameObject Player;
@@ -28,29 +28,34 @@ public class enemymove1 : MonoBehaviour
         MirrorDirection = 1;
         if (mirror) MirrorDirection = -1;
 
-        cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.2f;                        //new
         if (cnt >= 1)                                  //new
         {
-            for (int v = 0; v < t * DifficultyScene.difspd; v++)
-            {
-                GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-                a.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2))*DifficultyScene.difspd * Speed*PlacementDistance/15;
-            }
+            GameObject a = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+            a.GetComponent<enemyShotPattern>().arrow = new Vector2(0,-DifficultyScene.difspd * 0.3f);
             cnt = 0;
         }
-        GetComponent<Rigidbody>().position += new Vector3(0,0,-0.2f * MirrorDirection);
+
+        GetComponent<Rigidbody>().position += new Vector3(-0.3f * MirrorDirection, 0, 0);
+
+        if (transform.position.x < -27)
+            transform.position = new Vector3(27,transform.position.y,transform.position.z);
+        if (transform.position.x > 27)
+            transform.position = new Vector3(-27, transform.position.y, transform.position.z);
 
         if (hp <= 0)
         {
 
-            while (w<50){
+            while (w < 50)
+            {
                 //Debug.Log(a);
                 //Debug.Log(w);
 
                 if (a % 2 == 0)
                 {
                     Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
-                }else
+                }
+                else
                 {
                     Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
                 }
@@ -63,20 +68,6 @@ public class enemymove1 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (transform.position.z < -player_ctrl.zlimit)
-        {
-            transform.position = new Vector3(transform.position.x,transform.position.y,player_ctrl.zlimit);
-        }
-        if (transform.position.z > player_ctrl.zlimit)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -player_ctrl.zlimit);
-        }
-        /*if (!GetComponent<Renderer>().isVisible)
-        {
-            Destroy(gameObject);
-        }*/
-
-
         if (Player != null)
         {
             d = Vector3.Distance(transform.position, Player.transform.position);
@@ -88,6 +79,8 @@ public class enemymove1 : MonoBehaviour
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
-    }
+
+    }*/
 
 }
+

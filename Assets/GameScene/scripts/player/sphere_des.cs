@@ -28,17 +28,23 @@ public class sphere_des : MonoBehaviour
             {
                 if(Sakanadata.cunt > 3)
                 {
-                    Sakanadata.target = 0; //hinamoroko
-                    if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }//kawamutu
-                    if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 2; }//kurumeusu
+                    //Sakanadata.target = 0; //hinamoroko
+
+                    if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }
+                    if (other.GetComponent<enemymove2>() != null) { Sakanadata.target = 2; }
+                    if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 3; }
+
                     Sakanadata.cunt = 0;
                 }
             }
             else
             {
-                Sakanadata.target = 0;
+                //Sakanadata.target = 0;
+               
                 if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }
-                if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 2; }
+                if (other.GetComponent<enemymove2>() != null) { Sakanadata.target = 2; }
+                if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 3; }
+
             }
             Destroy(gameObject);
             ishit = true;

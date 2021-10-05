@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 8258698855007568344}
   - component: {fileID: 7330797793642985678}
   - component: {fileID: 6778041990285742940}
+  - component: {fileID: 7963245888993818207}
   m_Layer: 0
   m_Name: hinamoroko_model1l
   m_TagString: Untagged
@@ -238,6 +239,18 @@ MonoBehaviour:
   t: 8
   Speed: 3.36
   PlacementDistance: 3.24
+--- !u!114 &7963245888993818207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518797558694755274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cec6921bfc672947a5e9bc283393d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4518797558694755276
 GameObject:
   m_ObjectHideFlags: 0

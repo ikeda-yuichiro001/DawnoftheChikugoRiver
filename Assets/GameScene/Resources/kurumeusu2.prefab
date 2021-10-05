@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i: 5
+  i: 0
   mirror: 0
   hp: 1000
   maxhp: 1000
@@ -224,8 +224,8 @@ GameObject:
   - component: {fileID: 5675095272612161716}
   - component: {fileID: 5675095273068269986}
   - component: {fileID: 5675095273068269987}
-  - component: {fileID: 5675095273068269984}
   - component: {fileID: 5675095273068269988}
+  - component: {fileID: 2685748051379449044}
   m_Layer: 0
   m_Name: kurumeusu2
   m_TagString: Untagged
@@ -281,23 +281,6 @@ CapsuleCollider:
   m_Height: 0.068459414
   m_Direction: 2
   m_Center: {x: 0.00016101987, y: -0.00039142047, z: 0.032103322}
---- !u!114 &5675095273068269984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5675095272612197524}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25facb31908912c4e896fa1531e4946b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  t: 40
-  Speed: 2
-  PlacementDistance: 2
-  Player: {fileID: 0}
-  ishit: 0
 --- !u!114 &5675095273068269988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,13 +293,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i: 3
+  i: 9
   mirror: 0
   hp: 1000
   maxhp: 1000
   t: 5
   Speed: 3
   PlacementDistance: 3
+--- !u!114 &2685748051379449044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675095272612197524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25facb31908912c4e896fa1531e4946b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5675095272612197526
 GameObject:
   m_ObjectHideFlags: 0

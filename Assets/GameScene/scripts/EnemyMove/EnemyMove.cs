@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public int i = 1;//どの弾幕を撃つのかの設定
+
     public bool mirror;//反対に移動するときとかに使って
     int MirrorDirection = 1;
     int w = 0, a = 0;
@@ -716,6 +717,7 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
+            bossHp = 0;
             Destroy(gameObject);
         }
 

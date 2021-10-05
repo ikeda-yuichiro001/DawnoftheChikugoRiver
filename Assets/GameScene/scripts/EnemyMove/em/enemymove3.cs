@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemymove3 : MonoBehaviour
 {
     //bool lockon = false;
+    /*
     int w = 0, a = 0;
     public static int maxhp = 3000;
     public static int hp = maxhp;
@@ -33,7 +34,7 @@ public class enemymove3 : MonoBehaviour
         //Debug.Log(1);
         
         //gameObject.transform.position = 
-        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f*/, 0, /*Mathf.Cos(Time.time*4)*-1*/0);
+        GetComponent<Rigidbody>().position += new Vector3(Mathf.Sin(Time.time * Random.Range(2,4))/*+0.1f, 0, /*Mathf.Cos(Time.time*4)*-1*0);
         cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f;
 
         if (cnt >= 1)                                  //new
@@ -85,6 +86,6 @@ public class enemymove3 : MonoBehaviour
             Destroy(layer);
             Debug.Log("ピチューン！");
         }
-    }
+    }*/
 
 }

@@ -16,7 +16,7 @@ public class Sakanadata : MonoBehaviour
         sakana_name = GameObject.Find("Canvas/sakana name/Fish").GetComponent<Text>();
         sakana_torisetu = GameObject.Find("Canvas/sakana torisetu/Fishint").GetComponent<Text>();
         sakana_gazou = GameObject.Find("Canvas/sakana gazou").GetComponent<RawImage>();
-        target = 15;
+        target = 0;
     }
 
 
