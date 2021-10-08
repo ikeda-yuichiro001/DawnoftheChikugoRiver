@@ -1464,6 +1464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757dd35d8078cbf46b932c0190ccf026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yukarityann: {fileID: 2800000, guid: 1084735dcf82d0f479e67473d1f7d8fe, type: 3}
   Picture: {fileID: 0}
   FishName: {fileID: 0}
   Syoukaibun: {fileID: 0}
@@ -3252,7 +3253,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -90, y: 100}
-  m_SizeDelta: {x: 600, y: 300}
+  m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675647953
 MonoBehaviour:

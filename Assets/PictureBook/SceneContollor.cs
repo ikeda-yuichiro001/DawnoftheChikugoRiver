@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneContollor : MonoBehaviour
 {
+    public Texture2D yukarityann;
     Image Panel;
     RectTransform xxx;
     Image [] Fish = new Image[Max];
@@ -143,7 +144,7 @@ public class SceneContollor : MonoBehaviour
         {
             Syoukaibun.text = "---------------";
             FishName.text = "-------";
-            Picture.color = new Color(0, 0, 0, 0);
+            Picture.texture = yukarityann;
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)
                 || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
             {
