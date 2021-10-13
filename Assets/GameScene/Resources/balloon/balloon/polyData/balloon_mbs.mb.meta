@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: e3886f7079208554aaca8bfc74c3eddc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: balloon
+    100002: balloon_fabric_Poly
+    100004: //RootNode
+    100006: gondola
+    100008: joint10
+    100010: joint100
+    100012: joint101
+    100014: joint102
+    100016: joint103
+    100018: joint104
+    100020: joint105
+    100022: joint106
+    100024: joint107
+    100026: joint108
+    100028: joint109
+    100030: joint11
+    100032: joint110
+    100034: joint111
+    100036: joint112
+    100038: joint113
+    100040: joint114
+    100042: joint115
+    100044: joint116
+    100046: joint117
+    100048: joint118
+    100050: joint12
+    100052: joint13
+    100054: joint14
+    100056: joint15
+    100058: joint16
+    100060: joint17
+    100062: joint18
+    100064: joint19
+    100066: joint2
+    100068: joint2 1
+    100070: joint2 2
+    100072: joint2 3
+    100074: joint20
+    100076: joint21
+    100078: joint22
+    100080: joint23
+    100082: joint24
+    100084: joint25
+    100086: joint26
+    100088: joint27
+    100090: joint28
+    100092: joint29
+    100094: joint3
+    100096: joint3 1
+    100098: joint3 2
+    100100: joint3 3
+    100102: joint30
+    100104: joint31
+    100106: joint32
+    100108: joint33
+    100110: joint34
+    100112: joint35
+    100114: joint36
+    100116: joint37
+    100118: joint38
+    100120: joint39
+    100122: joint4
+    100124: joint4 1
+    100126: joint4 2
+    100128: joint4 3
+    100130: joint40
+    100132: joint41
+    100134: joint42
+    100136: joint43
+    100138: joint44
+    100140: joint45
+    100142: joint46
+    100144: joint47
+    100146: joint48
+    100148: joint49
+    100150: joint5
+    100152: joint5 1
+    100154: joint5 2
+    100156: joint5 3
+    100158: joint50
+    100160: joint51
+    100162: joint52
+    100164: joint53
+    100166: joint54
+    100168: joint55
+    100170: joint56
+    100172: joint57
+    100174: joint58
+    100176: joint59
+    100178: joint6
+    100180: joint6 1
+    100182: joint6 2
+    100184: joint6 3
+    100186: joint60
+    100188: joint61
+    100190: joint62
+    100192: joint63
+    100194: joint64
+    100196: joint65
+    100198: joint66
+    100200: joint67
+    100202: joint68
+    100204: joint69
+    100206: joint7
+    100208: joint70
+    100210: joint71
+    100212: joint72
+    100214: joint73
+    100216: joint74
+    100218: joint75
+    100220: joint76
+    100222: joint77
+    100224: joint78
+    100226: joint79
+    100228: joint8
+    100230: joint80
+    100232: joint81
+    100234: joint82
+    100236: joint83
+    100238: joint84
+    100240: joint85
+    100242: joint86
+    100244: joint87
+    100246: joint88
+    100248: joint89
+    100250: joint9
+    100252: joint90
+    100254: joint91
+    100256: joint92
+    100258: joint93
+    100260: joint94
+    100262: joint95
+    100264: joint96
+    100266: joint97
+    100268: joint98
+    100270: joint99
+    100272: Wire0
+    100274: Wire0_Poly
+    100276: Wire1
+    100278: Wire1_Poly
+    100280: Wire2
+    100282: Wire2_Poly
+    100284: Wire3
+    100286: Wire3_Poly
+    400000: balloon
+    400002: balloon_fabric_Poly
+    400004: //RootNode
+    400006: gondola
+    400008: joint10
+    400010: joint100
+    400012: joint101
+    400014: joint102
+    400016: joint103
+    400018: joint104
+    400020: joint105
+    400022: joint106
+    400024: joint107
+    400026: joint108
+    400028: joint109
+    400030: joint11
+    400032: joint110
+    400034: joint111
+    400036: joint112
+    400038: joint113
+    400040: joint114
+    400042: joint115
+    400044: joint116
+    400046: joint117
+    400048: joint118
+    400050: joint12
+    400052: joint13
+    400054: joint14
+    400056: joint15
+    400058: joint16
+    400060: joint17
+    400062: joint18
+    400064: joint19
+    400066: joint2
+    400068: joint2 1
+    400070: joint2 2
+    400072: joint2 3
+    400074: joint20
+    400076: joint21
+    400078: joint22
+    400080: joint23
+    400082: joint24
+    400084: joint25
+    400086: joint26
+    400088: joint27
+    400090: joint28
+    400092: joint29
+    400094: joint3
+    400096: joint3 1
+    400098: joint3 2
+    400100: joint3 3
+    400102: joint30
+    400104: joint31
+    400106: joint32
+    400108: joint33
+    400110: joint34
+    400112: joint35
+    400114: joint36
+    400116: joint37
+    400118: joint38
+    400120: joint39
+    400122: joint4
+    400124: joint4 1
+    400126: joint4 2
+    400128: joint4 3
+    400130: joint40
+    400132: joint41
+    400134: joint42
+    400136: joint43
+    400138: joint44
+    400140: joint45
+    400142: joint46
+    400144: joint47
+    400146: joint48
+    400148: joint49
+    400150: joint5
+    400152: joint5 1
+    400154: joint5 2
+    400156: joint5 3
+    400158: joint50
+    400160: joint51
+    400162: joint52
+    400164: joint53
+    400166: joint54
+    400168: joint55
+    400170: joint56
+    400172: joint57
+    400174: joint58
+    400176: joint59
+    400178: joint6
+    400180: joint6 1
+    400182: joint6 2
+    400184: joint6 3
+    400186: joint60
+    400188: joint61
+    400190: joint62
+    400192: joint63
+    400194: joint64
+    400196: joint65
+    400198: joint66
+    400200: joint67
+    400202: joint68
+    400204: joint69
+    400206: joint7
+    400208: joint70
+    400210: joint71
+    400212: joint72
+    400214: joint73
+    400216: joint74
+    400218: joint75
+    400220: joint76
+    400222: joint77
+    400224: joint78
+    400226: joint79
+    400228: joint8
+    400230: joint80
+    400232: joint81
+    400234: joint82
+    400236: joint83
+    400238: joint84
+    400240: joint85
+    400242: joint86
+    400244: joint87
+    400246: joint88
+    400248: joint89
+    400250: joint9
+    400252: joint90
+    400254: joint91
+    400256: joint92
+    400258: joint93
+    400260: joint94
+    400262: joint95
+    400264: joint96
+    400266: joint97
+    400268: joint98
+    400270: joint99
+    400272: Wire0
+    400274: Wire0_Poly
+    400276: Wire1
+    400278: Wire1_Poly
+    400280: Wire2
+    400282: Wire2_Poly
+    400284: Wire3
+    400286: Wire3_Poly
+    2100000: lambert1
+    2300000: gondola
+    3300000: gondola
+    4300000: gondola
+    4300002: Wire0_Poly
+    4300004: Wire1_Poly
+    4300006: Wire2_Poly
+    4300008: Wire3_Poly
+    4300010: balloon_fabric_Poly
+    9500000: //RootNode
+    13700000: balloon_fabric_Poly
+    13700002: Wire0_Poly
+    13700004: Wire1_Poly
+    13700006: Wire2_Poly
+    13700008: Wire3_Poly
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
