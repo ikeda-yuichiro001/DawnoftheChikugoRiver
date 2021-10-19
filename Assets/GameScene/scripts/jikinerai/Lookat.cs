@@ -9,11 +9,14 @@ public class Lookat : MonoBehaviour
     void Start()
     {
         // 名前でオブジェクトを特定するので一言一句合致させること（ポイント）
-        target = GameObject.Find("player");
+        //target = GameObject.Find("player");
     }
 
     void Update()
     {
+        if(target==null)
+            target = GameObject.Find("player");
+
         // 「LookAtメソッド」の活用（ポイント）
         transform.LookAt(target.transform.position);
     }
