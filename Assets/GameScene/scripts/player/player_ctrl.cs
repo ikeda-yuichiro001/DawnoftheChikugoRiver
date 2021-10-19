@@ -52,8 +52,5 @@ public class player_ctrl : MonoBehaviour
         {
             Instantiate(Resources.Load("player"),new Vector3( 0,2,-14),Quaternion.identity);
         }
-
-        //タイトルに戻る
-        title.esc();
     }
 }
