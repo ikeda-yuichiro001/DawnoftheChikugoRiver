@@ -13,7 +13,7 @@ public class EnemyFire : MonoBehaviour
     {
         timeCount += 1;
 
-        if (timeCount % 30 == 0)
+        if (timeCount *DifficultyScene.difspd % 30 == 0)
         {
             // 敵のミサイルを生成する
             enemyMissile = Instantiate(enemyMissilePrefab, transform.position, Quaternion.identity);
@@ -21,7 +21,7 @@ public class EnemyFire : MonoBehaviour
             Rigidbody enemyMissileRb = enemyMissile.GetComponent<Rigidbody>();
 
             // ミサイルを飛ばす方向を決める。「forward」は「z軸」方向をさす（ポイント）
-            enemyMissileRb.AddForce(transform.forward * speed);
+            enemyMissileRb.AddForce(transform.forward * speed *DifficultyScene.difspd);
 
 
         }
