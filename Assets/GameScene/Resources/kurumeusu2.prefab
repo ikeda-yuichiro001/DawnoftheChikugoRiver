@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3689613405775293919}
   - component: {fileID: 7250727837845146506}
-  - component: {fileID: 1401497362048734332}
   m_Layer: 0
   m_Name: jikinerai
   m_TagString: Untagged
@@ -51,24 +50,6 @@ MonoBehaviour:
   t: 5
   Speed: 3
   PlacementDistance: 3
---- !u!114 &1401497362048734332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950786717935154597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad073cfa32666bf4e89d8e9e63c8f8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMissilePrefab: {fileID: 5678424110958396956, guid: 209d14bfbcfcda54295bb9b819b445f7,
-    type: 3}
-  speed: 600
-  wayNumber: 5
-  enemyFireMissilePrefab: {fileID: 5678424110958396956, guid: 209d14bfbcfcda54295bb9b819b445f7,
-    type: 3}
 --- !u!1 &5675095272612197510
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,9 +278,9 @@ MonoBehaviour:
   mirror: 0
   hp: 1000
   maxhp: 1000
-  t: 5
-  Speed: 3
-  PlacementDistance: 3
+  t: 3
+  Speed: 6
+  PlacementDistance: 5
 --- !u!114 &2685748051379449044
 MonoBehaviour:
   m_ObjectHideFlags: 0
