@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8105759828134177888}
   - component: {fileID: 643700957460413874}
   - component: {fileID: 7857076788866220514}
+  - component: {fileID: 5082618970425824699}
+  - component: {fileID: 3580838715910421674}
   m_Layer: 0
   m_Name: urokodan1
   m_TagString: Untagged
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8105759828136374944}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 11.580667, y: 21.102549, z: 15.166386}
+  m_LocalScale: {x: 78.49682, y: 143.03864, z: 102.801765}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,7 +104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8105759828136374944}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77c36cfc8ebc1ac47bc9af4214cd37f1, type: 3}
   m_Name: 
@@ -110,3 +112,32 @@ MonoBehaviour:
   ishit: 0
   rb: {fileID: 0}
   arrow: {x: 0, y: 0}
+--- !u!114 &5082618970425824699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105759828136374944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4a8f619ba25ff439b3883403dfc826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ishit: 0
+  rb: {fileID: 643700957460413874}
+  arrow: {x: 0, y: 0}
+--- !u!136 &3580838715910421674
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105759828136374944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.012016816
+  m_Height: 0.021795928
+  m_Direction: 1
+  m_Center: {x: -0.000000001862645, y: 0.000897964, z: -0.0000000013969839}
