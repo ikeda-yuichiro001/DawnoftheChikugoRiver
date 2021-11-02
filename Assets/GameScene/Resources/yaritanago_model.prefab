@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6564572299188246729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69128144831232080}
+  - component: {fileID: 9104037888117506112}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69128144831232080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564572299188246729}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.002036852, y: -0.005474623, z: -0.011519774}
+  m_LocalScale: {x: 0.009008825, y: 0.0016042802, z: 0.0031688167}
+  m_Children: []
+  m_Father: {fileID: 7656868659036665361}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &9104037888117506112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564572299188246729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: 11
+  mirror: 0
+  hp: 1000
+  maxhp: 1000
+  t: 8
+  Speed: 4
+  PlacementDistance: 1.21
 --- !u!1 &7656868659036695089
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +81,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 6.9099, y: 2, z: 29.371}
   m_LocalScale: {x: 111.002266, y: 623.33246, z: 315.57523}
-  m_Children: []
+  m_Children:
+  - {fileID: 69128144831232080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -87,17 +138,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7656868659036695089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   i: 11
   mirror: 0
-  hp: 100
-  maxhp: 100
-  t: 7
-  Speed: 2.33
+  hp: 1000
+  maxhp: 1000
+  t: 8
+  Speed: 4
   PlacementDistance: 1.21
 --- !u!54 &7075636150631117749
 Rigidbody:

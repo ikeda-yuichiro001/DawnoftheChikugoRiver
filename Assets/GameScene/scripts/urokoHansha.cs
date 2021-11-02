@@ -13,6 +13,8 @@ public class urokoHansha : MonoBehaviour
     public static float HitRange = 1.0f;
     public bool isReflect;
 
+    private Vector3 latestPos;  //前回のPosition
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,15 @@ public class urokoHansha : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 diff = transform.position - latestPos;   //前回からどこに進んだかをベクトルで取得
+        latestPos = transform.position;  //前回のPositionの更新
+
+        //ベクトルの大きさが0.01以上の時に向きを変える処理をする
+        if (diff.magnitude > 0.01f)
+        {
+            transform.rotation = Quaternion.LookRotation(diff,new Vector3(90,0,-90)); //向きを変更する
+        }
+
         if (float.IsNaN(arrow.x)) arrow.x = 0;
         if (float.IsNaN(arrow.y)) arrow.y = 0;
         rb.position += new Vector3(arrow.x, 0, arrow.y);

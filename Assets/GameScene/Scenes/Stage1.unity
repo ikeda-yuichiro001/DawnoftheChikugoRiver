@@ -598,16 +598,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2048111540894315864, guid: e5ea71423f314ea4384681c906a59dd8,
-        type: 3}
-      propertyPath: Speed
-      value: 6.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048111540894315864, guid: e5ea71423f314ea4384681c906a59dd8,
-        type: 3}
-      propertyPath: t
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7075636150631117749, guid: e5ea71423f314ea4384681c906a59dd8,
         type: 3}
       propertyPath: m_UseGravity
@@ -1033,7 +1023,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697472601}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32e09d19b58aae140a71e2f3c94f2a7f, type: 3}
   m_Name: 
@@ -1108,7 +1098,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697472601}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f3064fcbb32e8458567dc4f3987387, type: 3}
   m_Name: 

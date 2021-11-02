@@ -701,14 +701,15 @@ public class EnemyMove : MonoBehaviour
         cnt += Time.deltaTime * DifficultyScene.difspd * DifficultyScene.difspd * 0.1f * Speed;                        //new
         if (cnt >= 1)                                  //new
         {
+            float randX = Random.Range(-20, 20), randZ = Random.Range(-5, 5);
             for (int v = 0; v < t * DifficultyScene.difspd; v++)
             {
-                GameObject a7 = Instantiate(Resources.Load("urokodan1"), transform.position, Quaternion.identity) as GameObject; //new
-                a7.GetComponent<urokoHansha>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 15;
+                GameObject a7 = Instantiate(Resources.Load("urokodan1"), new Vector3(transform.position.x + randX, transform.position.y, transform.position.z + randZ), Quaternion.identity) as GameObject; //new
+                a7.GetComponent<urokoHansha>().arrow = new Vector2(Mathf.Sin(v * 1f / t * Mathf.PI * 2), Mathf.Cos(v * 1f / t * Mathf.PI * 2)) * Speed / 15;
             }
             cnt = 0;
         }
-        GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.15f * MirrorDirection);
+        //GetComponent<Rigidbody>().position += new Vector3(0, 0, -0.15f * MirrorDirection);
 
         if (hp <= 0)
         {
