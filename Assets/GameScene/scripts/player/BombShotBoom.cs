@@ -37,6 +37,10 @@ public class BombShotBoom : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if (other.GetComponent<urokoHansha>() != null)
+        {
+            Destroy(other.gameObject);
+        }
 
         if (other.GetComponent<EnemyMove>() != null)
         {

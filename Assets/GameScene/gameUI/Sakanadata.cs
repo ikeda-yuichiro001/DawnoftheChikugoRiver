@@ -23,7 +23,7 @@ public class Sakanadata : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cunt += 1 * Time.deltaTime; Debug.Log(cunt);
+        cunt += 1 * Time.deltaTime; //Debug.Log(cunt);
         if (target < 16)
         {
             sakana_name.text = "魚の名前:" + DataBase[target].name;

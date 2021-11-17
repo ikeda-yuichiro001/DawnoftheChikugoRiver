@@ -25,23 +25,22 @@ public class urokoHansha : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Vector3 diff = transform.position - latestPos;   //前回からどこに進んだかをベクトルで取得
         latestPos = transform.position;  //前回のPositionの更新
 
         //ベクトルの大きさが0.01以上の時に向きを変える処理をする
         if (diff.magnitude > 0.01f)
         {
-            transform.rotation = Quaternion.LookRotation(diff,new Vector3(90,0,-90)); //向きを変更する
+            transform.rotation = Quaternion.LookRotation(diff.normalized); //向きを変更する
         }
+        
 
         if (float.IsNaN(arrow.x)) arrow.x = 0;
         if (float.IsNaN(arrow.y)) arrow.y = 0;
         rb.position += new Vector3(arrow.x, 0, arrow.y);
 
-        /*if (equipment == missile)
-        {
-            rb.AddRelativeForce(Vector3.forward*100);
-        }*/
+
         if ( transform.position.z <= -player_ctrl.zlimit - 10 )
         {
             Destroy(gameObject);
@@ -72,7 +71,6 @@ public class urokoHansha : MonoBehaviour
             Destroy(gameObject);
             shot.PowData = Player.gameObject.GetComponent<shot>().Power;
             Destroy(Player);
-            Debug.Log("ピチューン！");
             ishit = true;
         }
     }

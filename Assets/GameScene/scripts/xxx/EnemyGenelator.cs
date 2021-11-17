@@ -45,6 +45,7 @@ public class EnemyGenelator : EnemyGenelatorBehavior
         if(IsCreateBoss && boss == null)
         {
             //GameClear
+            //SceneManager.LoadScene("");
         }
 
     }
