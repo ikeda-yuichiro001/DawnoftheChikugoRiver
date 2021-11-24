@@ -280,7 +280,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1229,16 +1229,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 460143217825046668, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 460143217825046668, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 460143218845454936, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1289,11 +1279,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 523
       objectReference: {fileID: 0}
-    - target: {fileID: 460143218057552934, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 460143218511368629, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1304,12 +1289,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 460143218057552934, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7992437837044506365, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
         type: 3}
       propertyPath: boss1
       value: 
       objectReference: {fileID: 5675095272612197524, guid: 2bb097e164654784390b0a8d0b707147,
         type: 3}
+    - target: {fileID: 460143217825046668, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460143217825046668, guid: 0b8e72ac0fe7cac4ea1755bd06de2933,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b8e72ac0fe7cac4ea1755bd06de2933, type: 3}
 --- !u!54 &853427104 stripped
@@ -1543,12 +1543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92f7d8f5ebdf4f4ebfb93e4ba1954f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirror: 1
-  hp: 100
-  t: 8
-  Speed: 1.25
-  PlacementDistance: 0.93
-  ishit: 0
 --- !u!136 &1364481538
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1683,12 +1677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92f7d8f5ebdf4f4ebfb93e4ba1954f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirror: 0
-  hp: 160
-  t: 8
-  Speed: 1.32
-  PlacementDistance: 1.25
-  ishit: 0
 --- !u!23 &1373502930
 MeshRenderer:
   m_ObjectHideFlags: 0

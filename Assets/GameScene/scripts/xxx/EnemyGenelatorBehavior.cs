@@ -33,8 +33,18 @@ public class EnemyGenelatorBehavior : MonoBehaviour
 
     protected GameObject Generate(string name_, float x, float z)
     {
-        GameObject g = Instantiate(Resources.Load(name_) as GameObject);
+        object a = Resources.Load(name_);
+        if(a == null)
+        {
+            Debug.Log("!?!?!?"+ name_);
+        }
+        GameObject g = Instantiate(a as GameObject);
         g.transform.position = new Vector3(g.transform.position.x + x, g.transform.position.y, g.transform.position.z + z);
+        if(g == null)
+        {
+            Debug.Log("-----"+ name_);
+        }
+
         return g;
     }
 
