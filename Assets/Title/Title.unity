@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uptime: 0
   downtime: 0
-  cnt: 0.15
+  cnt: 0.2
 --- !u!4 &1774510150
 Transform:
   m_ObjectHideFlags: 0

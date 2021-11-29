@@ -238,6 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921aa6451f3c65841b31718e7157a15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: 0
+  uptime: 0
+  downtime: 0
+  cnt: 0
   Destroy_: 1
 --- !u!4 &101909079
 Transform:
@@ -1010,7 +1014,7 @@ MonoBehaviour:
   point2: 0
   uptime: 0
   downtime: 0
-  cnt: 0.15
+  cnt: 0.2
 --- !u!1 &711268247
 GameObject:
   m_ObjectHideFlags: 0
