@@ -1149,7 +1149,7 @@ MonoBehaviour:
   - image: {fileID: 2800000, guid: 16d9e7c2725b8344a9de140be1c3aadb, type: 3}
   - image: {fileID: 2800000, guid: 5fee8fbf4e2ea7a4daec55b0f7e9d13d, type: 3}
   - image: {fileID: 2800000, guid: 4fe1ce2a648ec5c4ab7a84e250ebed54, type: 3}
-  cnt: 0.15
+  cnt: 0.2
 --- !u!1 &1172878971
 GameObject:
   m_ObjectHideFlags: 0
