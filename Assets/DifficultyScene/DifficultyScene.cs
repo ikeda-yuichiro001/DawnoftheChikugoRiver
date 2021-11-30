@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DifficultyScene : MonoBehaviour
 {
+    Image Tutorial;
     Image Easy; 
     Image Normal; 
     Image Hard;
@@ -26,6 +27,7 @@ public class DifficultyScene : MonoBehaviour
 
     void Start()
     {
+        Tutorial = GameObject.Find("Canvas/Tutorial").GetComponent<Image>();
         Easy = GameObject.Find("Canvas/Easy").GetComponent<Image>();
         Normal = GameObject.Find("Canvas/Normal").GetComponent<Image>();
         Hard = GameObject.Find("Canvas/Hard").GetComponent<Image>();
@@ -116,13 +118,23 @@ public class DifficultyScene : MonoBehaviour
             }
             if (point == 5)
             {
-                point = 0;
+                point = -1;
             }
-            if (point == -1)
+            if (point == -2)
             {
                 point = 4;
             }
 
+
+            if (point == -1)
+            {
+                Tutorial.color = Color.white;
+                difspd = 1;
+            }
+            else
+            {
+                Tutorial.color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
 
             if (point == 0)
             {
