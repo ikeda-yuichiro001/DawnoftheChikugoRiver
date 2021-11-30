@@ -9,7 +9,7 @@ public class Contollor : MonoBehaviour
     public int point, Page, MaxPage, a;
     Image Left, Right, PreGame, Return;
     RawImage Gazou;
-    Text page;
+    Text page,Text;
     public float uptime, downtime;
     public PageData[] DataBase;
     [Range(0.1f, 1.0f)]
@@ -23,6 +23,7 @@ public class Contollor : MonoBehaviour
         Return = GameObject.Find("Canvas/Return").GetComponent<Image>();
         Gazou = GameObject.Find("Canvas/gazou").GetComponent<RawImage>();
         page = GameObject.Find("Canvas/Page").GetComponent<Text>();
+        Text = GameObject.Find("Canvas/Image/Text").GetComponent<Text>();
         Page = 1;
         a = MaxPage - 1;
     }
@@ -53,6 +54,7 @@ public class Contollor : MonoBehaviour
         }
         if (point < 0) { point = 3; }if(point > 3) { point = 0; }
         if(Page < 1) { Page = a; }if(Page > a) { Page = 1;}
+
         if (point == 0)
         {
             Left.color = new Color(1, 1, 1, 1);
@@ -106,6 +108,7 @@ public class Contollor : MonoBehaviour
         if(Page < MaxPage)
         {
             Gazou.texture = DataBase[Page].image;
+            Text.text = DataBase[Page].text;
         }
     }
     
@@ -114,4 +117,6 @@ public class Contollor : MonoBehaviour
 public class PageData
 {
     public Texture2D image;
+    [Multiline(3)]
+    public string text;
 }
