@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/GameScene/Scenes/Stage5-2.unity
     guid: 9b25df06d795bd4459d25e00b91c6a9e
   - enabled: 1
+    path: Assets/GameScene/Scenes/trial.unity
+    guid: 7a2fd92072a0e194ba7b5ff2e697ebfc
+  - enabled: 1
     path: Assets/GameClearScene/GameClear.unity
     guid: 143999c659c091f4db0d701367847f46
   - enabled: 1
