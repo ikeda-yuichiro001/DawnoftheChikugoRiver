@@ -694,7 +694,7 @@ public class EnemyMove : MonoBehaviour
             Debug.Log("ピチューン！");
         }
     }
-    void enemymove11()
+    void enemymove11()//これ使わない
     {
         if (mirror) MirrorDirection = -1;
 
@@ -762,7 +762,16 @@ public class EnemyMove : MonoBehaviour
     void enemymove12()//stage4Boss
     {
 
+        cnt += Time.deltaTime * DifficultyScene.difspd * 5;
 
+        if (cnt >= 1)                                  //new
+        {
+            
+            GameObject a7 = Instantiate(Resources.Load("scaleBullet"), new Vector3(transform.position.x , transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            a7.GetComponent<urokoHansha>().arrow = new Vector2(Mathf.Sin(Random.Range(-3.0f, 3.0f)), Mathf.Cos(Random.Range(-3.0f, 3.0f))) * Speed / 5;
+            
+            cnt = 0;
+        }
 
         if (hp <= 0)
         {
@@ -813,7 +822,42 @@ public class EnemyMove : MonoBehaviour
     }
     void enemymove13()
     {
+        if (hp <= 0)
+        {
 
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
+            Destroy(gameObject);
+        }
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
     }
     void enemymove14()
     {
