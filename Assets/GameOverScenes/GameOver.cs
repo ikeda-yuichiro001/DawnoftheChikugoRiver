@@ -11,9 +11,6 @@ public class GameOver : MonoBehaviour
     public Image TitleButton;//+
     public static int RetryRemain = 3;
     public static int MaxRetry = 3;
-    int Zanki = 3;
-    int Bomb = 3;
-    int Power = 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,15 +54,21 @@ public class GameOver : MonoBehaviour
             {
                 RetryRemain--;
                 imageTest.kari = MaxRetry - RetryRemain;
-                ScoreMangers.RetryRemain = Zanki;
-                ScoreMangers.Boom = Bomb;
-                ScoreMangers.Power = Power;
+                ScoreMangers.RetryRemain = 3;
+                ScoreMangers.Boom = 3;
+                ScoreMangers.Power = 8;
                 ScoreMangers.herl = RetryRemain;
                 SceneManager.LoadScene("Stage1");
 
             }
             else
             {
+                RetryRemain = 3;
+                ScoreMangers.herl = RetryRemain;
+                ScoreMangers.RetryRemain = 3;
+                ScoreMangers.Boom = 3;
+                ScoreMangers.Power = 0;
+                imageTest.kari = 0;
                 SceneManager.LoadScene("Title");
             } 
         }

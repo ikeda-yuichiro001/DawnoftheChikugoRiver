@@ -596,6 +596,7 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
+            bossHp = 0;
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
@@ -677,7 +678,6 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
-            bossHp = 0;
             Destroy(gameObject);
         }
 
@@ -795,6 +795,7 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
+            bossHp = 0;
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
@@ -822,6 +823,17 @@ public class EnemyMove : MonoBehaviour
     }
     void enemymove13()
     {
+        cnt += Time.deltaTime * DifficultyScene.difspd * 10;
+
+        if (cnt >= 1)                                  //new
+        {
+
+            GameObject a7 = Instantiate(Resources.Load("enemy_bul_big"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            a7.GetComponent<enemyShotPattern2>().arrow = new Vector2(Mathf.Sin(Random.Range(-3.0f, 3.0f)), Mathf.Cos(Random.Range(-3.0f, 3.0f))) * Speed / 25;
+
+            cnt = 0;
+        }
+
         if (hp <= 0)
         {
 
@@ -866,5 +878,6 @@ public class EnemyMove : MonoBehaviour
     void enemymove15()//LastBoss
     {
 
+        bossHp = 0;
     }
 }

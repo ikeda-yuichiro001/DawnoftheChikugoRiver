@@ -140,6 +140,12 @@ public class title : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            GameOver.RetryRemain = 3;
+            ScoreMangers.herl = GameOver.RetryRemain;
+            ScoreMangers.RetryRemain = 3;
+            ScoreMangers.Boom = 3;
+            ScoreMangers.Power = 0;
+            imageTest.kari = 0;
             SceneManager.LoadScene("Title");
         }
     }

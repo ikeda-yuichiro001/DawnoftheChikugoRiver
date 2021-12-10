@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class ScoreMangers : MonoBehaviour
 {
     public GameObject score_object = null; //テキストオブジェクト
-    public static int herl = 3;
+    public static int herl = 3;//コンテニュー
     public int herlBit = 0;
-    public static int Invincible = 2;
+    public static int Invincible = 2;//無敵
     public int InvincibleBit = 0;
-    public static int Boom = 3;
+    public static int Boom = 3;//ボム
     public int BoomBit = 0;
-    public static int Power = 0;
-    public static int RetryRemain = 5;
+    public static int Power = 0;//霊力
+    public static int RetryRemain = 3;//残機
     public int RetryRemainBit = 0;
 
     public Text Recover;
@@ -39,7 +39,7 @@ public class ScoreMangers : MonoBehaviour
         Boom = Boom;
         BoomBit = BoomBit;
         Power = Power;
-        RetryRemain = RetryRemain;
+        //RetryRemain = RetryRemain;
         RetryRemainBit = RetryRemainBit;
 
         //Debug.Log(gameObject.name);
