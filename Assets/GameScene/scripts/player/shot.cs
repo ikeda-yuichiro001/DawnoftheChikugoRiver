@@ -16,15 +16,12 @@ public class shot : MonoBehaviour
     public GameObject Player;
     GameObject Obj;
     public GameObject[] fannels = new GameObject[4];
-    public AudioClip sound1;//ショット
-    AudioSource audioSource;
     // Start is called before the first frame update
     public void Start_()
     {
         fannels = new GameObject[4];
         Player = GameObject.Find("player");
         Power = Power;
-        audioSource = GetComponent<AudioSource>();
     }
     
     public void UpPower()
@@ -74,7 +71,8 @@ public class shot : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {
-            audioSource.PlayOneShot(sound1);
+            SE.FindObjectOfType<AudioSource>() ;
+            //AudioSource.PlayOneShot(sound1);
             switch ((Power+1)/2+1)
             {
                 case 1://case Power.First:
