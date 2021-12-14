@@ -14,10 +14,11 @@ public class Lookat : MonoBehaviour
 
     void Update()
     {
-        if(target==null)
+        if (target == null) { }
             target = GameObject.Find("player");
-
-        // 「LookAtメソッド」の活用（ポイント）
-        transform.LookAt(target.transform.position);
+        if (GameObject.Find("player") == null)
+            transform.LookAt(Vector3.back);
+        else
+            transform.LookAt(target.transform.position);
     }
 }
