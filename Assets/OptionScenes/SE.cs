@@ -12,7 +12,7 @@ public class SE : OptionButton
     public AudioClip sound5;
     public AudioClip sound6;
     public AudioClip sound7;
-    AudioSource audioSource;
+    static AudioSource audioSource;
 
     void Start()
     {

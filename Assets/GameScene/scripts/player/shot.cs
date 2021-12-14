@@ -71,6 +71,8 @@ public class shot : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Z) && timecount == 0)
         {
+            SE.FindObjectOfType<AudioSource>() ;
+            //AudioSource.PlayOneShot(sound1);
             switch ((Power+1)/2+1)
             {
                 case 1://case Power.First:
