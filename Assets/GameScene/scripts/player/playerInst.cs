@@ -9,7 +9,7 @@ public class playerInst : MonoBehaviour
     public static int Zanki = 3;
     public static int bomb = 3;
     GameObject Player;
-    //float t = 0;
+    float t = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +44,23 @@ public class playerInst : MonoBehaviour
         }
         else if(Player == null && Zanki == 0 && !gameover)
         {
-            Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
-            Player.GetComponent<shot>().Power = 8;
-            Zanki = 3;
-            SceneManager.LoadScene("GameOver");
-            gameover = true;
+            t += Time.deltaTime;
+            if (t > 5) {
+                Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
+                ScoreMangers.Power = 8;
+                Zanki = 3;
+                if (SceneManager.GetActiveScene().name == "trial")
+                { // hogehogeシーンでのみやりたい処理
+                    ScoreMangers.Power = 0;
+                    SceneManager.LoadScene("trial");
+                }
+                else
+                { // それ以外のシーンでやりたい処理
+                    SceneManager.LoadScene("GameOver");
+                    gameover = true;
+                }
+            }
+            
         }
     }
 }

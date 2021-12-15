@@ -35,7 +35,7 @@ public class PointItem : MonoBehaviour
     {
         if (other.GetComponent<shot>() != null)
         {
-            imageTest.kari += 10000 * ((int)gameObject.transform.position.z + 30);
+            imageTest.kari += 10000 * ((int)gameObject.transform.position.z + 45);
             imageTest.scorejudge = 1;
             Destroy(gameObject);
         }
