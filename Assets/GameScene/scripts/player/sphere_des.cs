@@ -9,17 +9,20 @@ public class sphere_des : MonoBehaviour
     GameObject sphere;
     public Rigidbody rb;
     public Vector2 arrow;
+    public AudioSource _shot;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         sphere = GameObject.Find("Sphere");
+        _shot = GetComponent<AudioSource>();
     }
-
+    
     private void OnTriggerStay(Collider other)
     {
         if (!ishit && other.GetComponent<EnemyMove>() != null)
         {
+            _shot.Play();
             other.GetComponent<EnemyMove>().hp--;
             imageTest.kari += 10;
             imageTest.scorejudge = 1;

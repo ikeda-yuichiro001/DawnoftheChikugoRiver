@@ -1495,6 +1495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 7036185675643813870, guid: 245821e7d33be2a4a860d1c0eb28e300,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7388823090326297504, guid: 245821e7d33be2a4a860d1c0eb28e300,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1508,7 +1513,7 @@ PrefabInstance:
     - target: {fileID: 7388823090326297504, guid: 245821e7d33be2a4a860d1c0eb28e300,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -135.71
+      value: -117.2
       objectReference: {fileID: 0}
     - target: {fileID: 7388823090326297504, guid: 245821e7d33be2a4a860d1c0eb28e300,
         type: 3}
@@ -2957,6 +2962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fan_bul
       objectReference: {fileID: 0}
+    - target: {fileID: 7989065538229482944, guid: 5df4cf1b051d89e4bbf99c4b5e68f640,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 466140269761803312, guid: 5df4cf1b051d89e4bbf99c4b5e68f640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3017,6 +3027,11 @@ PrefabInstance:
       propertyPath: arrow.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6558102411321789588, guid: 5df4cf1b051d89e4bbf99c4b5e68f640,
+        type: 3}
+      propertyPath: _shot
+      value: 
+      objectReference: {fileID: 1114406933}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df4cf1b051d89e4bbf99c4b5e68f640, type: 3}
 --- !u!1001 &5675095272210266985
