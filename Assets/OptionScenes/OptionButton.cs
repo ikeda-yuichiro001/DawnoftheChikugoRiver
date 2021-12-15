@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class OptionButton : MonoBehaviour
 {
     [RuntimeInitializeOnLoadMethod()]
-    static void Init()
+    public static void Init()
     {
         Option.BGM = PlayerPrefs.GetFloat("Option.BGM",0.9f );
         Option.SE = PlayerPrefs.GetFloat("Option.SE",0.9f);
