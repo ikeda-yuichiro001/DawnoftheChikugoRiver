@@ -32,17 +32,26 @@ public class EnemyGenelator : EnemyGenelatorBehavior
         
     }
 
+    float timer = 0;
+
     // Update is called once per frame
     public override void UPDATE()
     {
         enemyList = CreateByTimer(enemyList);
         if (IsAllDead(enemyList) && !IsCreateBoss)
         {
-            IsCreateBoss = true;
-            boss = Generate("kurumeusu2", 0,0);
+
+            timer += Time.deltaTime;
+
+            if (timer > 5)
+            {
+                IsCreateBoss = true;
+                boss = Generate("kurumeusu2", 0, 0);
+                return;
+            }
         }
 
-        if(IsCreateBoss && boss == null)
+        if (IsCreateBoss && boss == null)
         {
             //GameClear
             //SceneManager.LoadScene("GameClear");

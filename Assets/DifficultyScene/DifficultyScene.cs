@@ -37,7 +37,7 @@ public class DifficultyScene : MonoBehaviour
         No = GameObject.Find("Canvas_window/No").GetComponent<Image>();
         window = GameObject.Find("Canvas_window");
         window.SetActive(false);
-        Debug.Log("debug comment");
+        //Debug.Log("debug comment");
     }
 
     

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7930110981122985118
 Transform:
   m_ObjectHideFlags: 0
@@ -4732,7 +4732,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4988181476302224955}
+  - {fileID: 787397457126485458}
   - {fileID: 7930110981122985118}
   - {fileID: 9225139931412305}
   m_Father: {fileID: 0}
@@ -4883,7 +4883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9225139931412305
 Transform:
   m_ObjectHideFlags: 0
@@ -4912,7 +4912,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4921,7 +4921,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.74
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -9658,7 +9658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 866da5a3b05471e4380daf669da18542, type: 3}
---- !u!4 &4988181476302224955 stripped
+--- !u!4 &787397457126485458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5752487945852196186, guid: 866da5a3b05471e4380daf669da18542,
     type: 3}
