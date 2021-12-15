@@ -1583,6 +1583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 792495815}
   - component: {fileID: 792495814}
+  - component: {fileID: 792495816}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1700,6 +1701,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792495816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792495813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d566259ffe90b044b54ff27ba4d1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioType: 0
 --- !u!54 &853427104 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1464724674636026624, guid: 5899ed6819a2c744092fca809218e227,
