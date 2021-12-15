@@ -38,7 +38,7 @@ public class ScoreMangers : MonoBehaviour
         InvincibleBit = InvincibleBit;
         Boom = Boom;
         BoomBit = BoomBit;
-        Power = Power;
+        //Power = Power;
         //RetryRemain = RetryRemain;
         RetryRemainBit = RetryRemainBit;
 
@@ -361,6 +361,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[0];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
             case 1:// PowerT.text = "ちから ：★";
@@ -371,6 +372,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[0];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
             case 2:// PowerT.text = "ちから ：★★";
@@ -381,6 +383,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[0];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
             case 3:// PowerT.text = "ちから ：★★★";
@@ -391,6 +394,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[0];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
             case 4:// PowerT.text = "ちから ：★★★★";
                 aiconall[34].sprite = aicon[7];
@@ -400,6 +404,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[0];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
             case 5:// PowerT.text = "ちから ：★★★★★";
@@ -410,6 +415,7 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[7];
                 aiconall[39].sprite = aicon[0];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
             case 6:// PowerT.text = "ちから ：★★★★★★";
@@ -420,9 +426,10 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[7];
                 aiconall[39].sprite = aicon[7];
                 aiconall[40].sprite = aicon[0];
+                aiconall[41].sprite = aicon[0];
                 break;
 
-            default:// PowerT.text = "ちから ：★★★★★★★";
+            case 7:// PowerT.text = "ちから ：★★★★★★★";
                 aiconall[34].sprite = aicon[7];
                 aiconall[35].sprite = aicon[7];
                 aiconall[36].sprite = aicon[7];
@@ -430,6 +437,18 @@ public class ScoreMangers : MonoBehaviour
                 aiconall[38].sprite = aicon[7];
                 aiconall[39].sprite = aicon[7];
                 aiconall[40].sprite = aicon[7];
+                aiconall[41].sprite = aicon[0];
+                break;
+
+            default:// PowerT.text = "ちから ：★★★★★★★★";
+                aiconall[34].sprite = aicon[7];
+                aiconall[35].sprite = aicon[7];
+                aiconall[36].sprite = aicon[7];
+                aiconall[37].sprite = aicon[7];
+                aiconall[38].sprite = aicon[7];
+                aiconall[39].sprite = aicon[7];
+                aiconall[40].sprite = aicon[7];
+                aiconall[41].sprite = aicon[7];
                 break;
         }
 

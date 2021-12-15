@@ -21,7 +21,7 @@ public class shot : MonoBehaviour
     {
         fannels = new GameObject[4];
         Player = GameObject.Find("player");
-        Power = Power;
+        //Power = Power;
     }
     
     public void UpPower()
@@ -30,7 +30,7 @@ public class shot : MonoBehaviour
         Power++;
         if (Power >= 9)
         {
-            imageTest.kari += 10000 * ((int)gameObject.transform.position.z + 30);
+            imageTest.kari += 10000 * ((int)gameObject.transform.position.z + 45);
             imageTest.scorejudge = 1;
             Power = 8;
         }
