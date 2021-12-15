@@ -41,8 +41,12 @@ public class StageClear : MonoBehaviour
             //Debug.Log(time);
             //if (time > 5 && !stage)
             //{
-            StageManager.stage++;
-            //Debug.Log("stage" + StageManager.stage);
+            if (SceneManager.GetActiveScene().name != "trial")
+            {
+                StageManager.stage++;
+                Debug.Log("????");
+            }
+            Debug.Log("stage" + StageManager.stage);
 
             time = 0;
             stage = true;
@@ -50,7 +54,12 @@ public class StageClear : MonoBehaviour
             EnemyMove.bossHp = 1;
             if (StageManager.stage < 6)
                 SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
-            else
+            if (StageManager.stage > 6)
+            {
+                Debug.Log("iop");
+                SceneManager.LoadScene("trial");
+            }
+            if(StageManager.stage == 6)
                 SceneManager.LoadScene("GameClear");
             //SceneManager.LoadScene("GameClearScene");
             //}

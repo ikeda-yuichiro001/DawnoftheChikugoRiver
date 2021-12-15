@@ -84,6 +84,7 @@ public class Contollor : MonoBehaviour
             PreGame.color = new Color(1, 1, 1, 1);
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
             {
+                StageManager.stage = 7;
                 SceneManager.LoadScene("trial");
             }
         }
