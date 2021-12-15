@@ -44,7 +44,6 @@ public class StageClear : MonoBehaviour
             if (SceneManager.GetActiveScene().name != "trial")
             {
                 StageManager.stage++;
-                Debug.Log("????");
             }
             Debug.Log("stage" + StageManager.stage);
 
@@ -56,7 +55,6 @@ public class StageClear : MonoBehaviour
                 SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
             if (StageManager.stage > 6)
             {
-                Debug.Log("iop");
                 SceneManager.LoadScene("trial");
             }
             if(StageManager.stage == 6)
