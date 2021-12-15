@@ -25,17 +25,17 @@ public class SE : OptionButton
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+       /* if (Input.GetKey(KeyCode.Z))
         {
             audioSource.PlayOneShot(sound1);//ショット
-        }
+        }*/
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && ScoreMangers.Boom > 0 )
         {
             audioSource.PlayOneShot(sound2);//ボム
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && ScoreMangers.Invincible > 0)
         {
             audioSource.PlayOneShot(sound3);//無敵
         }
