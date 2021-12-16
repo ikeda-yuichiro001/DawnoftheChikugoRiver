@@ -23,6 +23,8 @@ public class EnemyGenelator : EnemyGenelatorBehavior
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 30, timer = 18},
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 30, timer = 20},
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 30, timer = 22},
+
+        //new GenerateData(){ name}
     };
     public bool IsCreateBoss = false;
     public GameObject boss;
