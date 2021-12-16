@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5134316701193290106
 Transform:
   m_ObjectHideFlags: 0
@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 6558102411321789588}
   - component: {fileID: 6217251643236019075}
   - component: {fileID: 4924388303756951688}
+  - component: {fileID: 2102442570704407339}
   m_Layer: 0
   m_Name: fan_bul
   m_TagString: Untagged
@@ -264,7 +265,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93ebd38d5d7d7d94099a39e22d0728e5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 882223d14e82f5146a5797f58370a837, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -350,3 +351,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2102442570704407339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989065538229482944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d566259ffe90b044b54ff27ba4d1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioType: 1

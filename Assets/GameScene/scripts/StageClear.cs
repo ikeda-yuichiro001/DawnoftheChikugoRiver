@@ -45,7 +45,7 @@ public class StageClear : MonoBehaviour
             {
                 StageManager.stage++;
             }
-            Debug.Log("stage" + StageManager.stage);
+            //Debug.Log("stage" + StageManager.stage);
 
             time = 0;
             stage = true;

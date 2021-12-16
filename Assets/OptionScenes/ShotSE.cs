@@ -13,7 +13,7 @@ public class ShotSE : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))audioSource.mute =! audioSource.mute;
-        if (Input.GetKeyUp(KeyCode.Z)) audioSource.mute = !audioSource.mute;
+        if (Input.GetKeyDown(KeyCode.Z))audioSource.mute = false;
+        if (Input.GetKeyUp(KeyCode.Z)) audioSource.mute = true;
     }
 }

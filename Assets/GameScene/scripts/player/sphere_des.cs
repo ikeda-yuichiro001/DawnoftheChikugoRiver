@@ -22,7 +22,8 @@ public class sphere_des : MonoBehaviour
     {
         if (!ishit && other.GetComponent<EnemyMove>() != null)
         {
-            _shot.Play();
+            Instantiate(Resources.Load("hitSE"));
+            //_shot.Play();
             other.GetComponent<EnemyMove>().hp--;
             imageTest.kari += 10;
             imageTest.scorejudge = 1;
@@ -36,6 +37,18 @@ public class sphere_des : MonoBehaviour
                     if (other.GetComponent<enemymove1>() != null) { Sakanadata.target = 1; }
                     if (other.GetComponent<enemymove2>() != null) { Sakanadata.target = 2; }
                     if (other.GetComponent<enemymove3>() != null) { Sakanadata.target = 3; }
+                    if (other.GetComponent<enemymove4>() != null) { Sakanadata.target = 4; }
+                    if (other.GetComponent<enemymove5>() != null) { Sakanadata.target = 5; }
+                    if (other.GetComponent<enemymove6>() != null) { Sakanadata.target = 6; }
+                    if (other.GetComponent<enemymove7>() != null) { Sakanadata.target = 7; }
+                    if (other.GetComponent<enemymove8>() != null) { Sakanadata.target = 8; }
+                    if (other.GetComponent<enemymove9>() != null) { Sakanadata.target = 9; }
+                    if (other.GetComponent<enemymove10>() != null) { Sakanadata.target = 10; }
+                    if (other.GetComponent<enemymove11>() != null) { Sakanadata.target = 11; }
+                    if (other.GetComponent<enemymove12>() != null) { Sakanadata.target = 12; }
+                    if (other.GetComponent<enemymove13>() != null) { Sakanadata.target = 13; }
+                    if (other.GetComponent<enemymove14>() != null) { Sakanadata.target = 14; }
+                    if (other.GetComponent<enemymove15>() != null) { Sakanadata.target = 15; }
 
                     Sakanadata.cunt = 0;
                 }

@@ -38,7 +38,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6273522959740641521}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6160c7b7a8eac343aa55c4958692d3e, type: 3}
@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 415377530714837239}
   - component: {fileID: 9021636651738938453}
   - component: {fileID: 6564935959855637582}
+  - component: {fileID: 4408466091977632491}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -261,11 +262,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7036185675643813870}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93ebd38d5d7d7d94099a39e22d0728e5, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 4aa02ef55756fe84189d70042df4cc1d, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -350,3 +351,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4408466091977632491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036185675643813870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d566259ffe90b044b54ff27ba4d1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioType: 1

@@ -260,7 +260,7 @@ public class EnemyMove : MonoBehaviour
             {
                 //Debug.Log(a);
                 //Debug.Log(w);
-
+                Instantiate(Resources.Load("Extend"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
                 if (a % 2 == 0)
                 {
                     Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);

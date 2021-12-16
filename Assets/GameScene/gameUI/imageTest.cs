@@ -79,18 +79,28 @@ public class imageTest : MonoBehaviour
                 scorejudge = 0; //ほんとはゼロ
             }
         }
-        if (kari > 10000000 && ScoreExceed == 0)
+        if (kari >= 10000000 && ScoreExceed == 0)
         {
             Debug.Log("extend");
             ScoreMangers.RetryRemain++;
             ScoreExceed++;
         }
-        if (kari > 50000000 && ScoreExceed == 1)
+        if (kari >= 30000000 && ScoreExceed == 1)
         {
             ScoreMangers.RetryRemain++;
             ScoreExceed++;
         }
-        if (kari > 100000000 && ScoreExceed == 2)
+        if (kari >= 50000000 && ScoreExceed == 2)
+        {
+            ScoreMangers.RetryRemain++;
+            ScoreExceed++;
+        }
+        if (kari >= 75000000 && ScoreExceed == 3)
+        {
+            ScoreMangers.RetryRemain++;
+            ScoreExceed++;
+        }
+        if (kari >= 100000000 && ScoreExceed == 4)
         {
             ScoreMangers.RetryRemain++;
             ScoreExceed++;
