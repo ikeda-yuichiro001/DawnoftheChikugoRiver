@@ -26,8 +26,11 @@ ModelImporter:
     2100004: standardSurface1
     2100006: lambert1
     2100008: lambert5
+    2100010: lambert6
     2300000: pCube2
+    2300002: //RootNode
     3300000: pCube2
+    3300002: //RootNode
     4300000: pCube2
   externalObjects: {}
   materials:
