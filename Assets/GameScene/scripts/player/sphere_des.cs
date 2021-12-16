@@ -23,6 +23,7 @@ public class sphere_des : MonoBehaviour
         if (!ishit && other.GetComponent<EnemyMove>() != null)
         {
             Instantiate(Resources.Load("hitSE"));
+            Instantiate(Resources.Load("dead"));
             //_shot.Play();
             other.GetComponent<EnemyMove>().hp--;
             imageTest.kari += 10;
