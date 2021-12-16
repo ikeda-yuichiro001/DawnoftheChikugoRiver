@@ -276,8 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 12
   mirror: 0
-  hp: 1000
-  maxhp: 1000
+  hp: 2000
+  maxhp: 2000
   t: 3
   Speed: 6
   PlacementDistance: 5

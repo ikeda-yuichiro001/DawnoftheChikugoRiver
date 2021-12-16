@@ -11,8 +11,11 @@ ModelImporter:
     400004: left
     2000000: left
     2100000: lambert1
+    2100002: lambert4
     2300000: kawamutu_kurumeusu_mimurapCube1
+    2300002: //RootNode
     3300000: kawamutu_kurumeusu_mimurapCube1
+    3300002: //RootNode
     4300000: kawamutu_kurumeusu_mimurapCube1
   externalObjects: {}
   materials:

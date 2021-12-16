@@ -600,7 +600,7 @@ public class EnemyMove : MonoBehaviour
 
             imageTest.kari += 100;
             imageTest.scorejudge = 1;
-            bossHp = 0;
+            bossHp = 1;
             Destroy(gameObject);
         }
         //ここを画面外から見えなくなったらにする
