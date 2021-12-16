@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2405085803539402086}
   - component: {fileID: 2405085803540402086}
   - component: {fileID: 2785798201268336944}
-  - component: {fileID: 672575268218674338}
+  - component: {fileID: 375427064213279071}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af0f2a0d8c555b641a24728ab04bc318, type: 3}
+  - {fileID: 2100000, guid: c20828d4a6398d44bac57d69818db28c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 9
   mirror: 0
-  hp: 5000
+  hp: 1000
   maxhp: 0
   t: 12
   Speed: 6
   PlacementDistance: 2
---- !u!136 &672575268218674338
-CapsuleCollider:
+--- !u!135 &375427064213279071
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,10 +108,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.0041155037
-  m_Height: 0.039569736
-  m_Direction: 2
-  m_Center: {x: -0.0023664592, y: 0, z: -0.004087112}
+  serializedVersion: 2
+  m_Radius: 0.009725642
+  m_Center: {x: -0.0025960521, y: 0.0019175153, z: -0.0062266714}
 --- !u!1 &2405085803542663524
 GameObject:
   m_ObjectHideFlags: 0
