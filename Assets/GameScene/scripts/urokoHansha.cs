@@ -68,8 +68,8 @@ public class urokoHansha : MonoBehaviour
 
         if (d < HitRange && !ishit)
         {
-            Instantiate(Resources.Load("player_ghost"));
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Instantiate(Resources.Load("player_ghost"), transform.position, Quaternion.identity);
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Destroy(gameObject);
             ishit = true;

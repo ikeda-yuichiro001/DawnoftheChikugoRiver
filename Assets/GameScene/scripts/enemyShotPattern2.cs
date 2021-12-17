@@ -45,9 +45,9 @@ public class enemyShotPattern2 : MonoBehaviour
 
         if (d < HitRange && !ishit)
         {
-            Instantiate(Resources.Load("player_ghost"));
-            if(Player != null)
-                shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            Instantiate(Resources.Load("player_ghost"), transform.position, Quaternion.identity);
+            if (Player != null)
+                shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Destroy(gameObject);
             ishit = true;

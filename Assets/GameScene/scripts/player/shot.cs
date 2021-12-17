@@ -5,7 +5,7 @@ using UnityEngine;
 public class shot : MonoBehaviour
 {
     int N;
-    public int Power = 0;
+    public int Power;
     public static int PowData;
     public float PlacementDistance;
     [Range(0, 10)] public float Speed;
@@ -61,7 +61,7 @@ public class shot : MonoBehaviour
     void Update()
     {       
         ScoreMangers.Power = Power;
-
+        //Debug.Log(Power);
         timecount++;
         if (timecount == 3)
         {

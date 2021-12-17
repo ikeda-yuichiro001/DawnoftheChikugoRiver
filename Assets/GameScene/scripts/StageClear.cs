@@ -8,6 +8,7 @@ public class StageClear : MonoBehaviour
     GameObject stage1boss;
     float time = 0;
     bool a = false;
+    bool b = false;
     bool stage = false;
     public bool inst = false;
     //int StageNum = 1;
@@ -37,28 +38,42 @@ public class StageClear : MonoBehaviour
                 a = true;
             }
 
-            //time += Time.deltaTime;
-            //Debug.Log(time);
-            //if (time > 5 && !stage)
+            
             //{
-            if (SceneManager.GetActiveScene().name != "trial")
+            if (SceneManager.GetActiveScene().name != "trial" && !b)
             {
                 StageManager.stage++;
+                b = true;
             }
             //Debug.Log("stage" + StageManager.stage);
+            
+            
 
-            time = 0;
-            stage = true;
-            inst = false;
-            EnemyMove.bossHp = 1;
-            if (StageManager.stage < 6)
-                SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
-            if (StageManager.stage > 6)
+            time += Time.deltaTime;
+            //Debug.Log(time);
+            if (time > 5)
             {
-                SceneManager.LoadScene("trial");
+                if (StageManager.stage < 6) {
+                    inst = false;
+                    stage = true;
+                    EnemyMove.bossHp = 1;
+                    SceneManager.LoadScene("Stage" + StageManager.stage);//ここステージクリアしたら次のステージへ
+                }
+                if (StageManager.stage > 6)
+                {
+                    inst = false;
+                    stage = true;
+                    EnemyMove.bossHp = 1;
+                    SceneManager.LoadScene("trial");
+                }
+                if (StageManager.stage == 6)
+                {
+                    inst = false;
+                    stage = true;
+                    EnemyMove.bossHp = 1;
+                    SceneManager.LoadScene("GameClear");
+                }
             }
-            if(StageManager.stage == 6)
-                SceneManager.LoadScene("GameClear");
             //SceneManager.LoadScene("GameClearScene");
             //}
         }

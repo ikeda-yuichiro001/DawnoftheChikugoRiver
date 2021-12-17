@@ -81,29 +81,38 @@ public class imageTest : MonoBehaviour
         }
         if (kari >= 10000000 && ScoreExceed == 0)
         {
-            Debug.Log("extend");
-            ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
+            Debug.Log(playerInst.Zanki);
             ScoreExceed++;
+            return;
         }
         if (kari >= 30000000 && ScoreExceed == 1)
         {
-            ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
+            Debug.Log(playerInst.Zanki);
             ScoreExceed++;
+            return;
         }
         if (kari >= 50000000 && ScoreExceed == 2)
         {
-            ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
+            Debug.Log(playerInst.Zanki);
             ScoreExceed++;
+            return;
         }
         if (kari >= 75000000 && ScoreExceed == 3)
         {
-            ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
+            Debug.Log(playerInst.Zanki);
             ScoreExceed++;
+            return;
         }
         if (kari >= 100000000 && ScoreExceed == 4)
         {
-            ScoreMangers.RetryRemain++;
+            playerInst.Zanki++;
+            Debug.Log(playerInst.Zanki);
             ScoreExceed++;
+            return;
         }
     }
 

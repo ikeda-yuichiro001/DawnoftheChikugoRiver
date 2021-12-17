@@ -134,68 +134,8 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
 
         if (hp <= 0)
-    {
-
-        while (w < 50)
         {
-                //Debug.Log(a);
-                //Debug.Log(w);
-
-            if (a % 2 == 0)
-            {
-                Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
-            }
-            a = Random.Range(0, 99);
-            w = Random.Range(0, 99);
-        }
-
-        imageTest.kari += 100;
-        imageTest.scorejudge = 1;
-        Destroy(gameObject);
-    }
-
-    if (Player != null)
-    {
-        d = Vector3.Distance(transform.position, Player.transform.position);
-    }
-
-    if (d < 2.5f)
-    {
-        if(Player != null)
-        shot.PowData = Player.gameObject.GetComponent<shot>().Power;
-        Destroy(Player);
-        Debug.Log("ピチューン！");
-    }
-}
-    //下に二発
-    void enemymove2()
-    {
-
-        MirrorDirection = 1;
-        if (mirror) MirrorDirection = -1;
-
-        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.2f;                        //new
-        if (cnt >= 1)                                  //new
-        {
-            GameObject a2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x + PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
-            GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x - PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
-            a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
-            aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
-            cnt = 0;
-        }
-
-        GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
-
-        if (transform.position.x < -40) Destroy(gameObject);
-        if (transform.position.x > 40) Destroy(gameObject);
-
-        if (hp <= 0)
-        {
-
+            SceneContollor.kill[12] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
@@ -225,7 +165,67 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            if(Player != null)
+            shot.PowData = Player.GetComponent<shot>().Power;
+            Destroy(Player);
+            Debug.Log("ピチューン！");
+        }
+    }
+    //下に二発
+    void enemymove2()
+    {
+
+        MirrorDirection = 1;
+        if (mirror) MirrorDirection = -1;
+
+        cnt += Time.deltaTime * Speed * DifficultyScene.difspd * DifficultyScene.difspd * 0.2f;                        //new
+        if (cnt >= 1)                                  //new
+        {
+            GameObject a2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x + PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            GameObject aa2 = Instantiate(Resources.Load("enemy_bul"), new Vector3(transform.position.x - PlacementDistance, transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+            a2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
+            aa2.GetComponent<enemyShotPattern>().arrow = new Vector2(0, -DifficultyScene.difspd * 0.3f);
+            cnt = 0;
+        }
+
+        GetComponent<Rigidbody>().position += new Vector3(-0.1f * MirrorDirection, 0, 0);
+
+        if (transform.position.x < -40) Destroy(gameObject);
+        if (transform.position.x > 40) Destroy(gameObject);
+
+        if (hp <= 0)
+        {
+            SceneContollor.kill[12] = true;
+            while (w < 50)
+            {
+                //Debug.Log(a);
+                //Debug.Log(w);
+
+                if (a % 2 == 0)
+                {
+                    Instantiate(Resources.Load("Item"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PointItem"), transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
+                }
+                a = Random.Range(0, 99);
+                w = Random.Range(0, 99);
+            }
+
+            imageTest.kari += 100;
+            imageTest.scorejudge = 1;
+            Destroy(gameObject);
+        }
+
+        if (Player != null)
+        {
+            d = Vector3.Distance(transform.position, Player.transform.position);
+        }
+
+        if (d < 2.5f)
+        {
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -293,7 +293,7 @@ public class EnemyMove : MonoBehaviour
         if (d < 2.5f)
         {
             if(Player != null)
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
         }
     }
@@ -363,7 +363,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -407,7 +407,7 @@ public class EnemyMove : MonoBehaviour
         if (d < 2.5f)
         {
             if(Player != null)
-                shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+                shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -476,7 +476,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -501,7 +501,7 @@ public class EnemyMove : MonoBehaviour
 
         if (hp <= 0)
         {
-
+            SceneContollor.kill[1] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
@@ -542,7 +542,7 @@ public class EnemyMove : MonoBehaviour
         if (d < 2.5f)
         {
             if(Player!=null)
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -580,7 +580,7 @@ public class EnemyMove : MonoBehaviour
 
         if (hp <= 0)
         {
-
+            SceneContollor.kill[0] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
@@ -622,7 +622,7 @@ public class EnemyMove : MonoBehaviour
         if (d < 2.5f)
         {
             if(Player != null)
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -693,7 +693,7 @@ public class EnemyMove : MonoBehaviour
         if (d < 2.5f)
         {
             if(Player!=null)
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -757,7 +757,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -770,8 +770,8 @@ public class EnemyMove : MonoBehaviour
 
         if (cnt >= 1)                                  //new
         {
-            
-            GameObject a7 = Instantiate(Resources.Load("scaleBullet"), new Vector3(transform.position.x , transform.position.y, transform.position.z), Quaternion.identity) as GameObject; //new
+
+            GameObject a7 = Instantiate(Resources.Load("scaleBullet"), new Vector3(transform.position.x, transform.position.y, transform.position.z - 7), Quaternion.identity) as GameObject; //new
             a7.GetComponent<urokoHansha>().arrow = new Vector2(Mathf.Sin(Random.Range(-3.0f, 3.0f)), Mathf.Cos(Random.Range(-3.0f, 3.0f))) * Speed / 5;
             
             cnt = 0;
@@ -779,7 +779,7 @@ public class EnemyMove : MonoBehaviour
 
         if (hp <= 0)
         {
-
+            SceneContollor.kill[9] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
@@ -820,7 +820,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }
@@ -870,7 +870,7 @@ public class EnemyMove : MonoBehaviour
 
         if (d < 2.5f)
         {
-            shot.PowData = Player.gameObject.GetComponent<shot>().Power;
+            shot.PowData = Player.GetComponent<shot>().Power;
             Destroy(Player);
             Debug.Log("ピチューン！");
         }

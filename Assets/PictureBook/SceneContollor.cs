@@ -31,7 +31,7 @@ public class SceneContollor : MonoBehaviour
     public float cnt;
     void Start()
     {
-        for (int t = 0; t < kill.Length; t++) { kill[t] = true; }
+        //for (int t = 0; t < kill.Length; t++) { kill[t] = true; }ここ消せば初期化やね
         for (int t = 0; t < Max; t++)
         {
             Fish[t] = GameObject.Find("Canvas/Fish" + t).GetComponent<Image>();
@@ -122,7 +122,7 @@ public class SceneContollor : MonoBehaviour
             Fish[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
         Fish[point].color = Color.white;
-        Debug.Log(point);
+        //Debug.Log(point);
         if(point < Max-1)
         {
              if (kill[point] == true)
