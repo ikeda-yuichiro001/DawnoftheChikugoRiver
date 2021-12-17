@@ -70,10 +70,10 @@ GameObject:
   - component: {fileID: 8901798666524677424}
   - component: {fileID: 8901798666521253136}
   - component: {fileID: 8901798666522253264}
-  - component: {fileID: 4434706523525141185}
   - component: {fileID: 4016069095500232636}
   - component: {fileID: 4768665546005294003}
   - component: {fileID: 6459571095842584246}
+  - component: {fileID: 961163701113260034}
   m_Layer: 0
   m_Name: oyanirami_model
   m_TagString: Untagged
@@ -141,18 +141,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4434706523525141185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901798666524182800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0eb578c9798a1a498bbcaefb633ff67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4016069095500232636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +189,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.0027933752
   m_Center: {x: 0.0053082607, y: -0.010971126, z: -0.0015125731}
+--- !u!114 &961163701113260034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8901798666524182800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b675c65fe0accc94c8289736ead1b83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

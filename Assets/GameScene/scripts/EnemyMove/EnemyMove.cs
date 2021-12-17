@@ -378,7 +378,7 @@ public class EnemyMove : MonoBehaviour
 
         if (hp <= 0)
         {
-
+            SceneContollor.kill[3] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
@@ -717,7 +717,7 @@ public class EnemyMove : MonoBehaviour
 
         if (hp <= 0)
         {
-
+            SceneContollor.kill[13] = true;
             while (w < 50)
             {
                 //Debug.Log(a);
