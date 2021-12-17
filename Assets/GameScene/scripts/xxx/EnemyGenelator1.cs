@@ -23,6 +23,14 @@ public class EnemyGenelator1 : EnemyGenelatorBehavior
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 35, timer = 18},
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 35, timer = 20},
         new GenerateData(){ name = "kawamutu1", pointX = -12, pointZ = 35, timer = 22},
+
+        new GenerateData(){ name = "parent", pointX = -15, pointZ = 15, timer = 25},
+        new GenerateData(){ name = "parent", pointX = 15, pointZ = 15, timer = 25},
+
+        new GenerateData(){ name = "yaritanago_model", pointX = -10, pointZ = 15, timer = 60},
+        new GenerateData(){ name = "yaritanago_model", pointX = 10, pointZ = 15, timer = 60},
+
+        new GenerateData(){ name = "aburabote_model", pointX = 0, pointZ = 10, timer = 90}
     };
     public bool IsCreateBoss = false;
     public GameObject boss;
@@ -43,7 +51,7 @@ public class EnemyGenelator1 : EnemyGenelatorBehavior
             
             timer += Time.deltaTime;
             
-            if (timer > 5)
+            if (timer > 25)
             {
                 IsCreateBoss = true;
                 boss = Generate("kurumeusu2", 0, 0);
@@ -51,10 +59,10 @@ public class EnemyGenelator1 : EnemyGenelatorBehavior
             }
         }
 
-        if(IsCreateBoss && boss == null)
+        /*if(IsCreateBoss && boss == null)
         {
             //GameClear
-        }
+        }*/
 
     }
 }

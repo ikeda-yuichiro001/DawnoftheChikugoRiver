@@ -41,7 +41,7 @@ public class urokoHansha : MonoBehaviour
         rb.position += new Vector3(arrow.x, 0, arrow.y);
 
 
-        if ( transform.position.z <= -player_ctrl.zlimit - 10 )
+        if ( transform.position.z >= player_ctrl.zlimit + 20 || transform.position.z <= -player_ctrl.zlimit - 20 || transform.position.x >= player_ctrl.xlimit + 20 || transform.position.x <= -player_ctrl.xlimit - 20)
         {
             Destroy(gameObject);
         }

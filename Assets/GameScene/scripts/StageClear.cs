@@ -45,7 +45,7 @@ public class StageClear : MonoBehaviour
                 StageManager.stage++;
                 b = true;
             }
-            //Debug.Log("stage" + StageManager.stage);
+            Debug.Log("stage" + StageManager.stage);
             
             
 
@@ -53,7 +53,7 @@ public class StageClear : MonoBehaviour
             //Debug.Log(time);
             if (time > 5)
             {
-                if (StageManager.stage < 6) {
+                if (StageManager.stage < 0) {
                     inst = false;
                     stage = true;
                     EnemyMove.bossHp = 1;
@@ -66,7 +66,7 @@ public class StageClear : MonoBehaviour
                     EnemyMove.bossHp = 1;
                     SceneManager.LoadScene("trial");
                 }
-                if (StageManager.stage == 6)
+                if (StageManager.stage == 2)
                 {
                     inst = false;
                     stage = true;

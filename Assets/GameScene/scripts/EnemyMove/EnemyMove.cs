@@ -396,7 +396,7 @@ public class EnemyMove : MonoBehaviour
                 w = Random.Range(0, 99);
             }
 
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
         }
 
         if (Player != null)
@@ -559,7 +559,7 @@ public class EnemyMove : MonoBehaviour
                 GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
                 a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin(v * 0.5f / t * Mathf.PI * 2), Mathf.Cos(v * 0.5f / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 15;
 
-                yield return new WaitForSeconds(0.6f / DifficultyScene.difspd);
+                yield return new WaitForSeconds(5.0f / DifficultyScene.difspd);
             }
         }
 
@@ -632,9 +632,11 @@ public class EnemyMove : MonoBehaviour
         for (int v = 0; v < t * 16 * DifficultyScene.difspd*DifficultyScene.difspd; v++)
         {
             GameObject a7 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
-            a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin((v * 1f / 16) / t * Mathf.PI * 2), Mathf.Cos((v * 1f / 16) / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 30;
+            a7.GetComponent<enemyShotPattern>().arrow = new Vector2(Mathf.Sin((v * 1f / 8) / t * Mathf.PI * 2), Mathf.Cos((v * 1f / 8) / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 30;
+            GameObject a8 = Instantiate(Resources.Load("enemy_bul"), transform.position, Quaternion.identity) as GameObject; //new
+            a8.GetComponent<enemyShotPattern>().arrow = new Vector2(-Mathf.Sin((v * 1f / 8) / t * Mathf.PI * 2), -Mathf.Cos((v * 1f / 8) / t * Mathf.PI * 2)) * DifficultyScene.difspd * Speed / 30;
 
-            yield return new WaitForSeconds(0.05f / DifficultyScene.difspd / DifficultyScene.difspd);
+            yield return new WaitForSeconds(0.125f / DifficultyScene.difspd / DifficultyScene.difspd);
             if (v == t * 16 * DifficultyScene.difspd - 1) v = -1;
         }
     }

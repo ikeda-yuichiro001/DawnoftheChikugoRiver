@@ -14,7 +14,7 @@ public class twoSecDestroy : MonoBehaviour
     void Update()
     {
         t += Time.deltaTime;
-        if (t > 3)
+        if (t > 1)
             Destroy(gameObject);
     }
 }
