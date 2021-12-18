@@ -42,6 +42,12 @@ public class EnemyGenelator1 : EnemyGenelatorBehavior
 
     float timer = 0;
 
+    public MeshRenderer meshRenderer;
+
+    public float value_;
+    public Color c;
+    public Color a = Color.white;
+    public Color b = Color.white;
     // Update is called once per frame
     public override void UPDATE()
     {
@@ -58,6 +64,13 @@ public class EnemyGenelator1 : EnemyGenelatorBehavior
                 return;
             }
         }
+
+        if (IsCreateBoss)
+            value_ += Time.deltaTime;
+
+        c = Color.Lerp(a, b, value_);
+        meshRenderer.material.color = c;
+            
 
         /*if(IsCreateBoss && boss == null)
         {
