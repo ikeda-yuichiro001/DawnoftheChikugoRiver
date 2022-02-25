@@ -31,6 +31,8 @@ public class Invinsible : MonoBehaviour
             {
                 GetComponent<Renderer>().material.color = new Color(255, 0, 0, 255);
                 enemyShotPattern.HitRange = 0.5f;
+                enemyShotPattern2.HitRange = 0.5f;
+                urokoHansha.HitRange = 0.5f;
                 t = 0;
                 Switch = false;
             }
