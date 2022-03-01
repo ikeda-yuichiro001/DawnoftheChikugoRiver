@@ -18,7 +18,7 @@ public class SceneContollor : MonoBehaviour
     public int point;
     public int i;
     private Vector2 Panel_pos;
-    const int Max = 16;
+    const int Max = 17;
     public FishData[] DataBase;
     /* public int[] y;
     public int a = 0, h = 30, k, X;
