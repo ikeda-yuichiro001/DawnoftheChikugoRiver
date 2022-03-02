@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMissilePrefab: {fileID: 1731458024810890607, guid: 5899ed6819a2c744092fca809218e227,
     type: 3}
-  speed: 718.23
+  speed: 650

@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyFireMissilePrefab: {fileID: 5093946106016238846, guid: 3a5e7bf5e1f03ac46a624bfc23fe1adb,
     type: 3}
-  wayNumber: 35
+  wayNumber: 17
 --- !u!114 &6138128639013515829
 MonoBehaviour:
   m_ObjectHideFlags: 0

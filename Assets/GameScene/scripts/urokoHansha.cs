@@ -38,7 +38,7 @@ public class urokoHansha : MonoBehaviour
 
         if (float.IsNaN(arrow.x)) arrow.x = 0;
         if (float.IsNaN(arrow.y)) arrow.y = 0;
-        rb.position += new Vector3(arrow.x, 0, arrow.y);
+        rb.position += new Vector3(arrow.x, 0, arrow.y) * Time.deltaTime;
 
 
         if ( transform.position.z >= player_ctrl.zlimit + 20 || transform.position.z <= -player_ctrl.zlimit - 20 || transform.position.x >= player_ctrl.xlimit + 20 || transform.position.x <= -player_ctrl.xlimit - 20)

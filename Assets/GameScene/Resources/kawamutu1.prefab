@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130ab07b976c4a04683eeac08959f7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i: 8
+  i: 7
   mirror: 0
   hp: 40
   maxhp: 40

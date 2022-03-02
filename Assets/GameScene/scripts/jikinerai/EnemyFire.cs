@@ -13,7 +13,7 @@ public class EnemyFire : MonoBehaviour
     {
         timeCount += 1;
 
-        if (timeCount *DifficultyScene.difspd % 30 == 0)
+        if (timeCount *DifficultyScene.difspd % 75 == 0)
         {
             // 敵のミサイルを生成する
             enemyMissile = Instantiate(enemyMissilePrefab, transform.position, Quaternion.identity);

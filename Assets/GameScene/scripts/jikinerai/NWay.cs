@@ -15,8 +15,7 @@ public class NWay : MonoBehaviour
         {
             // Instantiate()は、プレハブからクローンを産み出すメソッド（重要ポイント）
             // Quaternion.Euler(x, y, z)
-            // 今回は「i = 0の時 → y = -30」「i = 1の時 → y = -15」「i = 2の時 → y = 0」「i = 3の時 → y = 15」「i = 4の時 → y = 30」になるようにする。
-            GameObject enemyFireMissile = Instantiate(enemyFireMissilePrefab, transform.position, Quaternion.Euler(0, 7.5f - (7.5f * wayNumber) + (15 * i), 0));
+            GameObject enemyFireMissile = Instantiate(enemyFireMissilePrefab, transform.position, Quaternion.Euler(0, 7.5f - (7.5f * wayNumber) + (15.0f * i), 0));
 
             // SetParent()は親子関係を作るメソッド（ポイント）
             // 『このスクリプトが付いているNWayオブジェクトをenemyFireMissileクローンの親に設定する。』
