@@ -13,7 +13,9 @@ public class playerInst : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Zanki++;
+        Player = Instantiate(Resources.Load("player"), new Vector3(0, 2, -30), Quaternion.identity) as GameObject;
+        Player.name = "player";
+        //Zanki++;
     }
 
     // Update is called once per frame
@@ -30,9 +32,10 @@ public class playerInst : MonoBehaviour
             for(int d = 0; d < shot.PowData; d++)
             Player.GetComponent<shot>().UpPower();
             Player.GetComponent<shot>().DownPower();
-            Zanki --;
-            ScoreMangers.RetryRemain = Zanki;
-            ScoreMangers.Boom = bomb;
+            //Debug.Log("残機:" + Zanki + ":" + ScoreMangers.RetryRemain);
+            Zanki--;
+            //ScoreMangers.RetryRemain = Zanki;
+            //ScoreMangers.Boom = bomb;
             /*
             t += Time.deltaTime;
             if (t > 7)

@@ -72,7 +72,8 @@ public class DifficultyScene : MonoBehaviour
                 {
                     GameLevel.Level = point;
                     StageManager.stage = 1;
-                    //Debug.Log(ScoreMangers.RetryRemain);
+                    ScoreMangers.RetryRemain = 3;
+                    Debug.Log(ScoreMangers.RetryRemain);
                     SceneManager.LoadScene("Stage" + StageManager.stage);
                 }
                 else

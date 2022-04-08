@@ -36,7 +36,7 @@ public class EnemyGenelatorBehavior : MonoBehaviour
         object a = Resources.Load(name_);
         if(a == null)
         {
-            Debug.Log("!?!?!?"+ name_);
+            //Debug.Log("!?!?!?"+ name_);
         }
         GameObject g = Instantiate(a as GameObject);
         g.transform.position = new Vector3(g.transform.position.x + x, g.transform.position.y, g.transform.position.z + z);

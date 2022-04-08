@@ -15,6 +15,10 @@ public class backTitle : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
+            playerInst.Zanki = 3;
+            ScoreMangers.Invincible = 2;
+            ScoreMangers.Power = 0;
+            imageTest.ScoreReset();
             title.esc();
         }
     }

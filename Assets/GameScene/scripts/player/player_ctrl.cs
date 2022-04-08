@@ -42,7 +42,6 @@ public class player_ctrl : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            //GetComponent<Rigidbody>().position
             transform.position -= transform.forward * 50f * Time.deltaTime * slow;
         }
         if (transform.position.z > zlimit) transform.position -= transform.forward * 50f * Time.deltaTime;
@@ -53,5 +52,18 @@ public class player_ctrl : MonoBehaviour
         {
             Instantiate(Resources.Load("player"),new Vector3( 0,2,-14),Quaternion.identity);
         }
+    }
+
+    static bool blue()
+    {
+        return Input.GetKey(KeyCode.Z);//orで書き足すよーん
+    }
+    static bool red()
+    {
+        return Input.GetKey(KeyCode.X);
+    }
+    static bool yellow()
+    {
+        return Input.GetKey(KeyCode.C);
     }
 }

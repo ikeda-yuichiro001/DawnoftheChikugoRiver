@@ -1,30 +1,19 @@
 fileFormatVersion: 2
-guid: 3259ef9fe3c14b649845b839f1a7065b
+guid: ead60170f94759944a8db623f5309c0d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: kawamutu_kurumeusu_mimurapCube1
-    100004: left
-    100006: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
-    100008: kawamutu_kurumeusu_mimura:left
+    100002: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
+    100004: kawamutu_kurumeusu_mimura:left
     400000: //RootNode
-    400002: kawamutu_kurumeusu_mimurapCube1
-    400004: left
-    400006: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
-    400008: kawamutu_kurumeusu_mimura:left
-    2000000: left
-    2000002: kawamutu_kurumeusu_mimura:left
+    400002: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
+    400004: kawamutu_kurumeusu_mimura:left
+    2000000: kawamutu_kurumeusu_mimura:left
     2100000: lambert1
-    2100002: lambert4
-    2300000: kawamutu_kurumeusu_mimurapCube1
-    2300002: //RootNode
-    2300004: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
-    3300000: kawamutu_kurumeusu_mimurapCube1
-    3300002: //RootNode
-    3300004: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
-    4300000: kawamutu_kurumeusu_mimurapCube1
-    4300002: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
+    2300000: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
+    3300000: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
+    4300000: kawamutu_kurumeusu_mimura:kawamutu_kurumeusu_mimurapCube1
   externalObjects: {}
   materials:
     importMaterials: 1
