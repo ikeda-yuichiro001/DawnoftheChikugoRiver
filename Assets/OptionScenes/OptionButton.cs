@@ -187,6 +187,7 @@ public class OptionButton : MonoBehaviour
         Number.text = ((int)(Option.BGM * 100)).ToString("000");
 
         Number2.text = ((int)(Option.SE * 100)).ToString("000");
+        //aaaaaa
     }
 }
 
